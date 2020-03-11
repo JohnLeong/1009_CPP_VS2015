@@ -132,12 +132,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InstagramPost.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SampleClass.cpp" />
+    <ClCompile Include="ScrapeStorage.cpp" />
+    <ClCompile Include="SocialMediaComment.cpp" />
+    <ClCompile Include="SocialMediaPost.cpp" />
+    <ClCompile Include="SocialMediaPostStorage.cpp" />
+    <ClCompile Include="TwitterPost.cpp" />
     <ClCompile Include="UserInterfaceForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="InstagramPost.h" />
     <ClInclude Include="SampleClass.h" />
+    <ClInclude Include="ScrapeStorage.h" />
+    <ClInclude Include="SocialMediaComment.h" />
+    <ClInclude Include="SocialMediaPost.h" />
+    <ClInclude Include="SocialMediaPostStorage.h" />
+    <ClInclude Include="TwitterPost.h" />
     <ClInclude Include="UserInterfaceForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

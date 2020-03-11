@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\DataStorage">
+      <UniqueIdentifier>{bfc40219-3b42-4f03-9478-553e41d609b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataStorage">
+      <UniqueIdentifier>{dbc80087-6158-4a08-8ac3-c5220fde7f86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UserInterfaceForm.h">
@@ -20,6 +26,24 @@
     </ClInclude>
     <ClInclude Include="SampleClass.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SocialMediaPost.h">
+      <Filter>Header Files\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="SocialMediaPostStorage.h">
+      <Filter>Header Files\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="TwitterPost.h">
+      <Filter>Header Files\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="InstagramPost.h">
+      <Filter>Header Files\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrapeStorage.h">
+      <Filter>Header Files\DataStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="SocialMediaComment.h">
+      <Filter>Header Files\DataStorage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -32,5 +56,28 @@
     <ClCompile Include="SampleClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SocialMediaPost.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="SocialMediaPostStorage.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="TwitterPost.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="InstagramPost.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapeStorage.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="SocialMediaComment.cpp">
+      <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserInterfaceForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

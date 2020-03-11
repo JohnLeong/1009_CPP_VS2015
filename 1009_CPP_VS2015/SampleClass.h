@@ -29,10 +29,10 @@ namespace Demo
 		SampleClass(int myInteger, float myFloat, double myDouble, string myString);
 		~SampleClass();		//Make sure to have class destructors, even if not used
 
-		//Use upper camel case for all function names
-		//Capital letter for the beginning of each word
-		string GetHelloWorld();		
-		void TestFunction(int a, int b);
+		//Use pascal case for all function names
+		//Capital letter for the beginning of each word after the first
+		string getHelloWorld();		
+		void testFunction(int a, int b);
 	};
 }
 

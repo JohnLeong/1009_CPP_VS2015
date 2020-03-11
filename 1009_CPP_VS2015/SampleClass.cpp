@@ -38,7 +38,7 @@ namespace Demo
 	*
 	* @return			Returns a "Hello world!" string
 	*/
-	string SampleClass::GetHelloWorld()
+	string SampleClass::getHelloWorld()
 	{
 		return "Hello world!";
 	}
@@ -49,7 +49,7 @@ namespace Demo
 	* @param a			An integer which does nothing
 	* @param b			An integer which also does nothing
 	*/
-	void SampleClass::TestFunction(int a, int b)
+	void SampleClass::testFunction(int a, int b)
 	{
 		//Use static casts to cast variables
 		float exampleCast = static_cast<float>(a);
