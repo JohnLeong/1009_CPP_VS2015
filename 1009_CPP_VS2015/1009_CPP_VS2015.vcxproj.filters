@@ -45,6 +45,9 @@
     <ClInclude Include="SocialMediaComment.h">
       <Filter>Header Files\DataStorage</Filter>
     </ClInclude>
+    <ClInclude Include="ScrapeUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -73,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="SocialMediaComment.cpp">
       <Filter>Source Files\DataStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapeUtility.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
