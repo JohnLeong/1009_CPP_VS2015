@@ -1,26 +1,17 @@
 #pragma once
 #ifndef TWITTER_POST_H
 #define TWITTER_POST_H
-
+#define TWITTER_POST_NAMESPACE_START namespace ICT1009 { namespace DataStorage {
+#define TWITTER_POST_NAMESPACE_END }}
 #include "SocialMediaPost.h"
 
-namespace ICT1009
+TWITTER_POST_NAMESPACE_START
+class TwitterPost : public SocialMediaPost
 {
-	namespace DataStorage
-	{
-		class TwitterPost : public SocialMediaPost
-		{
-		private:
-			unsigned int retweets;
-
-		public:
-			TwitterPost();
-			~TwitterPost();
-
-			unsigned int getRetweets();
-
-			void setRetweets(unsigned int retweets);
-		};
-	}
-}
+	PV_GET_SET(unsigned int, TwitterPost, retweets, Retweets)
+public:
+	TwitterPost();
+	~TwitterPost();
+};
+TWITTER_POST_NAMESPACE_END
 #endif

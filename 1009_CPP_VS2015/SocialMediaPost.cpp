@@ -5,13 +5,14 @@ namespace ICT1009
 	namespace DataStorage
 	{
 		SocialMediaPost::SocialMediaPost()
-			: likes(0), caption(""), commentList(new vector<SocialMediaComment>())
+			: likes(0), caption(""), postedBy("")
 		{
+			//commentList(new vector<SocialMediaComment>())
 		}
 
 		SocialMediaPost::~SocialMediaPost()
 		{
-			delete commentList;
+			//delete commentList;
 		}
 
 		vector<string> SocialMediaPost::getHashtags()
@@ -21,45 +22,28 @@ namespace ICT1009
 			return hashtagList;
 		}
 
-		bool SocialMediaPost::addComment(SocialMediaComment comment)
+		bool SocialMediaPost::addComment(SocialMediaPost::SocialMediaCommentPtr comment)
 		{
-			commentList->push_back(comment);
+			commentList.push_back(comment);
 			return true;
 		}
 
-		unsigned int SocialMediaPost::getLikes()
+		
+		json SocialMediaPost::getPostJson()
 		{
-			return likes;
+			json j;
+			return j;
 		}
 
-		string SocialMediaPost::getCaption()
-		{
-			return caption;
-		}
 
-		string SocialMediaPost::getPostedBy()
+		void SocialMediaPost::printAttributes() 
 		{
-			return postedBy;
-		}
-
-		vector<SocialMediaComment>* SocialMediaPost::getComments()
-		{
-			return commentList;
-		}
-
-		void SocialMediaPost::setLikes(unsigned int likes)
-		{
-			this->likes = likes;
-		}
-
-		void SocialMediaPost::setPostedBy(string postedBy)
-		{
-			this->postedBy = postedBy;
-		}
-
-		void SocialMediaPost::setCaption(string caption)
-		{
-			this->caption = caption;
+			using std::cout; using std::endl;
+			cout << "---SocialMediaPost Attributes---" << endl;
+			cout << "Likes: " << this->likes << endl;
+			cout << "Caption: " << this->caption << endl;
+			cout << "PostedBy: " << this->postedBy << endl;
+			for (std::size_t i = 0; i < this->commentList.size(); this->commentList[i++]->printAttributes());
 		}
 	}
 }

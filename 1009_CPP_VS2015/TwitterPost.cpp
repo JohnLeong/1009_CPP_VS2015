@@ -1,27 +1,16 @@
 #include "TwitterPost.h"
 
+#ifndef TWITTER_POST_CPP
+#define TWITTER_POST_CPP
 
-namespace ICT1009
+TWITTER_POST_NAMESPACE_START
+TwitterPost::TwitterPost()
 {
-	namespace DataStorage
-	{
-		TwitterPost::TwitterPost()
-		{
-		}
-
-		TwitterPost::~TwitterPost()
-		{
-
-		}
-
-		unsigned int TwitterPost::getRetweets()
-		{
-			return retweets;
-		}
-
-		void TwitterPost::setRetweets(unsigned int retweets)
-		{
-			this->retweets = retweets;
-		}
-	}
 }
+
+TwitterPost::~TwitterPost()
+{
+
+}
+TWITTER_POST_NAMESPACE_END
+#endif

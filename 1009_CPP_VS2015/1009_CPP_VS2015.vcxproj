@@ -136,11 +136,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bridge.cpp" />
+    <ClCompile Include="CurlObj.cpp" />
+    <ClCompile Include="DateTimeUtility.cpp" />
+    <ClCompile Include="FileUtility.cpp" />
     <ClCompile Include="InstagramPost.cpp" />
+    <ClCompile Include="InstagramScrapper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SampleClass.cpp" />
     <ClCompile Include="ScrapeStorage.cpp" />
-    <ClCompile Include="ScrapeUtility.cpp" />
     <ClCompile Include="SocialMediaComment.cpp" />
     <ClCompile Include="SocialMediaPost.cpp" />
     <ClCompile Include="SocialMediaPostStorage.cpp" />
@@ -148,10 +152,15 @@
     <ClCompile Include="UserInterfaceForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bridge.h" />
+    <ClInclude Include="CurlObj.h" />
+    <ClInclude Include="DateTimeUtility.h" />
+    <ClInclude Include="FileUtility.h" />
     <ClInclude Include="InstagramPost.h" />
+    <ClInclude Include="InstagramScrapper.h" />
+    <ClInclude Include="macros.h" />
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="ScrapeStorage.h" />
-    <ClInclude Include="ScrapeUtility.h" />
     <ClInclude Include="SocialMediaComment.h" />
     <ClInclude Include="SocialMediaPost.h" />
     <ClInclude Include="SocialMediaPostStorage.h" />

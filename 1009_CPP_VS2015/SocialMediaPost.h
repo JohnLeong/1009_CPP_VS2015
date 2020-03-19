@@ -1,44 +1,39 @@
 #pragma once
 #ifndef SOCIAL_MEDIA_POST_H
 #define SOCIAL_MEDIA_POST_H
+#define SOCIAL_MEDIA_NAMESPACE_START namespace ICT1009 { namespace DataStorage {
+#define SOCIAL_MEDIA_NAMESPACE_END }}
 
-#include <string>
 #include <vector>
+#include <memory>
 #include "SocialMediaComment.h"
 
 using std::string;
 using std::vector;
 
-namespace ICT1009
+SOCIAL_MEDIA_NAMESPACE_START
+class SocialMediaPost
 {
-	namespace DataStorage
-	{
-		class SocialMediaPost
-		{
-		private:
-			unsigned int likes;							//The number of likes this post has
-			string caption;								//The caption of this post
-			string postedBy;							//The username of the person who made this post
-			vector<SocialMediaComment>* commentList;	//The list of all the comments on this post
-			//Date date;
-			
-		public:
-			SocialMediaPost();
-			~SocialMediaPost();
+	typedef std::shared_ptr<SocialMediaComment> SocialMediaCommentPtr;
 
-			vector<string> getHashtags();
-			bool addComment(SocialMediaComment comment);
+	PV_GET_SET(unsigned int, SocialMediaPost, likes, Likes)	//The number of likes this post has
+	PV_GET_SET(string, SocialMediaPost, caption, Caption)	//The caption of this post
+	PV_GET_SET(string, SocialMediaPost, postedBy, PostedBy)	//The username of the person who made this post
 
-			unsigned int getLikes();
-			string getCaption();
-			string getPostedBy();
-			vector<SocialMediaComment>* getComments();
+	//The list of all the comments on this post
+	PRT_GET_SET(vector<SocialMediaCommentPtr>, SocialMediaPost, commentList, CommentList)
 
-			void setLikes(unsigned int likes);
-			void setPostedBy(string postedBy);
-			void setCaption(string caption);
-		};
-	}
-}
+
+public:
+	SocialMediaPost();
+	~SocialMediaPost();
+
+	vector<string> getHashtags();
+	bool addComment(SocialMediaCommentPtr comment);	
+	void printAttributes();
+	virtual json getPostJson();
+	
+};
+SOCIAL_MEDIA_NAMESPACE_END
 
 #endif
