@@ -21,9 +21,9 @@ namespace ICT1009
 			//Set analysed data scrape type
 			switch (data->getMode())
 			{
-			case DataStorage::ScrapeStorage::ScrapeMode::HASHTAG:
+			case DataStorage::ScrapeStorage::ScrapeMode::Hashtag:
 				analysedData.setScrapeType("Hashtags");
-			case DataStorage::ScrapeStorage::ScrapeMode::PROFILE:
+			case DataStorage::ScrapeStorage::ScrapeMode::Profile:
 				analysedData.setScrapeType("Profiles");
 			default:
 				break;
