@@ -136,8 +136,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnalysedData.cpp" />
     <ClCompile Include="Bridge.cpp" />
     <ClCompile Include="CurlObj.cpp" />
+    <ClCompile Include="DataAnalyser.cpp" />
     <ClCompile Include="DateTimeUtility.cpp" />
     <ClCompile Include="FileUtility.cpp" />
     <ClCompile Include="InstagramPost.cpp" />
@@ -150,11 +152,14 @@
     <ClCompile Include="SocialMediaPost.cpp" />
     <ClCompile Include="SocialMediaPostStorage.cpp" />
     <ClCompile Include="TwitterPost.cpp" />
+    <ClCompile Include="TwitterScraper.cpp" />
     <ClCompile Include="UserInterfaceForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnalysedData.h" />
     <ClInclude Include="Bridge.h" />
     <ClInclude Include="CurlObj.h" />
+    <ClInclude Include="DataAnalyser.h" />
     <ClInclude Include="DateTimeUtility.h" />
     <ClInclude Include="FileUtility.h" />
     <ClInclude Include="InstagramPost.h" />
@@ -167,6 +172,7 @@
     <ClInclude Include="SocialMediaPost.h" />
     <ClInclude Include="SocialMediaPostStorage.h" />
     <ClInclude Include="TwitterPost.h" />
+    <ClInclude Include="TwitterScraper.h" />
     <ClInclude Include="UserInterfaceForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -28,7 +28,13 @@
     <Filter Include="Header Files\WebScrapping">
       <UniqueIdentifier>{53344aa6-451b-4f8f-8092-a18e65e5b914}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Utilities\WebScrapping">
+    <Filter Include="Header Files\Analysis">
+      <UniqueIdentifier>{47ec75f7-798b-4596-ad85-c98b8c6d9d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Analysis">
+      <UniqueIdentifier>{bed818e3-6913-4a79-aa35-e39107cb2971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WebScrapping">
       <UniqueIdentifier>{ad2b1c54-2d97-49f3-9804-57e07c8a7a4a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -78,6 +84,15 @@
     <ClInclude Include="OCR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DataAnalyser.h">
+      <Filter>Header Files\Analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="TwitterScraper.h">
+      <Filter>Header Files\WebScrapping</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysedData.h">
+      <Filter>Header Files\Analysis</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -90,10 +105,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Bridge.cpp">
-      <Filter>Source Files\Utilities\WebScrapping</Filter>
+      <Filter>Source Files\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="InstagramScrapper.cpp">
-      <Filter>Source Files\Utilities\WebScrapping</Filter>
+      <Filter>Source Files\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="TwitterPost.cpp">
       <Filter>Source Files\DataStorage</Filter>
@@ -117,13 +132,22 @@
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
     <ClCompile Include="CurlObj.cpp">
-      <Filter>Source Files\Utilities\WebScrapping</Filter>
+      <Filter>Source Files\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="DateTimeUtility.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
     <ClCompile Include="OCR.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAnalyser.cpp">
+      <Filter>Source Files\Analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="TwitterScraper.cpp">
+      <Filter>Source Files\WebScrapping</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysedData.cpp">
+      <Filter>Source Files\Analysis</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
