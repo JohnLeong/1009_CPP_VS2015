@@ -27,7 +27,7 @@ public:
 	~FileUtility();
 	static std::string getCurrentWorkingDirectory();
 	static bool fileExists(std::string filePath);
-	static std::string fileToString(const std::string filePath);
+	static std::string getFileAsString(const std::string filePath);
 	static bool directoryExists(const std::string folderPath);
 };
 

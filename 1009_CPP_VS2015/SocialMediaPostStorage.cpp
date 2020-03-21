@@ -1,6 +1,5 @@
 #include "SocialMediaPostStorage.h"
-#ifndef SOCIAL_MEDIA_POST_STORAGE_CPP
-#define SOCIAL_MEDIA_POST_STORAGE_CPP
+
 
 SOCIAL_MEDIA_POST_STORAGE_NAMESPACE_START
 SocialMediaPostStorage::SocialMediaPostStorage()
@@ -37,4 +36,3 @@ json SocialMediaPostStorage::getProfileJson()
 	return profile;
 }
 SOCIAL_MEDIA_POST_STORAGE_NAMESPACE_END
-#endif

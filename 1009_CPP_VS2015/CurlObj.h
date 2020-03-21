@@ -1,8 +1,12 @@
 #pragma once
 #ifndef CURL_OBJ_H
 #define CURL_OBJ_H
-#include "curl\curl.h"
+
 #include <string>
+#include <iostream>
+#include "curl\curl.h"
+#include "FileUtility.h"
+
 
 #define CURL_NAMESPACE_START namespace ICT1009 { namespace WebScrapping {
 #define CURL_NAMESPACE_END } } 
@@ -19,12 +23,12 @@ private:
 public:
 	CurlObj();
 	~CurlObj();
-	void initializeStartUpOptions();
-	void setCookies(std::string cookies);
+	void initializeScrapingOptions();
+	void setCookies(std::string cookies);	
 	void resetOptions();
 	static int bufferWriter(char *data, int size, int nmemb, std::string *buffer);
 	std::string getPageHtml(std::string url, std::string cookies);
-
+	bool downloadImage(std::string imageUrl, std::string savePath);
 };
 
 CURL_NAMESPACE_END

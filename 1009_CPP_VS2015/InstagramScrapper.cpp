@@ -1,7 +1,6 @@
 #include "InstagramScrapper.h"
 
-#ifndef INSTAGRAM_SCRAPPER_CPP
-#define INSTAGRAM_SCRAPPER_CPP
+
 INSTAGRAM_NAMESPACE_START
 
 
@@ -14,6 +13,8 @@ InstagramScrapper::~InstagramScrapper()
 {	
 
 }
+
+
 
 int InstagramScrapper::scrapeByProfiles(const std::string username, const std::string password,
 	const std::string joinedProfiles, const int numberOfposts, const std::string savePath) {
@@ -34,7 +35,7 @@ int InstagramScrapper::scrapeByProfiles(const std::string username, const std::s
 	using std::cout; using std::endl;
 	using std::string; using std::remove;
 	
-	string cwd = FileUtility::getCurrentWorkingDirectory();
+	//string cwd = FileUtility::getCurrentWorkingDirectory();
 	remove(this->profileTempFile.c_str());
 
 	Bridge bridge;
@@ -111,11 +112,11 @@ nextiteration:
 	
 	cout << "Printing JSON details: \n\n" << endl;
 	cout << storage->getJsonString() << endl;
+
 	//Add error checks later...
 	storage->saveToFile(savePath);
 	return 0;
 }
 
-INSTAGRAM_NAMESPACE_END
 
-#endif
+INSTAGRAM_NAMESPACE_END

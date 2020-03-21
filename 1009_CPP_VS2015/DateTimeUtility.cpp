@@ -1,7 +1,6 @@
 #include "DateTimeUtility.h"
 
-#ifndef DATE_TIME_UTILITY_CPP
-#define DATE_TIME_UTILITY_CPP
+
 
 namespace ICT1009
 {
@@ -34,7 +33,3 @@ namespace ICT1009
 		}
 	}
 }
-
-
-
-#endif

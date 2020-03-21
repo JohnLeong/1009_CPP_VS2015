@@ -1,7 +1,6 @@
 #include "Bridge.h"
 
-#ifndef BRIDGE_CPP
-#define BRIDGE_CPP
+
 
 BRIDGE_NAMESPACE_START
 Bridge::Bridge()
@@ -33,18 +32,25 @@ int Bridge::executeScript(std::string scriptName, std::string parameters) {
 	// The script must be at the same path as the debug/release path
 	std::string scriptPath = FileUtility::getCurrentWorkingDirectory() + "\\" + scriptName;
 	if (!FileUtility::fileExists(scriptPath))
+		std::cout << "File: "  + scriptPath << "does not exits" << std::endl;
 		throw "File: " + scriptPath + " does not exists.";
 	
 	std::string command = "\"" + this->executable + "\" " + scriptName + " " + parameters;
 	int res = system(command.c_str());
-	return 0;
+	return res;
+}
+
+int Bridge::execute(std::string parameters) {
+	std::string command = this->executable + " " + parameters;
+	std::cout << "command is : " << command << std::endl;
+	int res = system(command.c_str());
+	return res;
 }
 
 std::string Bridge::getCookies() {
 	using ICT1009::Utility::FileUtility;
 	std::string cookiePath = FileUtility::getCurrentWorkingDirectory() + "\\" + instagramCookieFile;
 	return FileUtility::fileExists(cookiePath) ?
-		FileUtility::fileToString(cookiePath) :	"";
+		FileUtility::getFileAsString(cookiePath) :	"";
 }
 BRIDGE_NAMESPACE_END
-#endif

@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include "FileUtility.h"
+#include "macros.h"
 
 BRIDGE_NAMESPACE_START
 /*
@@ -15,15 +16,17 @@ BRIDGE_NAMESPACE_START
 */
 class Bridge
 {
-private:
-	std::string executable;
-	std::string pythonRelPath;
-	std::string instagramCookieFile;
+
+	PV_GET_SET(std::string, Bridge, executable, Executable)
+	PV_GET_SET(std::string, Bridge, pythonRelPath, PythonRelPath)
+	PV_GET_SET(std::string, Bridge, instagramCookieFile, InstagramCookieFile)
+	
 public:
 	Bridge();
 	~Bridge();
 
 	int executeScript(std::string scriptName, std::string parameters);
+	int execute(std::string paremeters);
 	std::string getCookies();
 
 };

@@ -1,7 +1,6 @@
 #include "SocialMediaComment.h"
 
-#ifndef SOCIAL_MEDIA_COMMENT_CPP
-#define SOCIAL_MEDIA_COMMENT_CPP
+
 SOCIAL_MEDIA_COMMENT_NAMESPACE_START
 
 SocialMediaComment::SocialMediaComment()
@@ -28,8 +27,6 @@ void SocialMediaComment::printAttributes()
 
 json SocialMediaComment::getCommentJson()
 {
-	//PV_GET_SET(string, SocialMediaComment, commentBy, CommentBy)
-	//	PV_GET_SET(string, SocialMediaComment, comment, Comment)
 	json commentDetails;
 	if (commentBy == "" && comment == "") 
 		commentDetails = json::object({});
@@ -39,4 +36,3 @@ json SocialMediaComment::getCommentJson()
 }
 
 SOCIAL_MEDIA_COMMENT_NAMESPACE_END
-#endif

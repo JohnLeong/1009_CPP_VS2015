@@ -1,7 +1,5 @@
 #include "InstagramPost.h"
 
-#ifndef INSTAGRAM_POST_CPP
-#define INSTAGRAM_POST_CPP
 INSTAGRAM_POST_NAMESPACE_START
 
 
@@ -60,6 +58,6 @@ void InstagramPost::printAttributes()
 }
 
 INSTAGRAM_POST_NAMESPACE_END
-#endif
+
 
 

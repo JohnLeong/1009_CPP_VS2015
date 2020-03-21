@@ -1,6 +1,5 @@
 #include "ScrapeStorage.h"
-#ifndef SCRAPE_STORAGE_CPP
-#define SCRAPE_STORAGE_CPP
+
 SCRAPE_STORAGE_NAMESPACE_START
 
 ScrapeStorage::ScrapeStorage()
@@ -79,4 +78,3 @@ bool ScrapeStorage::addDetails(SocialMediaPostStoragePtr details)
 	}				
 }
 SCRAPE_STORAGE_NAMESPACE_END
-#endif

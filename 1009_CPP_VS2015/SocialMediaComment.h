@@ -12,7 +12,7 @@
 #include "macros.h"
 
 
-using nlohmann::json;
+using json = nlohmann::json;
 using std::string;
 
 SOCIAL_MEDIA_COMMENT_NAMESPACE_START

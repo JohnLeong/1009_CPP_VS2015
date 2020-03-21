@@ -127,6 +127,9 @@ class WebDriver:
 
 	URL_INSTAGRAM_HOME 	= "https://www.instagram.com/"
 	URL_INSTAGRAM_LOGIN = "https://www.instagram.com/accounts/login/"
+
+	URL_INSTAGRAM_HASHTAG = URL_INSTAGRAM_HOME+"explore/tags/"
+
 	CSS_LOGIN_USERNAME 	= ".HmktE input[name='username']"
 	CSS_LOGIN_PASSWORD 	= ".HmktE input[name='password']"
 	CSS_LOGIN_SUBMIT 	= ".HmktE button[type='submit']"
@@ -144,7 +147,9 @@ class WebDriver:
 	TIMEOUT_PAGE	 = 10
 	TIMEOUT_REDIRECT = 10
 
-	JSON_SAVE_PATH = os.getcwd()+"\\tmp\\tmp_instagram_profiles.txt"
+	TMP_SAVE_PROFILE = os.getcwd()+"\\tmp\\tmp_instagram_profiles.txt"
+	TMP_SAVE_HASHTAGS = os.getcwd()+"\\tmp\\tmp_instagram_hashtags.txt"
+
 	COOKIES_SAVE_PATH = os.getcwd()+"\\tmp\\instagram_cookies.txt" 
 
 	def __init__(self):
@@ -169,14 +174,14 @@ class WebDriver:
 		elements = self.driver.find_elements(By.CSS_SELECTOR, css_selector)
 		return len(elements) != 0
 
-	def _profile_is_available(self, url):
+	def _page_is_available(self, url):
 		try:
 			w_username = WebDriverWait(self.driver, self.TIMEOUT_PAGE).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.CSS_VALID_PAGE_DIV)))
 			return True
 		except TimeoutException as e:
 			return False
 	def _profile_is_private(self, url):
-		return self._profile_is_available(url) and self._selector_exists(self.CSS_PRIVATE)
+		return self._page_is_available(url) and self._selector_exists(self.CSS_PRIVATE)
 
 	def _scroll_to_page_bottom(self):
 		self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -198,7 +203,7 @@ class WebDriver:
 	def get_number_of_posts_in_profile(self):
 		elements = self._safe_get_web_elements(self.CSS_PAGE_DETAILS, self.TIMEOUT_ELEMENT)
 		if elements is None:
-			return -1
+			return 0
 		else:
 			ret = elements[0].text.replace(",","")
 			if ret == "":
@@ -210,7 +215,7 @@ class WebDriver:
 	def get_number_of_followers_in_profile(self):
 		elements = self._safe_get_web_elements(self.CSS_PAGE_DETAILS, self.TIMEOUT_ELEMENT)
 		if elements is None:
-			return -1
+			return 0
 		else:
 			ret = elements[1].get_attribute("title").replace(",","")
 			if ret == "":
@@ -221,7 +226,7 @@ class WebDriver:
 	def get_number_of_following_in_profile(self):
 		elements = self._safe_get_web_elements(self.CSS_PAGE_DETAILS, self.TIMEOUT_ELEMENT)
 		if elements is None:
-			return -1
+			return 0
 		else:
 			ret = elements[2].text.replace(",","")
 			if ret == "":
@@ -229,8 +234,15 @@ class WebDriver:
 			else:
 				return int(ret)
 		
+	def get_number_of_posts_in_hashtag(self):
+		element  = self._safe_get_web_element(self.CSS_PAGE_DETAILS, self.TIMEOUT_ELEMENT)
+		if element is None:
+			return 0
+		else:
+			return int(element.text.replace(",", ""))
 
-	
+
+
 	def login_instagram(self, username, password):
 		self.driver.get(self.URL_INSTAGRAM_LOGIN)
 
@@ -268,16 +280,91 @@ class WebDriver:
 		# sub_urls = OrderedSet()
 		sub_urls = {}
 		url_count = post_cap if post_cap < int(self.get_number_of_posts_in_profile()) else int(self.get_number_of_posts_in_profile())
-		
 		while (len(sub_urls) < url_count):
 			elements = self.driver.find_elements(By.CSS_SELECTOR, css_selector)
 			soup = BeautifulSoup(self.driver.page_source, 'html.parser')
 			elements = soup.select(css_selector)
 			for element in elements:
 				sub_urls[element['href']] = None
-				# sub_urls.add(element['href'])
 			self._scroll_to_page_bottom()
 		return {x for i, x in enumerate(sub_urls.keys()) if i < url_count}
+
+
+	def scrape_hashtags_suburls(self, username, password, joined_hashtags, post_cap):
+		try:
+			self.login_instagram(username, password)
+		except Exception as e:
+			return "Unable to login."
+
+		time.sleep(1)
+
+		# Layer1 
+		hashtags = { "scrape_mode":"hashtags", "platform":"instagram", "details": []}
+
+		parser = RequestParser(self.driver.get_cookies())
+
+		for hashtag in joined_hashtags.split(";"):
+			hashtag_url = self.URL_INSTAGRAM_HASHTAG + hashtag + "/"
+
+			self.driver.get(hashtag_url)
+
+			h_details = {}
+			
+
+			if (not self._page_is_available(hashtag_url)):
+				h_details['hash_tag_is_valid'] = "invalid"
+				hashtags['details'].append(h_details)
+				continue
+			else:
+				h_details['hash_tag_is_valid'] = "valid"
+
+			# Layer 2
+			h_details['hash_tag'] = hashtag
+			h_details['total_posts'] = int(self.get_number_of_posts_in_hashtag())
+			h_details['extracted_posts'] = []
+
+			print("Post cap before in: ", post_cap)
+			
+			posts_urls = self.get_posts_url(post_cap, self.CSS_HASHTAG_POSTS_SUB_URL)
+
+			for url in posts_urls:
+				h_details['extracted_posts'].append(
+					parser.get_post_dict(str(self.URL_INSTAGRAM_HOME[:-1])+str(url))
+					)
+
+			hashtags['details'].append(h_details)
+
+		with open(self.TMP_SAVE_HASHTAGS, 'w', encoding='utf-8') as outfile:
+			json.dump(hashtags, outfile, ensure_ascii=False)
+
+		print("done")
+			# Layer 3
+			# p_details["display_image_url"] = something
+			# p_details["posted_by"] = something
+			# p_details["no_of_comments"] = something
+			# p_details["location"] = something
+			# p_details["date_time"] = something
+
+			
+			# System.out.println("Putting number of likes");
+			# if (likes > -1) {
+			# 	post.put("no_of_likes", likes);
+			# 	post.put("no_of_views", 0
+			# 	post.put("type", "image")
+			
+			# else {
+			# 	double numberOfViews = this.getNumberOfViewsInPost();
+			# 	post.put("no_of_likes", 0);
+			# 	post.put("no_of_views", numberOfViews)
+			# 	post.put("type", "video")
+
+
+
+
+
+
+
+
 
 	def scrape_profiles_suburls(self, username, password, joined_profiles, post_cap):		
 		try:
@@ -299,7 +386,7 @@ class WebDriver:
 
 			p_details['profile_name'] = profile
 
-			if (not self._profile_is_available(profile_url)):
+			if (not self._page_is_available(profile_url)):
 				p_details['profile_is_viewable'] = "unavailable"
 				profiles['details'].append(p_details)
 				continue
@@ -310,6 +397,7 @@ class WebDriver:
 			else:
 				p_details['profile_is_viewable'] = "viewable"
 
+
 			p_details['profile_description'] = self.get_profile_description()
 			p_details['no_of_posts'] = int(self.get_number_of_posts_in_profile())
 			p_details['no_of_followers'] = int(self.get_number_of_followers_in_profile())
@@ -318,16 +406,15 @@ class WebDriver:
 			p_sub_urls = self.get_posts_url(post_cap, self.CSS_PROFILE_POSTS_SUB_URL)
 			# p_details['extracted_posts'] = [{'url':self.URL_INSTAGRAM_HOME + url} for url in p_sub_urls]
 			p_details['extracted_posts'] = []
-			profiles['details'].append(p_details)
-
 			for url in p_sub_urls:
 				p_details['extracted_posts'].append(
 					parser.get_post_dict(str(self.URL_INSTAGRAM_HOME[:-1])+str(url))
 					)
+			profiles['details'].append(p_details)
 
-
-		with open(self.JSON_SAVE_PATH, 'w', encoding='utf-8') as outfile:
+		with open(self.TMP_SAVE_PROFILE, 'w', encoding='utf-8') as outfile:
 			json.dump(profiles, outfile, ensure_ascii=False)
+
 
 
 	@property
@@ -364,25 +451,35 @@ if __name__ == '__main__':
 	# 2 number of posts
 	
 	start = WebDriver()
-	try: 
-		start.scrape_profiles_suburls("hehebongesher", "Password12345", "realdonaldtrump;hehebongesh;niggascrack", 4)
-	except Exception as e:
-		raise e
-		
+
+	# try: 
+	# 	start.scrape_profiles_suburls("hehebongesher", "Password12345", "realdonaldtrump;hehebongesh;niggascrack", 4)
+	# except Exception as e:
+	# 	raise e
 	
+
+	# try:
+	# start.scrape_hashtags_suburls("hehebongesher", "Password12345", "wuhan", 4)
+	# except Exception as e:
+	# 	print(e)
+
 		
-	# mode = sys.argv[1]
-
-	# if (mode == "instagram_profile" and (len(sys.argv)-2) >= 4):
-	# 	try:
-	# 		username, password, profiles, posts_cap = sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
-
-	# 		start.scrape_profiles_suburls(username, password, profiles, posts_cap)
-	# 	except Exception as e:
-	# 		print(e)
-	# elif (mode == "instagram_hashtag" and (len(sys.argv)-2) >= 4):
-
-	# 	pass
+	mode = sys.argv[1]
+	if (mode == "instagram_profile" and (len(sys.argv)-2) >= 4):
+		try:
+			username, password, profiles, posts_cap = sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
+			start.scrape_profiles_suburls(username, password, profiles, posts_cap)
+		except Exception as e:
+			print(e)
+	elif (mode == "instagram_hashtag" and (len(sys.argv)-2) >= 4):
+		try:
+			username, password, hashtags, posts_cap =  sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
+			start.scrape_hashtags_suburls(username, password, hashtags, posts_cap)
+		except Exception as e:
+			print(e)
+		pass
+	else:
+		print("Invalid number of parameters")
 
 
 

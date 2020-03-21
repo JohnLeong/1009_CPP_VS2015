@@ -25,11 +25,11 @@
     <Filter Include="Source Files\Utilities">
       <UniqueIdentifier>{846ee546-6a8a-4354-912f-157b2151a242}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\WebScrapping">
-      <UniqueIdentifier>{ad2b1c54-2d97-49f3-9804-57e07c8a7a4a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\WebScrapping">
       <UniqueIdentifier>{53344aa6-451b-4f8f-8092-a18e65e5b914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities\WebScrapping">
+      <UniqueIdentifier>{ad2b1c54-2d97-49f3-9804-57e07c8a7a4a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +75,9 @@
     <ClInclude Include="DateTimeUtility.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="OCR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -87,10 +90,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Bridge.cpp">
-      <Filter>Source Files\WebScrapping</Filter>
+      <Filter>Source Files\Utilities\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="InstagramScrapper.cpp">
-      <Filter>Source Files\WebScrapping</Filter>
+      <Filter>Source Files\Utilities\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="TwitterPost.cpp">
       <Filter>Source Files\DataStorage</Filter>
@@ -114,10 +117,13 @@
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
     <ClCompile Include="CurlObj.cpp">
-      <Filter>Source Files\WebScrapping</Filter>
+      <Filter>Source Files\Utilities\WebScrapping</Filter>
     </ClCompile>
     <ClCompile Include="DateTimeUtility.cpp">
       <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="OCR.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

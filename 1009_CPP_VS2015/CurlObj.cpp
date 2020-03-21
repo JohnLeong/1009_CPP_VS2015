@@ -1,6 +1,5 @@
 #include "CurlObj.h"
-#ifndef CURL_OBJ_CPP
-#define CURL_OBJ_CPP
+
 CURL_NAMESPACE_START
 
 CurlObj::CurlObj()
@@ -15,7 +14,7 @@ CurlObj::~CurlObj()
 	delete this->handle;
 }
 
-void CurlObj::initializeStartUpOptions() {
+void CurlObj::initializeScrapingOptions() {
 	if (this->handle) {
 		SETOPT(CURLOPT_USERAGENT, userAgent.c_str());
 		SETOPT(CURLOPT_AUTOREFERER, 1);
@@ -74,5 +73,43 @@ std::string CurlObj::getPageHtml(std::string url, std::string cookies) {
 	return "";
 }
 
+
+
+bool CurlObj::downloadImage(std::string imageUrl, std::string savePath) {
+	using std::cout; using std::endl;
+	
+	try {
+		cout << savePath.c_str() << endl;
+		FILE *file  = fopen(savePath.c_str(), "wb");
+		if (file == NULL) {
+			cout << "Unable to open file" << endl;
+			return false;
+		}
+		CURLcode result;
+		curl_global_init(CURL_GLOBAL_ALL);
+		this->handle = curl_easy_init();			
+			
+		SETOPT(CURLOPT_URL, imageUrl.c_str());
+		SETOPT(CURLOPT_WRITEDATA, file);
+
+		result = curl_easy_perform(this->handle);
+
+		fclose(file);
+
+		curl_easy_cleanup(this->handle);
+		curl_global_cleanup();
+
+		if (result != CURLE_OK) {
+			cout << "result != CURLE_OK" << endl;
+			return false;
+		}
+		
+		return true;		
+	} catch (...) {
+		cout << "Exception at downloadImage" << endl;
+		return false;
+	}
+
+
+}
 CURL_NAMESPACE_END
-#endif

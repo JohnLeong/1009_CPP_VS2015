@@ -1,6 +1,4 @@
 #include "FileUtility.h"
-#ifndef FILE_UTILITY_CPP
-#define FILE_UTILITY_CPP
 
 FILE_UTILITY_NAMESPACE_START
 
@@ -39,7 +37,7 @@ bool FileUtility::directoryExists(const std::string folderPath) {
 	return false;
 }
 
-std::string FileUtility::fileToString(const std::string filePath) {
+std::string FileUtility::getFileAsString(const std::string filePath) {
 	std::ifstream t(filePath);
 	t.seekg(0, std::ios::end);
 	size_t size = t.tellg();
@@ -50,4 +48,3 @@ std::string FileUtility::fileToString(const std::string filePath) {
 }
 
 FILE_UTILITY_NAMESPACE_END
-#endif
