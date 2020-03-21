@@ -12,20 +12,18 @@
 #include "macros.h"
 
 
-using json = nlohmann::json;
-using std::string;
 
 SOCIAL_MEDIA_COMMENT_NAMESPACE_START
 class SocialMediaComment
 {
-	PV_GET_SET(string, SocialMediaComment, commentBy, CommentBy)
-	PV_GET_SET(string, SocialMediaComment, comment, Comment)
+	PV_GET_SET(std::string, SocialMediaComment, commentBy, CommentBy)
+	PV_GET_SET(std::string, SocialMediaComment, comment, Comment)
 
 public:
 	SocialMediaComment();
 	~SocialMediaComment();
 	void printAttributes();
-	json getCommentJson();
+	nlohmann::json getCommentJson();
 };
 SOCIAL_MEDIA_COMMENT_NAMESPACE_END
 #endif

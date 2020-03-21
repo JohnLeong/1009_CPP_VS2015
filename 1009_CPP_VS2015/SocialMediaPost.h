@@ -1,8 +1,8 @@
 #pragma once
 #ifndef SOCIAL_MEDIA_POST_H
 #define SOCIAL_MEDIA_POST_H
-#define SOCIAL_MEDIA_NAMESPACE_START namespace ICT1009 { namespace DataStorage {
-#define SOCIAL_MEDIA_NAMESPACE_END }}
+#define SOCIAL_MEDIA_POST_NAMESPACE_START namespace ICT1009 { namespace DataStorage {
+#define SOCIAL_MEDIA_POST_NAMESPACE_END }}
 
 #include <vector>
 #include <memory>
@@ -11,7 +11,7 @@
 using std::string;
 using std::vector;
 
-SOCIAL_MEDIA_NAMESPACE_START
+SOCIAL_MEDIA_POST_NAMESPACE_START
 class SocialMediaPost
 {
 	typedef std::shared_ptr<SocialMediaComment> SocialMediaCommentPtr;
@@ -31,9 +31,9 @@ public:
 	vector<string> getHashtags();
 	bool addComment(SocialMediaCommentPtr comment);	
 	void printAttributes();
-	virtual json getPostJson();
+	virtual nlohmann::json getPostJson();
 	
 };
-SOCIAL_MEDIA_NAMESPACE_END
+SOCIAL_MEDIA_POST_NAMESPACE_END
 
 #endif

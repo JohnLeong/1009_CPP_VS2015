@@ -26,13 +26,14 @@ int main() {
 	Application::Run(%form);*/
 
 
-	//ICT1009::WebScrapping::InstagramScrapper scrapper;
-	//std::cout << "---Start---" << std::endl;
-	////Parameters: Username, Password, profiles, PostCap, SaveFolderPath
-	//scrapper.scrapeByProfiles("hehebongesher", "Password12345", "realdonaldtrump;sgsitconfessions", 2, "C:\\Users\\user\\Desktop\\Json Export2");
+	ICT1009::WebScrapping::InstagramScrapper scrapper;
+	std::cout << "---Start---" << std::endl;
+	//Parameters: Username, Password, profiles, PostCap, SaveFolderPath
+	//scrapper.scrapeByHashTags("hehebongesher", "Password12345", "apple;orange", 2, "C:\\Users\\user\\Desktop\\Json Export2");
+	//scrapper.scrapeByProfiles("hehebongesher", "Password12345", "sgsitconfessions", 20, "C:\\Users\\user\\Desktop\\Json Export2");
 
 	ICT1009::TextRecognition::OCRUtility test;
-	test.appendImagesTextToJson("C:\\Users\\User\\Desktop\\Json Export2\\19-03-2020_19-03-52.txt");
+	test.appendImagesTextToJson("C:\\Users\\User\\Desktop\\Json Export2\\22-03-2020_01-06-28.txt");
 	/*ICT1009::WebScrapping::CurlObj obj;
 	if (obj.downloadImage("https://instagram.fsin2-1.fna.fbcdn.net/v/t51.2885-15/e35/90085970_142309450600811_4714120005388155425_n.jpg?_nc_ht=instagram.fsin2-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=yOgmTAg_enAAX_URou9&oh=b8f35dc4a3fbd7168566d828b38b4f79&oe=5E760813", "ocr.jpg")) {
 		

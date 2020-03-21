@@ -33,7 +33,7 @@ int Bridge::executeScript(std::string scriptName, std::string parameters) {
 	std::string scriptPath = FileUtility::getCurrentWorkingDirectory() + "\\" + scriptName;
 	if (!FileUtility::fileExists(scriptPath))
 		std::cout << "File: "  + scriptPath << "does not exits" << std::endl;
-		throw "File: " + scriptPath + " does not exists.";
+		//throw "File: " + scriptPath + " does not exists.";
 	
 	std::string command = "\"" + this->executable + "\" " + scriptName + " " + parameters;
 	int res = system(command.c_str());

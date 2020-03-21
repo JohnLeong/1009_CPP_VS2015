@@ -102,8 +102,7 @@ bool CurlObj::downloadImage(std::string imageUrl, std::string savePath) {
 		if (result != CURLE_OK) {
 			cout << "result != CURLE_OK" << endl;
 			return false;
-		}
-		
+		}		
 		return true;		
 	} catch (...) {
 		cout << "Exception at downloadImage" << endl;

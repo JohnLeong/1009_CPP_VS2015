@@ -1,4 +1,10 @@
-import sys, os, configparser, time, json, requests, re, collections
+import sys
+import os
+import time
+import json
+import requests
+import re
+import collections
 from datetime import datetime
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -436,6 +442,7 @@ class WebDriver:
 			self._open = False
 
 
+
 	def __exit__(self, type, value, traceback):
 		self._quit()
 
@@ -459,25 +466,24 @@ if __name__ == '__main__':
 	
 
 	# try:
-	# start.scrape_hashtags_suburls("hehebongesher", "Password12345", "wuhan", 4)
+	# 	start.scrape_hashtags_suburls("hehebongesher", "Password12345", "wuhan", 4)
 	# except Exception as e:
 	# 	print(e)
 
-		
+
 	mode = sys.argv[1]
 	if (mode == "instagram_profile" and (len(sys.argv)-2) >= 4):
 		try:
-			username, password, profiles, posts_cap = sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
-			start.scrape_profiles_suburls(username, password, profiles, posts_cap)
+			username, password, profiles, posts_cap = sys.argv[2], sys.argv[3], sys.argv[4], float(sys.argv[5])
+			start.scrape_profiles_suburls(username, password, profiles, float(posts_cap))
 		except Exception as e:
 			print(e)
 	elif (mode == "instagram_hashtag" and (len(sys.argv)-2) >= 4):
 		try:
-			username, password, hashtags, posts_cap =  sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
-			start.scrape_hashtags_suburls(username, password, hashtags, posts_cap)
+			username, password, hashtags, posts_cap =  sys.argv[2], sys.argv[3], sys.argv[4], float(sys.argv[5])
+			start.scrape_hashtags_suburls(username, password, hashtags, float(posts_cap))
 		except Exception as e:
 			print(e)
-		pass
 	else:
 		print("Invalid number of parameters")
 

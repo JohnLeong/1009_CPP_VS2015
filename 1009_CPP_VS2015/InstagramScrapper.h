@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <memory>
 
 #define nullptr __nullptr
 #include "json.hpp"
@@ -23,7 +24,8 @@ using ICT1009::Utility::FileUtility;
 INSTAGRAM_NAMESPACE_START
 class InstagramScrapper
 {
-	
+	typedef std::shared_ptr<ICT1009::WebScrapping::Bridge> BridgePtr;
+	BridgePtr bridge;					// To execute Tessearct Executable.
 
 	PV_GET_SET(std::string, InstagramScrapper, username, Username)
 	PV_GET_SET(std::string, InstagramScrapper, password, Password)
@@ -32,7 +34,8 @@ class InstagramScrapper
 
 private:
 	const std::string cookieFileName;
-	const std::string profileTempFile;	
+	const std::string tempHashTagFile;
+	const std::string tempProfileFile;	
 public:
 	InstagramScrapper();
 	~InstagramScrapper();

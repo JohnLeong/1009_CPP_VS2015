@@ -19,11 +19,20 @@ OCRUtility::~OCRUtility()
 	*/
 }
 
-
-int OCRUtility::imageUrlToText(std::string imageUrl) 
+bool OCRUtility::downloadImage(const std::string imageUrl)
 {
-	return 0;
+	//this->downloader->downloadImage(post["display_image_url"].get<std::string>(), tempDownloadImage);
+	return this->downloader->downloadImage(imageUrl, tempDownloadImage);
 }
+std::string OCRUtility::getDownloadedImageText() {
+	using ICT1009::Utility::FileUtility;
+	this->bridge->execute(tempDownloadImage + " " + tempImageTextFile);
+	if (FileUtility::fileExists(FileUtility::getCurrentWorkingDirectory()+"\\"+tempImageTextFile+".txt")) 
+		return FileUtility::getFileAsString(tempImageTextFile+".txt");
+	else 	
+		return "Downloaded Image not found";
+}
+
 
 void OCRUtility::appendImagesTextToJson(std::string jsonPath)
 {
@@ -39,27 +48,21 @@ void OCRUtility::appendImagesTextToJson(std::string jsonPath)
 		Remove temp downloaded image if possible
 		Remove temp image text file if possible
 	*/
-	remove(this->tempDownloadImage.c_str());
-	remove((this->tempImageTextFile+".txt").c_str());
 
 	bridge->setExecutable(this->executablePath);
 
 	for (auto &detail : j["details"]) {
 		for (auto &post : detail["extracted_posts"]) {
-			this->downloader->downloadImage(post["display_image_url"].get<std::string>(), this->tempDownloadImage);
-			this->bridge->execute(this->tempDownloadImage + " " + this->tempImageTextFile);
-			if (FileUtility::fileExists(FileUtility::getCurrentWorkingDirectory()+"\\"+tempImageTextFile+".txt")) {
-				std::cout << "Managed to insert text" << std::endl;
-				post["img_ocr_text"] = FileUtility::getFileAsString(this->tempImageTextFile+".txt");
-			} else {
-				std::cout << "Failed to get text" << std::endl;
-				post["img_ocr_text"] = "Error";
-			}
+			if (downloadImage(post["display_image_url"].get<std::string>()))
+				post["img_ocr_text"] = getDownloadedImageText();
+			else 
+				post["img_ocr_text"] = "Unable to download file";
+			
+			remove(this->tempDownloadImage.c_str());
+			remove((this->tempImageTextFile+".txt").c_str());
 		}
 	}
-	remove(this->tempDownloadImage.c_str());
-	remove((this->tempImageTextFile+".txt").c_str());
-	std::ofstream o(jsonPath); o << j << std::endl; o.close();
 
+	std::ofstream o(jsonPath); o << j << std::endl; o.close();
 }
 OCR_UTILITY_NAMESPACE_END

@@ -9,10 +9,19 @@
 
 using std::vector;
 
+
+#define PLATFORM_INSTAGRAM 0
+#define PLATFORM_TWITTER 1
+#define SCRAPE_MODE_HASHTAG 0
+#define SCRAPE_MODE_PROFILE 1
+
 SOCIAL_MEDIA_POST_STORAGE_NAMESPACE_START
 class SocialMediaPostStorage
 {	
 	typedef std::shared_ptr<SocialMediaPost> SocialMediaPostPtr;
+	//typedef ICT1009::DataStorage::ScrapeStorage::Platform Platform;
+	//typedef ICT1009::DataStorage::ScrapeStorage::ScrapeMode ScrapeMode;
+
 	/*	
 		PV = private
 		PRT = protected
@@ -27,14 +36,16 @@ class SocialMediaPostStorage
 	PV_GET_SET(unsigned int, SocialMediaPostStorage, followingCount, FollowingCount)	//Number of following
 	PV_GET_SET(vector<SocialMediaPostPtr>, SocialMediaPostStorage, postList, PostList)	//Vector to store all posts	
 
+
+
 public:
 			
 	SocialMediaPostStorage();
 	~SocialMediaPostStorage();
 
 	bool addPost(SocialMediaPostPtr post);
-	json getProfileJson();
-	
+	nlohmann::json getTargetJson(int platform, int mode);
+	nlohmann::json getPostJson(int platform);
 
 		
 };

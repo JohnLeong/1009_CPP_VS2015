@@ -25,8 +25,9 @@ void SocialMediaComment::printAttributes()
 	}
 }
 
-json SocialMediaComment::getCommentJson()
+nlohmann::json SocialMediaComment::getCommentJson()
 {
+	using json = nlohmann::json;
 	json commentDetails;
 	if (commentBy == "" && comment == "") 
 		commentDetails = json::object({});

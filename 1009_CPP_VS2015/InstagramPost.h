@@ -38,11 +38,12 @@ public:
 	PV_GET_SET(string, InstagramPost, timeStamp, TimeStamp)				//Datetime
 	PV_GET_SET(string, InstagramPost, location, Location)					//location
 	
+
 public:
 	InstagramPost();
 	~InstagramPost();
 	void printAttributes();
-	json getPostJson();
+	nlohmann::json getPostJson();
 };
 
 INSTAGRAM_POST_NAMESPACE_END

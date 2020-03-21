@@ -33,13 +33,12 @@ private:
 	
 
 	bool downloadImage(const std::string imageUrl);		
-	void preprocessImage(const std::string imagePath);
-	std::string ocrImage(const std::string imagePath);
+	std::string getDownloadedImageText();
 public:
 	OCRUtility();
 	~OCRUtility();
 	
-	int imageUrlToText(std::string imageUrl);
+
 	void appendImagesTextToJson(std::string jsonPath);
 
 	

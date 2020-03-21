@@ -3,13 +3,11 @@
 SCRAPE_STORAGE_NAMESPACE_START
 
 ScrapeStorage::ScrapeStorage()
-	: scrapePlatform(ScrapeStorage::INSTAGRAM), mode(ScrapeStorage::HASHTAG)
 {	
 }
 
 //Load from a json file
 ScrapeStorage::ScrapeStorage(string filePath)
-	: scrapePlatform(ScrapeStorage::INSTAGRAM), mode(ScrapeStorage::HASHTAG)
 {
 
 }
@@ -19,23 +17,23 @@ ScrapeStorage::~ScrapeStorage()
 
 }
 
-json ScrapeStorage::getOutputJsonObject()
+nlohmann::json ScrapeStorage::getOutputJsonObject()
 {
-	json scrapeResult;
-	json details;
+	using json = nlohmann::json;
+	json scrapeResult; json details;
+	
 	for (size_t i = 0; i < scrapedDetails.size();
-		details.push_back(scrapedDetails[i++]->getProfileJson()));
+		details.push_back(scrapedDetails[i++]->getTargetJson(scrapePlatform, mode)));
 
-	scrapeResult["platform"] = this->scrapePlatform == INSTAGRAM ?
-		"instagram" :
-		"twitter";
-	scrapeResult["scrape_mode"] = this->mode == PROFILE ? "profiles" : "hashtags";
+	scrapeResult["platform"] = this->scrapePlatform == Platform::Instagram ? "instagram" : "twitter";
+	scrapeResult["scrape_mode"] = this->mode == ScrapeMode::Profile ? "profiles" : "hashtags";
 	scrapeResult["details"] = details;
 	return scrapeResult;
 }
 
 bool ScrapeStorage::saveToFile(string folderPath)
 {
+	using json = nlohmann::json;
 	using ICT1009::Utility::FileUtility;
 	using ICT1009::Utility::DateTimeUtility;
 	if (!FileUtility::directoryExists(folderPath))
@@ -60,7 +58,7 @@ bool ScrapeStorage::saveToFile(string folderPath)
 string ScrapeStorage::getJsonString()
 {
 	try {
-		json j = getOutputJsonObject();
+		nlohmann::json j = getOutputJsonObject();
 		return j.dump();
 	} catch (...) {
 		return "";

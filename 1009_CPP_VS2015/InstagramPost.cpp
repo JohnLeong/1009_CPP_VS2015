@@ -2,7 +2,6 @@
 
 INSTAGRAM_POST_NAMESPACE_START
 
-
 InstagramPost::InstagramPost()
 	: postUrl(""), imageUrl(""), commentsCount(0), type(InstagramPost::PostType::IMAGE),
 	videoViews(0), timeStamp(""), location(""), SocialMediaPost()
@@ -11,11 +10,11 @@ InstagramPost::InstagramPost()
 
 InstagramPost:: ~InstagramPost()
 {
-
 }
 
-json InstagramPost::getPostJson()
+nlohmann::json InstagramPost::getPostJson()
 {
+	using json = nlohmann::json;
 
 	json post;
 	json jsonComments;
@@ -53,7 +52,6 @@ void InstagramPost::printAttributes()
 	cout << "Likes: " << this->getLikes() << endl;
 	cout << "Caption: " << this->getCaption() << endl;
 	cout << "PostedBy: " << this->getPostedBy()<< endl;
-	
 	for (std::size_t i = 0; i < this->commentList.size(); this->commentList[i++]->printAttributes());
 }
 

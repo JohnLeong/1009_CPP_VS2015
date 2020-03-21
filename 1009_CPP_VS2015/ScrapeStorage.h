@@ -6,6 +6,7 @@
 #include "SocialMediaPostStorage.h"
 #include "FileUtility.h"
 #include "DateTimeUtility.h"
+
 using std::vector;
 
 SCRAPE_STORAGE_NAMESPACE_START
@@ -13,22 +14,30 @@ class ScrapeStorage
 {
 	// Usage of smart pointers
 	typedef std::shared_ptr<SocialMediaPostStorage> SocialMediaPostStoragePtr;
+
 public:
-	enum Platform
-	{
-		INSTAGRAM,
-		TWITTER
+
+	/*
+		Enum in c++ dont use all caps will colide with macros naming.
+	*/
+	
+	enum Platform {
+		Instagram = 0,
+		Twitter = 1
 	};
-	enum ScrapeMode
-	{
-		HASHTAG,
-		PROFILE
+
+	enum ScrapeMode {
+		Hashtag = 0,
+		Profile = 1
 	};
+
 
 	PV_GET_SET(Platform, ScrapeStorage, scrapePlatform, ScrapePlatform)
 	PV_GET_SET(ScrapeMode, ScrapeStorage, mode, Mode)
 	PV_GET_SET(vector<SocialMediaPostStoragePtr>, ScrapeStorage, scrapedDetails, ScrapedDetails)
 	
+
+
 public:
 	ScrapeStorage();
 	ScrapeStorage(const string filePath);
@@ -37,7 +46,7 @@ public:
 	//
 	bool saveToFile(const string filePath);
 	string getJsonString();
-	json getOutputJsonObject();
+	nlohmann::json getOutputJsonObject();
 
 	//To append items into SocialMediaPost Vector
 	bool addDetails(SocialMediaPostStoragePtr details);
