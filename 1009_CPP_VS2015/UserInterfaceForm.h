@@ -1182,11 +1182,10 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 			std::string filePath = msclr::interop::marshal_as<std::string>(imageOcrFilePathValueLabel->Text);
 			typedef std::shared_ptr<ICT1009::TextRecognition::OCRUtility> OCRPtr;
 			OCRPtr extractor(new ICT1009::TextRecognition::OCRUtility);
-			extractor->appendImagesTextToJson(filePath);
-			/*switch (extractor->appendImagesTextToJson(filePath)) {
-				case 1:
-					imageOcrConsoleTextBox->AppendText("Successfully appeneded image text to file\r\n");
-					break;
+			imageOcrConsoleTextBox->AppendText("Executing OCR procedure...\r\n");
+			
+			int returnCode = extractor->appendImagesTextToJson(filePath);
+			switch (returnCode) {
 				case -1:
 					imageOcrConsoleTextBox->AppendText("Unable to read specified Json file\r\n");
 					break;
@@ -1194,8 +1193,12 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 					imageOcrConsoleTextBox->AppendText("Unable to append to Json file\r\n");
 					break;
 				default:
-					imageOcrConsoleTextBox->AppendText("Default Case\r\n");
-			}*/
+					if (returnCode > 1) {
+
+						imageOcrConsoleTextBox->AppendText("Successfully appended image text to file\r\n");
+					}
+					//imageOcrConsoleTextBox->AppendText("Default Case\r\n");
+			}
 		}
 	}
 

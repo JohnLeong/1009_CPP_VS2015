@@ -37,6 +37,12 @@
     <Filter Include="Source Files\WebScrapping">
       <UniqueIdentifier>{ad2b1c54-2d97-49f3-9804-57e07c8a7a4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\OCR">
+      <UniqueIdentifier>{2d4ea2d2-0076-4a1b-8559-a68c2407edde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OCR">
+      <UniqueIdentifier>{ca079688-8322-43f2-823f-e9ae489c0590}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UserInterfaceForm.h">
@@ -91,7 +97,7 @@
       <Filter>Header Files\Analysis</Filter>
     </ClInclude>
     <ClInclude Include="OCRUtility.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OCR</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -147,7 +153,7 @@
       <Filter>Source Files\Analysis</Filter>
     </ClCompile>
     <ClCompile Include="OCRUtility.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OCR</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

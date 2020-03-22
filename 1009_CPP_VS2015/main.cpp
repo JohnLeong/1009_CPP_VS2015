@@ -14,12 +14,12 @@
 #include "DateTimeUtility.h"
 #include "CurlObj.h"
 
-
 using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThread]
 int main() {
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	My1009_CPP_VS2015::UserInterfaceForm form;
@@ -41,8 +41,8 @@ int main() {
 		std::cout << "failed" << std::endl;
 	}*/
 
-	int block;
-	std::cin >> block;
+	/*int block;
+	std::cin >> block;*/
 	//std::cout << "Folder exists: " << FileUtility::directoryExists("C:\\Users\\user\\Desktop\\Json Export32") << std::endl;
 	return 0;
 }

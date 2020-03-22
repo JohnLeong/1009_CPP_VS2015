@@ -10,8 +10,7 @@ CurlObj::CurlObj()
 
 CurlObj::~CurlObj()
 {
-	curl_global_cleanup();
-	delete this->handle;
+	
 }
 
 void CurlObj::initializeScrapingOptions() {
@@ -85,6 +84,7 @@ bool CurlObj::downloadImage(std::string imageUrl, std::string savePath) {
 			cout << "Unable to open file" << endl;
 			return false;
 		}
+
 		CURLcode result;
 		curl_global_init(CURL_GLOBAL_ALL);
 		this->handle = curl_easy_init();			

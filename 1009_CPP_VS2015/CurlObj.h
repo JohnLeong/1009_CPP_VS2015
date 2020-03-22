@@ -4,6 +4,7 @@
 
 #include <string>
 #include <iostream>
+#include <memory>
 #include "curl\curl.h"
 #include "FileUtility.h"
 
@@ -16,8 +17,10 @@ CURL_NAMESPACE_START
 
 class CurlObj
 {
+	typedef std::shared_ptr<CURL> CurlPtr;
+
 private:
-	CURL *handle;
+	CURL* handle;
 	const std::string userAgent;
 	std::string buffer;
 public:
