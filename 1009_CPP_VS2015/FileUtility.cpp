@@ -47,4 +47,20 @@ std::string FileUtility::getFileAsString(const std::string filePath) {
 	return buffer;
 }
 
+bool FileUtility::saveStringToFile(const std::string output, const std::string filePath) {
+	try {
+		std::ofstream file(filePath);
+		if (file.is_open()) {
+			file << output << std::endl;
+			file.close();
+			return true;
+		} else {
+			return false;
+		}
+	} catch (...){
+		return false;
+	}
+	return false;
+}
+
 FILE_UTILITY_NAMESPACE_END

@@ -29,6 +29,7 @@ public:
 	static bool fileExists(std::string filePath);
 	static std::string getFileAsString(const std::string filePath);
 	static bool directoryExists(const std::string folderPath);
+	static bool saveStringToFile(const std::string output, const std::string filePath);
 };
 
 FILE_UTILITY_NAMESPACE_END

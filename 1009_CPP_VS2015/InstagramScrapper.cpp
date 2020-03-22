@@ -100,7 +100,7 @@ nextiteration:
 	//Add error checks later...
 	storage->saveToFile(savePath);
 
-	return 0;
+	return 1;
 }
 
 /*-----------------------------------------------------------------*/
@@ -201,6 +201,6 @@ nextiteration:
 
 	//Add error checks later...
 	storage->saveToFile(savePath);
-	return 0;
+	return 1;
 }
 INSTAGRAM_NAMESPACE_END
