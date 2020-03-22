@@ -329,7 +329,7 @@ class WebDriver:
 			h_details['total_posts'] = int(self.get_number_of_posts_in_hashtag())
 			h_details['extracted_posts'] = []
 
-			print("Post cap before in: ", post_cap)
+			# print("Post cap before in: ", post_cap)
 			
 			posts_urls = self.get_posts_url(post_cap, self.CSS_HASHTAG_POSTS_SUB_URL)
 
@@ -343,7 +343,7 @@ class WebDriver:
 		with open(self.TMP_SAVE_HASHTAGS, 'w', encoding='utf-8') as outfile:
 			json.dump(hashtags, outfile, ensure_ascii=False)
 
-		print("done")
+		# print("done")
 			# Layer 3
 			# p_details["display_image_url"] = something
 			# p_details["posted_by"] = something
@@ -495,4 +495,3 @@ if __name__ == '__main__':
 
 
 
-	

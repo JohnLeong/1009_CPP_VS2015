@@ -74,7 +74,7 @@ int InstagramScrapper::scrapeByHashTags(const std::string username, const std::s
 		hashTags->setPostsCount(detail["total_posts"].get<int>());	//change to total_posts
 
 		for (auto &post : detail["extracted_posts"]) {
-			cout << "\n\n" << endl;
+			//cout << "\n\n" << endl;
 			instagramPost = InstagramPostPtr(new InstagramPost());
 			instagramPost->setCaption(post["caption"].get<string>());
 			instagramPost->setPostUrl(post["post_url"].get<string>());
@@ -94,8 +94,8 @@ nextiteration:
 		storage->addDetails(hashTags);
 	}
 
-	cout << "Printing JSON details: \n\n" << endl;
-	cout << storage->getJsonString() << endl;
+	//cout << "Printing JSON details: \n\n" << endl;
+	//cout << storage->getJsonString() << endl;
 
 	//Add error checks later...
 	storage->saveToFile(savePath);
