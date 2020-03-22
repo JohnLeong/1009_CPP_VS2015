@@ -3,6 +3,7 @@
 #include <iostream>
 #include "InstagramScrapper.h"
 #include "FileUtility.h"
+#include "OCRUtility.h"
 #define nullptr __nullptr
 #include "json.hpp"
 #undef nullptr
@@ -121,6 +122,18 @@ namespace My1009_CPP_VS2015 {
 
 	private: System::Windows::Forms::TabPage^  imageOcrTab;
 	private: System::Windows::Forms::Label^  imageOcrHeaderLabel;
+	private: System::Windows::Forms::Label^  imageOcrFilePathLabel;
+
+	private: System::Windows::Forms::Label^  imageOcrDescriptionLabel;
+	private: System::Windows::Forms::Label^  imageOcrFilePathHeaderLabel;
+private: System::Windows::Forms::Label^  imageOcrFilePathValueLabel;
+private: System::Windows::Forms::Button^  imageOcrExecuteButton;
+private: System::Windows::Forms::TextBox^  imageOcrConsoleTextBox;
+private: System::Windows::Forms::Button^  imageOcrBrowseJsonButton;
+private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
+
+
+
 
 
 
@@ -208,11 +221,19 @@ namespace My1009_CPP_VS2015 {
 			this->visualisationTab = (gcnew System::Windows::Forms::TabPage());
 			this->visualisationHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->imageOcrTab = (gcnew System::Windows::Forms::TabPage());
+			this->imageOcrExecuteButton = (gcnew System::Windows::Forms::Button());
+			this->imageOcrConsoleTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->imageOcrBrowseJsonButton = (gcnew System::Windows::Forms::Button());
+			this->imageOcrFilePathHeaderLabel = (gcnew System::Windows::Forms::Label());
+			this->imageOcrFilePathValueLabel = (gcnew System::Windows::Forms::Label());
+			this->imageOcrFilePathLabel = (gcnew System::Windows::Forms::Label());
+			this->imageOcrDescriptionLabel = (gcnew System::Windows::Forms::Label());
 			this->imageOcrHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->aboutTab = (gcnew System::Windows::Forms::TabPage());
 			this->instagramFolderDialog = (gcnew System::Windows::Forms::FolderBrowserDialog());
 			this->displayJsonLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->displayJsonSaveFileDialog = (gcnew System::Windows::Forms::SaveFileDialog());
+			this->imageOcrLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->sidePanelBacking->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sitLogo))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -813,6 +834,13 @@ namespace My1009_CPP_VS2015 {
 			// 
 			// imageOcrTab
 			// 
+			this->imageOcrTab->Controls->Add(this->imageOcrExecuteButton);
+			this->imageOcrTab->Controls->Add(this->imageOcrConsoleTextBox);
+			this->imageOcrTab->Controls->Add(this->imageOcrBrowseJsonButton);
+			this->imageOcrTab->Controls->Add(this->imageOcrFilePathHeaderLabel);
+			this->imageOcrTab->Controls->Add(this->imageOcrFilePathValueLabel);
+			this->imageOcrTab->Controls->Add(this->imageOcrFilePathLabel);
+			this->imageOcrTab->Controls->Add(this->imageOcrDescriptionLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrHeaderLabel);
 			this->imageOcrTab->Location = System::Drawing::Point(12, 58);
 			this->imageOcrTab->Name = L"imageOcrTab";
@@ -820,6 +848,73 @@ namespace My1009_CPP_VS2015 {
 			this->imageOcrTab->TabIndex = 6;
 			this->imageOcrTab->Text = L"6";
 			this->imageOcrTab->UseVisualStyleBackColor = true;
+			// 
+			// imageOcrExecuteButton
+			// 
+			this->imageOcrExecuteButton->Location = System::Drawing::Point(223, 277);
+			this->imageOcrExecuteButton->Name = L"imageOcrExecuteButton";
+			this->imageOcrExecuteButton->Size = System::Drawing::Size(75, 56);
+			this->imageOcrExecuteButton->TabIndex = 7;
+			this->imageOcrExecuteButton->Text = L"Execute";
+			this->imageOcrExecuteButton->UseVisualStyleBackColor = true;
+			this->imageOcrExecuteButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::imageOcrExecuteButton_Click);
+			// 
+			// imageOcrConsoleTextBox
+			// 
+			this->imageOcrConsoleTextBox->Location = System::Drawing::Point(56, 406);
+			this->imageOcrConsoleTextBox->Multiline = true;
+			this->imageOcrConsoleTextBox->Name = L"imageOcrConsoleTextBox";
+			this->imageOcrConsoleTextBox->ReadOnly = true;
+			this->imageOcrConsoleTextBox->Size = System::Drawing::Size(705, 225);
+			this->imageOcrConsoleTextBox->TabIndex = 6;
+			// 
+			// imageOcrBrowseJsonButton
+			// 
+			this->imageOcrBrowseJsonButton->Location = System::Drawing::Point(53, 280);
+			this->imageOcrBrowseJsonButton->Name = L"imageOcrBrowseJsonButton";
+			this->imageOcrBrowseJsonButton->Size = System::Drawing::Size(75, 23);
+			this->imageOcrBrowseJsonButton->TabIndex = 5;
+			this->imageOcrBrowseJsonButton->Text = L"Browse";
+			this->imageOcrBrowseJsonButton->UseVisualStyleBackColor = true;
+			this->imageOcrBrowseJsonButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::imageOcrBrowseJsonButton_Click);
+			// 
+			// imageOcrFilePathHeaderLabel
+			// 
+			this->imageOcrFilePathHeaderLabel->AutoSize = true;
+			this->imageOcrFilePathHeaderLabel->Location = System::Drawing::Point(50, 130);
+			this->imageOcrFilePathHeaderLabel->Name = L"imageOcrFilePathHeaderLabel";
+			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(208, 37);
+			this->imageOcrFilePathHeaderLabel->TabIndex = 4;
+			this->imageOcrFilePathHeaderLabel->Text = L"File Location:";
+			// 
+			// imageOcrFilePathValueLabel
+			// 
+			this->imageOcrFilePathValueLabel->AutoSize = true;
+			this->imageOcrFilePathValueLabel->Location = System::Drawing::Point(150, 200);
+			this->imageOcrFilePathValueLabel->Name = L"imageOcrFilePathValueLabel";
+			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(94, 37);
+			this->imageOcrFilePathValueLabel->TabIndex = 3;
+			this->imageOcrFilePathValueLabel->Text = L"None";
+			// 
+			// imageOcrFilePathLabel
+			// 
+			this->imageOcrFilePathLabel->AutoSize = true;
+			this->imageOcrFilePathLabel->Location = System::Drawing::Point(50, 200);
+			this->imageOcrFilePathLabel->Name = L"imageOcrFilePathLabel";
+			this->imageOcrFilePathLabel->Size = System::Drawing::Size(182, 37);
+			this->imageOcrFilePathLabel->TabIndex = 2;
+			this->imageOcrFilePathLabel->Text = L"File loaded:";
+			// 
+			// imageOcrDescriptionLabel
+			// 
+			this->imageOcrDescriptionLabel->AutoSize = true;
+			this->imageOcrDescriptionLabel->Location = System::Drawing::Point(44, 73);
+			this->imageOcrDescriptionLabel->Name = L"imageOcrDescriptionLabel";
+			this->imageOcrDescriptionLabel->Size = System::Drawing::Size(2555, 37);
+			this->imageOcrDescriptionLabel->TabIndex = 1;
+			this->imageOcrDescriptionLabel->Text = L"*This function is currently only compatible with Instagram scraped Data. For ever"
+				L"y post in the JSON file, an ocr_text field will be appended to it whenever text "
+				L"extraction is possible. ";
 			// 
 			// imageOcrHeaderLabel
 			// 
@@ -840,6 +935,10 @@ namespace My1009_CPP_VS2015 {
 			this->aboutTab->TabIndex = 7;
 			this->aboutTab->Text = L"7";
 			this->aboutTab->UseVisualStyleBackColor = true;
+			// 
+			// imageOcrLoadFileDialog
+			// 
+			this->imageOcrLoadFileDialog->FileName = L"openFileDialog1";
 			// 
 			// UserInterfaceForm
 			// 
@@ -1066,12 +1165,40 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 		}
 	}
 
+	private: System::Void imageOcrBrowseJsonButton_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (imageOcrLoadFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+			imageOcrFilePathValueLabel->Text = imageOcrLoadFileDialog->FileName;
+		}
+	}
 
 
 
 
+	private: System::Void imageOcrExecuteButton_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (imageOcrFilePathValueLabel->Text == "None" or imageOcrFilePathValueLabel->Text == "") {
+			imageOcrConsoleTextBox->AppendText("Please choose json file to conduct OCR on \r\n");
+		} else {
+			using nlohmann::json;
+			std::string filePath = msclr::interop::marshal_as<std::string>(imageOcrFilePathValueLabel->Text);
+			typedef std::shared_ptr<ICT1009::TextRecognition::OCRUtility> OCRPtr;
+			OCRPtr extractor(new ICT1009::TextRecognition::OCRUtility);
+			extractor->appendImagesTextToJson(filePath);
+			/*switch (extractor->appendImagesTextToJson(filePath)) {
+				case 1:
+					imageOcrConsoleTextBox->AppendText("Successfully appeneded image text to file\r\n");
+					break;
+				case -1:
+					imageOcrConsoleTextBox->AppendText("Unable to read specified Json file\r\n");
+					break;
+				case -2:
+					imageOcrConsoleTextBox->AppendText("Unable to append to Json file\r\n");
+					break;
+				default:
+					imageOcrConsoleTextBox->AppendText("Default Case\r\n");
+			}*/
+		}
+	}
 
-// End point
 
-};
+}; //Endpoint
 }

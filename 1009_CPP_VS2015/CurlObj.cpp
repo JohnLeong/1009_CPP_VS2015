@@ -108,7 +108,5 @@ bool CurlObj::downloadImage(std::string imageUrl, std::string savePath) {
 		cout << "Exception at downloadImage" << endl;
 		return false;
 	}
-
-
 }
 CURL_NAMESPACE_END

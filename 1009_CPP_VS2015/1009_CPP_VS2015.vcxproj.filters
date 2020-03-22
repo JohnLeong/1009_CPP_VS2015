@@ -81,9 +81,6 @@
     <ClInclude Include="DateTimeUtility.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="OCR.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DataAnalyser.h">
       <Filter>Header Files\Analysis</Filter>
     </ClInclude>
@@ -92,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="AnalysedData.h">
       <Filter>Header Files\Analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="OCRUtility.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,9 +137,6 @@
     <ClCompile Include="DateTimeUtility.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="OCR.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DataAnalyser.cpp">
       <Filter>Source Files\Analysis</Filter>
     </ClCompile>
@@ -148,6 +145,9 @@
     </ClCompile>
     <ClCompile Include="AnalysedData.cpp">
       <Filter>Source Files\Analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="OCRUtility.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

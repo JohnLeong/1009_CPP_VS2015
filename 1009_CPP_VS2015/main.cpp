@@ -13,7 +13,7 @@
 #include "FileUtility.h"
 #include "DateTimeUtility.h"
 #include "CurlObj.h"
-#include "OCR.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;

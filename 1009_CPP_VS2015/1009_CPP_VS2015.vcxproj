@@ -145,7 +145,7 @@
     <ClCompile Include="InstagramPost.cpp" />
     <ClCompile Include="InstagramScrapper.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OCR.cpp" />
+    <ClCompile Include="OCRUtility.cpp" />
     <ClCompile Include="SampleClass.cpp" />
     <ClCompile Include="ScrapeStorage.cpp" />
     <ClCompile Include="SocialMediaComment.cpp" />
@@ -165,7 +165,7 @@
     <ClInclude Include="InstagramPost.h" />
     <ClInclude Include="InstagramScrapper.h" />
     <ClInclude Include="macros.h" />
-    <ClInclude Include="OCR.h" />
+    <ClInclude Include="OCRUtility.h" />
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="ScrapeStorage.h" />
     <ClInclude Include="SocialMediaComment.h" />
