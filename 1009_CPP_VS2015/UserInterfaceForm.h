@@ -131,6 +131,50 @@ private: System::Windows::Forms::Button^  imageOcrExecuteButton;
 private: System::Windows::Forms::TextBox^  imageOcrConsoleTextBox;
 private: System::Windows::Forms::Button^  imageOcrBrowseJsonButton;
 private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
+private: System::Windows::Forms::TextBox^  twitterHashtagsTextBox;
+private: System::Windows::Forms::Label^  twitterHashtagsLabel;
+private: System::Windows::Forms::Label^  twitterHashtagModeLabel;
+private: System::Windows::Forms::Button^  twitterSelectPathButton;
+private: System::Windows::Forms::Label^  twitterExportPathLabel;
+private: System::Windows::Forms::Label^  twitterExportLabel;
+private: System::Windows::Forms::NumericUpDown^  twitterNumHashtagsSelector;
+
+
+
+private: System::Windows::Forms::Label^  twitterNumPostsLabel;
+private: System::Windows::Forms::Button^  twitterScrapeProfilesButton;
+
+private: System::Windows::Forms::NumericUpDown^  twitterNumProfilesSelector;
+
+private: System::Windows::Forms::Label^  twitterNumPostsProfileLabel;
+private: System::Windows::Forms::TextBox^  twitterProfilesTextBox;
+private: System::Windows::Forms::Label^  twitterProfilesLabel;
+private: System::Windows::Forms::Label^  twitterProfileModeLabel;
+private: System::Windows::Forms::Button^  twitterScrapeHashtagsButton;
+private: System::Windows::Forms::Button^  analysisSelectFileButton;
+
+private: System::Windows::Forms::Label^  analysisFilePathLabel;
+
+private: System::Windows::Forms::Label^  analysisFileLocationLabel;
+private: System::Windows::Forms::DataGridView^  analysisRelatedHashtagsTable;
+
+
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  HashtagColumn;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  FreqColumn;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^  TotalColumn;
+private: System::Windows::Forms::Label^  analysisAvgWordsLabel;
+
+private: System::Windows::Forms::Label^  analysisAvgLikesLabel;
+
+private: System::Windows::Forms::Label^  analysisNumPostsLabel;
+private: System::Windows::Forms::Label^  label1;
+private: System::Windows::Forms::Label^  label2;
+private: System::Windows::Forms::Label^  label3;
+
+
+
+
 
 
 
@@ -171,6 +215,8 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -207,6 +253,21 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramUsernameLabel = (gcnew System::Windows::Forms::Label());
 			this->instagramHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->twitterTab = (gcnew System::Windows::Forms::TabPage());
+			this->twitterScrapeProfilesButton = (gcnew System::Windows::Forms::Button());
+			this->twitterNumProfilesSelector = (gcnew System::Windows::Forms::NumericUpDown());
+			this->twitterNumPostsProfileLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterProfilesTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->twitterProfilesLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterProfileModeLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterScrapeHashtagsButton = (gcnew System::Windows::Forms::Button());
+			this->twitterNumHashtagsSelector = (gcnew System::Windows::Forms::NumericUpDown());
+			this->twitterNumPostsLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterHashtagsTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->twitterHashtagsLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterHashtagModeLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterSelectPathButton = (gcnew System::Windows::Forms::Button());
+			this->twitterExportPathLabel = (gcnew System::Windows::Forms::Label());
+			this->twitterExportLabel = (gcnew System::Windows::Forms::Label());
 			this->twitterHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->displayJsonTab = (gcnew System::Windows::Forms::TabPage());
 			this->displayJsonFileOutputRichTextBox = (gcnew System::Windows::Forms::RichTextBox());
@@ -217,6 +278,19 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->displayJsonFilePathHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->displayJsonHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->dataAnalysisTab = (gcnew System::Windows::Forms::TabPage());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->analysisAvgWordsLabel = (gcnew System::Windows::Forms::Label());
+			this->analysisAvgLikesLabel = (gcnew System::Windows::Forms::Label());
+			this->analysisNumPostsLabel = (gcnew System::Windows::Forms::Label());
+			this->analysisRelatedHashtagsTable = (gcnew System::Windows::Forms::DataGridView());
+			this->HashtagColumn = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->FreqColumn = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->TotalColumn = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->analysisSelectFileButton = (gcnew System::Windows::Forms::Button());
+			this->analysisFilePathLabel = (gcnew System::Windows::Forms::Label());
+			this->analysisFileLocationLabel = (gcnew System::Windows::Forms::Label());
 			this->dataAnalysisHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->visualisationTab = (gcnew System::Windows::Forms::TabPage());
 			this->visualisationHeaderLabel = (gcnew System::Windows::Forms::Label());
@@ -239,8 +313,11 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->tabControl1->SuspendLayout();
 			this->instagramTab->SuspendLayout();
 			this->twitterTab->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->twitterNumProfilesSelector))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->twitterNumHashtagsSelector))->BeginInit();
 			this->displayJsonTab->SuspendLayout();
 			this->dataAnalysisTab->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->BeginInit();
 			this->visualisationTab->SuspendLayout();
 			this->imageOcrTab->SuspendLayout();
 			this->SuspendLayout();
@@ -478,10 +555,10 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramTab->Controls->Add(this->instagramPasswordLabel);
 			this->instagramTab->Controls->Add(this->instagramUsernameLabel);
 			this->instagramTab->Controls->Add(this->instagramHeaderLabel);
-			this->instagramTab->Location = System::Drawing::Point(12, 58);
+			this->instagramTab->Location = System::Drawing::Point(4, 33);
 			this->instagramTab->Name = L"instagramTab";
 			this->instagramTab->Padding = System::Windows::Forms::Padding(3);
-			this->instagramTab->Size = System::Drawing::Size(836, 676);
+			this->instagramTab->Size = System::Drawing::Size(852, 709);
 			this->instagramTab->TabIndex = 0;
 			this->instagramTab->Text = L"1";
 			this->instagramTab->UseVisualStyleBackColor = true;
@@ -501,7 +578,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramExportFolderPathValueLabel->AutoSize = true;
 			this->instagramExportFolderPathValueLabel->Location = System::Drawing::Point(275, 120);
 			this->instagramExportFolderPathValueLabel->Name = L"instagramExportFolderPathValueLabel";
-			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(94, 37);
+			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(59, 25);
 			this->instagramExportFolderPathValueLabel->TabIndex = 21;
 			this->instagramExportFolderPathValueLabel->Text = L"None";
 			// 
@@ -520,7 +597,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramExportFolderPathLabel->AutoSize = true;
 			this->instagramExportFolderPathLabel->Location = System::Drawing::Point(25, 130);
 			this->instagramExportFolderPathLabel->Name = L"instagramExportFolderPathLabel";
-			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(201, 37);
+			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(123, 25);
 			this->instagramExportFolderPathLabel->TabIndex = 19;
 			this->instagramExportFolderPathLabel->Text = L"Folder Path: ";
 			// 
@@ -529,7 +606,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramExportLabel->AutoSize = true;
 			this->instagramExportLabel->Location = System::Drawing::Point(25, 93);
 			this->instagramExportLabel->Name = L"instagramExportLabel";
-			this->instagramExportLabel->Size = System::Drawing::Size(218, 37);
+			this->instagramExportLabel->Size = System::Drawing::Size(134, 25);
 			this->instagramExportLabel->TabIndex = 19;
 			this->instagramExportLabel->Text = L"Export Folder:";
 			// 
@@ -566,7 +643,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			this->instagramProfilePostCountTextBox->Location = System::Drawing::Point(399, 284);
 			this->instagramProfilePostCountTextBox->Name = L"instagramProfilePostCountTextBox";
-			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 44);
+			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramProfilePostCountTextBox->TabIndex = 15;
 			// 
 			// instagramHashTagsTextBox
@@ -581,7 +658,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			this->instagramHashTagPostCountTextBox->Location = System::Drawing::Point(32, 284);
 			this->instagramHashTagPostCountTextBox->Name = L"instagramHashTagPostCountTextBox";
-			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 44);
+			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramHashTagPostCountTextBox->TabIndex = 13;
 			// 
 			// instagramUsernamePasswordTextBox
@@ -589,7 +666,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramUsernamePasswordTextBox->Location = System::Drawing::Point(556, 56);
 			this->instagramUsernamePasswordTextBox->Name = L"instagramUsernamePasswordTextBox";
 			this->instagramUsernamePasswordTextBox->PasswordChar = '*';
-			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 44);
+			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramUsernamePasswordTextBox->TabIndex = 10;
 			this->instagramUsernamePasswordTextBox->Text = L"Password12345";
 			// 
@@ -597,7 +674,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			this->instagramUsernameTextBox->Location = System::Drawing::Point(204, 62);
 			this->instagramUsernameTextBox->Name = L"instagramUsernameTextBox";
-			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 44);
+			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramUsernameTextBox->TabIndex = 9;
 			this->instagramUsernameTextBox->Text = L"hehebongesher";
 			// 
@@ -606,7 +683,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramProfilesLabel->AutoSize = true;
 			this->instagramProfilesLabel->Location = System::Drawing::Point(392, 333);
 			this->instagramProfilesLabel->Name = L"instagramProfilesLabel";
-			this->instagramProfilesLabel->Size = System::Drawing::Size(123, 37);
+			this->instagramProfilesLabel->Size = System::Drawing::Size(76, 25);
 			this->instagramProfilesLabel->TabIndex = 8;
 			this->instagramProfilesLabel->Text = L"Profiles";
 			this->instagramProfilesLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramProfilesLabel_Click);
@@ -616,7 +693,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramHashTagsLabel->AutoSize = true;
 			this->instagramHashTagsLabel->Location = System::Drawing::Point(25, 333);
 			this->instagramHashTagsLabel->Name = L"instagramHashTagsLabel";
-			this->instagramHashTagsLabel->Size = System::Drawing::Size(164, 37);
+			this->instagramHashTagsLabel->Size = System::Drawing::Size(103, 25);
 			this->instagramHashTagsLabel->TabIndex = 7;
 			this->instagramHashTagsLabel->Text = L"HashTags";
 			// 
@@ -625,7 +702,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramProfileNumberOfPostLabel->AutoSize = true;
 			this->instagramProfileNumberOfPostLabel->Location = System::Drawing::Point(392, 248);
 			this->instagramProfileNumberOfPostLabel->Name = L"instagramProfileNumberOfPostLabel";
-			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(257, 37);
+			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
 			this->instagramProfileNumberOfPostLabel->TabIndex = 6;
 			this->instagramProfileNumberOfPostLabel->Text = L"Number of Posts";
 			// 
@@ -634,7 +711,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramHashTagNumberOfPostLabel->AutoSize = true;
 			this->instagramHashTagNumberOfPostLabel->Location = System::Drawing::Point(25, 248);
 			this->instagramHashTagNumberOfPostLabel->Name = L"instagramHashTagNumberOfPostLabel";
-			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(257, 37);
+			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
 			this->instagramHashTagNumberOfPostLabel->TabIndex = 5;
 			this->instagramHashTagNumberOfPostLabel->Text = L"Number of Posts";
 			// 
@@ -643,7 +720,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramProfileModeLabel->AutoSize = true;
 			this->instagramProfileModeLabel->Location = System::Drawing::Point(392, 201);
 			this->instagramProfileModeLabel->Name = L"instagramProfileModeLabel";
-			this->instagramProfileModeLabel->Size = System::Drawing::Size(195, 37);
+			this->instagramProfileModeLabel->Size = System::Drawing::Size(121, 25);
 			this->instagramProfileModeLabel->TabIndex = 4;
 			this->instagramProfileModeLabel->Text = L"Profile Mode";
 			// 
@@ -652,7 +729,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramHashTagModeLabel->AutoSize = true;
 			this->instagramHashTagModeLabel->Location = System::Drawing::Point(25, 201);
 			this->instagramHashTagModeLabel->Name = L"instagramHashTagModeLabel";
-			this->instagramHashTagModeLabel->Size = System::Drawing::Size(236, 37);
+			this->instagramHashTagModeLabel->Size = System::Drawing::Size(148, 25);
 			this->instagramHashTagModeLabel->TabIndex = 3;
 			this->instagramHashTagModeLabel->Text = L"HashTag Mode";
 			// 
@@ -661,7 +738,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramPasswordLabel->AutoSize = true;
 			this->instagramPasswordLabel->Location = System::Drawing::Point(362, 56);
 			this->instagramPasswordLabel->Name = L"instagramPasswordLabel";
-			this->instagramPasswordLabel->Size = System::Drawing::Size(167, 37);
+			this->instagramPasswordLabel->Size = System::Drawing::Size(104, 25);
 			this->instagramPasswordLabel->TabIndex = 2;
 			this->instagramPasswordLabel->Text = L"Password:";
 			// 
@@ -670,7 +747,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramUsernameLabel->AutoSize = true;
 			this->instagramUsernameLabel->Location = System::Drawing::Point(25, 56);
 			this->instagramUsernameLabel->Name = L"instagramUsernameLabel";
-			this->instagramUsernameLabel->Size = System::Drawing::Size(173, 37);
+			this->instagramUsernameLabel->Size = System::Drawing::Size(108, 25);
 			this->instagramUsernameLabel->TabIndex = 1;
 			this->instagramUsernameLabel->Text = L"Username:";
 			this->instagramUsernameLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramUsernameLabel_Click);
@@ -688,14 +765,188 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			// twitterTab
 			// 
+			this->twitterTab->Controls->Add(this->twitterScrapeProfilesButton);
+			this->twitterTab->Controls->Add(this->twitterNumProfilesSelector);
+			this->twitterTab->Controls->Add(this->twitterNumPostsProfileLabel);
+			this->twitterTab->Controls->Add(this->twitterProfilesTextBox);
+			this->twitterTab->Controls->Add(this->twitterProfilesLabel);
+			this->twitterTab->Controls->Add(this->twitterProfileModeLabel);
+			this->twitterTab->Controls->Add(this->twitterScrapeHashtagsButton);
+			this->twitterTab->Controls->Add(this->twitterNumHashtagsSelector);
+			this->twitterTab->Controls->Add(this->twitterNumPostsLabel);
+			this->twitterTab->Controls->Add(this->twitterHashtagsTextBox);
+			this->twitterTab->Controls->Add(this->twitterHashtagsLabel);
+			this->twitterTab->Controls->Add(this->twitterHashtagModeLabel);
+			this->twitterTab->Controls->Add(this->twitterSelectPathButton);
+			this->twitterTab->Controls->Add(this->twitterExportPathLabel);
+			this->twitterTab->Controls->Add(this->twitterExportLabel);
 			this->twitterTab->Controls->Add(this->twitterHeaderLabel);
-			this->twitterTab->Location = System::Drawing::Point(12, 58);
+			this->twitterTab->Location = System::Drawing::Point(4, 33);
 			this->twitterTab->Name = L"twitterTab";
 			this->twitterTab->Padding = System::Windows::Forms::Padding(3);
-			this->twitterTab->Size = System::Drawing::Size(836, 676);
+			this->twitterTab->Size = System::Drawing::Size(852, 709);
 			this->twitterTab->TabIndex = 2;
 			this->twitterTab->Text = L"2";
 			this->twitterTab->UseVisualStyleBackColor = true;
+			// 
+			// twitterScrapeProfilesButton
+			// 
+			this->twitterScrapeProfilesButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterScrapeProfilesButton->Location = System::Drawing::Point(529, 543);
+			this->twitterScrapeProfilesButton->Name = L"twitterScrapeProfilesButton";
+			this->twitterScrapeProfilesButton->Size = System::Drawing::Size(233, 39);
+			this->twitterScrapeProfilesButton->TabIndex = 25;
+			this->twitterScrapeProfilesButton->Text = L"Scrape by profiles";
+			this->twitterScrapeProfilesButton->UseVisualStyleBackColor = true;
+			// 
+			// twitterNumProfilesSelector
+			// 
+			this->twitterNumProfilesSelector->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterNumProfilesSelector->Location = System::Drawing::Point(529, 461);
+			this->twitterNumProfilesSelector->Name = L"twitterNumProfilesSelector";
+			this->twitterNumProfilesSelector->Size = System::Drawing::Size(90, 28);
+			this->twitterNumProfilesSelector->TabIndex = 24;
+			// 
+			// twitterNumPostsProfileLabel
+			// 
+			this->twitterNumPostsProfileLabel->AutoSize = true;
+			this->twitterNumPostsProfileLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterNumPostsProfileLabel->Location = System::Drawing::Point(526, 436);
+			this->twitterNumPostsProfileLabel->Name = L"twitterNumPostsProfileLabel";
+			this->twitterNumPostsProfileLabel->Size = System::Drawing::Size(77, 17);
+			this->twitterNumPostsProfileLabel->TabIndex = 23;
+			this->twitterNumPostsProfileLabel->Text = L"No. posts";
+			// 
+			// twitterProfilesTextBox
+			// 
+			this->twitterProfilesTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterProfilesTextBox->Location = System::Drawing::Point(12, 461);
+			this->twitterProfilesTextBox->Multiline = true;
+			this->twitterProfilesTextBox->Name = L"twitterProfilesTextBox";
+			this->twitterProfilesTextBox->Size = System::Drawing::Size(482, 122);
+			this->twitterProfilesTextBox->TabIndex = 22;
+			// 
+			// twitterProfilesLabel
+			// 
+			this->twitterProfilesLabel->AutoSize = true;
+			this->twitterProfilesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->twitterProfilesLabel->Location = System::Drawing::Point(14, 436);
+			this->twitterProfilesLabel->Name = L"twitterProfilesLabel";
+			this->twitterProfilesLabel->Size = System::Drawing::Size(63, 17);
+			this->twitterProfilesLabel->TabIndex = 21;
+			this->twitterProfilesLabel->Text = L"Profiles";
+			// 
+			// twitterProfileModeLabel
+			// 
+			this->twitterProfileModeLabel->AutoSize = true;
+			this->twitterProfileModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterProfileModeLabel->Location = System::Drawing::Point(12, 400);
+			this->twitterProfileModeLabel->Name = L"twitterProfileModeLabel";
+			this->twitterProfileModeLabel->Size = System::Drawing::Size(163, 29);
+			this->twitterProfileModeLabel->TabIndex = 20;
+			this->twitterProfileModeLabel->Text = L"Profile Mode";
+			// 
+			// twitterScrapeHashtagsButton
+			// 
+			this->twitterScrapeHashtagsButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterScrapeHashtagsButton->Location = System::Drawing::Point(529, 318);
+			this->twitterScrapeHashtagsButton->Name = L"twitterScrapeHashtagsButton";
+			this->twitterScrapeHashtagsButton->Size = System::Drawing::Size(233, 39);
+			this->twitterScrapeHashtagsButton->TabIndex = 19;
+			this->twitterScrapeHashtagsButton->Text = L"Scrape by hashtags";
+			this->twitterScrapeHashtagsButton->UseVisualStyleBackColor = true;
+			// 
+			// twitterNumHashtagsSelector
+			// 
+			this->twitterNumHashtagsSelector->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterNumHashtagsSelector->Location = System::Drawing::Point(529, 236);
+			this->twitterNumHashtagsSelector->Name = L"twitterNumHashtagsSelector";
+			this->twitterNumHashtagsSelector->Size = System::Drawing::Size(90, 28);
+			this->twitterNumHashtagsSelector->TabIndex = 18;
+			// 
+			// twitterNumPostsLabel
+			// 
+			this->twitterNumPostsLabel->AutoSize = true;
+			this->twitterNumPostsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->twitterNumPostsLabel->Location = System::Drawing::Point(526, 211);
+			this->twitterNumPostsLabel->Name = L"twitterNumPostsLabel";
+			this->twitterNumPostsLabel->Size = System::Drawing::Size(77, 17);
+			this->twitterNumPostsLabel->TabIndex = 16;
+			this->twitterNumPostsLabel->Text = L"No. posts";
+			// 
+			// twitterHashtagsTextBox
+			// 
+			this->twitterHashtagsTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterHashtagsTextBox->Location = System::Drawing::Point(12, 236);
+			this->twitterHashtagsTextBox->Multiline = true;
+			this->twitterHashtagsTextBox->Name = L"twitterHashtagsTextBox";
+			this->twitterHashtagsTextBox->Size = System::Drawing::Size(482, 122);
+			this->twitterHashtagsTextBox->TabIndex = 15;
+			// 
+			// twitterHashtagsLabel
+			// 
+			this->twitterHashtagsLabel->AutoSize = true;
+			this->twitterHashtagsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->twitterHashtagsLabel->Location = System::Drawing::Point(14, 211);
+			this->twitterHashtagsLabel->Name = L"twitterHashtagsLabel";
+			this->twitterHashtagsLabel->Size = System::Drawing::Size(76, 17);
+			this->twitterHashtagsLabel->TabIndex = 5;
+			this->twitterHashtagsLabel->Text = L"Hashtags";
+			// 
+			// twitterHashtagModeLabel
+			// 
+			this->twitterHashtagModeLabel->AutoSize = true;
+			this->twitterHashtagModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterHashtagModeLabel->Location = System::Drawing::Point(12, 175);
+			this->twitterHashtagModeLabel->Name = L"twitterHashtagModeLabel";
+			this->twitterHashtagModeLabel->Size = System::Drawing::Size(181, 29);
+			this->twitterHashtagModeLabel->TabIndex = 4;
+			this->twitterHashtagModeLabel->Text = L"Hashtag Mode";
+			// 
+			// twitterSelectPathButton
+			// 
+			this->twitterSelectPathButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterSelectPathButton->Location = System::Drawing::Point(12, 114);
+			this->twitterSelectPathButton->Name = L"twitterSelectPathButton";
+			this->twitterSelectPathButton->Size = System::Drawing::Size(122, 32);
+			this->twitterSelectPathButton->TabIndex = 3;
+			this->twitterSelectPathButton->Text = L"Select path";
+			this->twitterSelectPathButton->UseVisualStyleBackColor = true;
+			// 
+			// twitterExportPathLabel
+			// 
+			this->twitterExportPathLabel->AutoSize = true;
+			this->twitterExportPathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->twitterExportPathLabel->Location = System::Drawing::Point(8, 90);
+			this->twitterExportPathLabel->Name = L"twitterExportPathLabel";
+			this->twitterExportPathLabel->Size = System::Drawing::Size(170, 20);
+			this->twitterExportPathLabel->TabIndex = 2;
+			this->twitterExportPathLabel->Text = L"Path: No path selected";
+			// 
+			// twitterExportLabel
+			// 
+			this->twitterExportLabel->AutoSize = true;
+			this->twitterExportLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->twitterExportLabel->Location = System::Drawing::Point(8, 62);
+			this->twitterExportLabel->Name = L"twitterExportLabel";
+			this->twitterExportLabel->Size = System::Drawing::Size(144, 22);
+			this->twitterExportLabel->TabIndex = 1;
+			this->twitterExportLabel->Text = L"Export location";
 			// 
 			// twitterHeaderLabel
 			// 
@@ -717,9 +968,9 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathHeaderLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonHeaderLabel);
-			this->displayJsonTab->Location = System::Drawing::Point(12, 58);
+			this->displayJsonTab->Location = System::Drawing::Point(4, 33);
 			this->displayJsonTab->Name = L"displayJsonTab";
-			this->displayJsonTab->Size = System::Drawing::Size(836, 676);
+			this->displayJsonTab->Size = System::Drawing::Size(852, 709);
 			this->displayJsonTab->TabIndex = 3;
 			this->displayJsonTab->Text = L"3";
 			this->displayJsonTab->UseVisualStyleBackColor = true;
@@ -737,7 +988,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->displayJsonFilePathValueLabel->AutoSize = true;
 			this->displayJsonFilePathValueLabel->Location = System::Drawing::Point(100, 150);
 			this->displayJsonFilePathValueLabel->Name = L"displayJsonFilePathValueLabel";
-			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(94, 37);
+			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(59, 25);
 			this->displayJsonFilePathValueLabel->TabIndex = 5;
 			this->displayJsonFilePathValueLabel->Text = L"None";
 			// 
@@ -766,7 +1017,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->displayJsonFilePathLabel->AutoSize = true;
 			this->displayJsonFilePathLabel->Location = System::Drawing::Point(48, 150);
 			this->displayJsonFilePathLabel->Name = L"displayJsonFilePathLabel";
-			this->displayJsonFilePathLabel->Size = System::Drawing::Size(100, 37);
+			this->displayJsonFilePathLabel->Size = System::Drawing::Size(64, 25);
 			this->displayJsonFilePathLabel->TabIndex = 2;
 			this->displayJsonFilePathLabel->Text = L"label1";
 			// 
@@ -775,7 +1026,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->displayJsonFilePathHeaderLabel->AutoSize = true;
 			this->displayJsonFilePathHeaderLabel->Location = System::Drawing::Point(48, 100);
 			this->displayJsonFilePathHeaderLabel->Name = L"displayJsonFilePathHeaderLabel";
-			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(229, 37);
+			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(142, 25);
 			this->displayJsonFilePathHeaderLabel->TabIndex = 1;
 			this->displayJsonFilePathHeaderLabel->Text = L"Json File Path:";
 			// 
@@ -792,13 +1043,176 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			// dataAnalysisTab
 			// 
+			this->dataAnalysisTab->Controls->Add(this->label1);
+			this->dataAnalysisTab->Controls->Add(this->label2);
+			this->dataAnalysisTab->Controls->Add(this->label3);
+			this->dataAnalysisTab->Controls->Add(this->analysisAvgWordsLabel);
+			this->dataAnalysisTab->Controls->Add(this->analysisAvgLikesLabel);
+			this->dataAnalysisTab->Controls->Add(this->analysisNumPostsLabel);
+			this->dataAnalysisTab->Controls->Add(this->analysisRelatedHashtagsTable);
+			this->dataAnalysisTab->Controls->Add(this->analysisSelectFileButton);
+			this->dataAnalysisTab->Controls->Add(this->analysisFilePathLabel);
+			this->dataAnalysisTab->Controls->Add(this->analysisFileLocationLabel);
 			this->dataAnalysisTab->Controls->Add(this->dataAnalysisHeaderLabel);
-			this->dataAnalysisTab->Location = System::Drawing::Point(12, 58);
+			this->dataAnalysisTab->Location = System::Drawing::Point(4, 33);
 			this->dataAnalysisTab->Name = L"dataAnalysisTab";
-			this->dataAnalysisTab->Size = System::Drawing::Size(836, 676);
+			this->dataAnalysisTab->Size = System::Drawing::Size(852, 709);
 			this->dataAnalysisTab->TabIndex = 4;
 			this->dataAnalysisTab->Text = L"4";
 			this->dataAnalysisTab->UseVisualStyleBackColor = true;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(378, 281);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(150, 24);
+			this->label1->TabIndex = 13;
+			this->label1->Text = L"Avg post length: ";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(378, 224);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(206, 24);
+			this->label2->TabIndex = 12;
+			this->label2->Text = L"Avg hashtags per post: ";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(378, 171);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(154, 24);
+			this->label3->TabIndex = 11;
+			this->label3->Text = L"Target hashtags: ";
+			// 
+			// analysisAvgWordsLabel
+			// 
+			this->analysisAvgWordsLabel->AutoSize = true;
+			this->analysisAvgWordsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisAvgWordsLabel->Location = System::Drawing::Point(12, 281);
+			this->analysisAvgWordsLabel->Name = L"analysisAvgWordsLabel";
+			this->analysisAvgWordsLabel->Size = System::Drawing::Size(182, 24);
+			this->analysisAvgWordsLabel->TabIndex = 10;
+			this->analysisAvgWordsLabel->Text = L"Avg words per post: ";
+			// 
+			// analysisAvgLikesLabel
+			// 
+			this->analysisAvgLikesLabel->AutoSize = true;
+			this->analysisAvgLikesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisAvgLikesLabel->Location = System::Drawing::Point(12, 224);
+			this->analysisAvgLikesLabel->Name = L"analysisAvgLikesLabel";
+			this->analysisAvgLikesLabel->Size = System::Drawing::Size(95, 24);
+			this->analysisAvgLikesLabel->TabIndex = 9;
+			this->analysisAvgLikesLabel->Text = L"Avg likes: ";
+			// 
+			// analysisNumPostsLabel
+			// 
+			this->analysisNumPostsLabel->AutoSize = true;
+			this->analysisNumPostsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisNumPostsLabel->Location = System::Drawing::Point(12, 171);
+			this->analysisNumPostsLabel->Name = L"analysisNumPostsLabel";
+			this->analysisNumPostsLabel->Size = System::Drawing::Size(119, 24);
+			this->analysisNumPostsLabel->TabIndex = 8;
+			this->analysisNumPostsLabel->Text = L"No. of posts: ";
+			// 
+			// analysisRelatedHashtagsTable
+			// 
+			this->analysisRelatedHashtagsTable->AllowUserToAddRows = false;
+			this->analysisRelatedHashtagsTable->AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->analysisRelatedHashtagsTable->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->analysisRelatedHashtagsTable->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->HashtagColumn,
+					this->FreqColumn, this->TotalColumn
+			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle2;
+			this->analysisRelatedHashtagsTable->Location = System::Drawing::Point(12, 339);
+			this->analysisRelatedHashtagsTable->Name = L"analysisRelatedHashtagsTable";
+			this->analysisRelatedHashtagsTable->ReadOnly = true;
+			this->analysisRelatedHashtagsTable->RowHeadersVisible = false;
+			this->analysisRelatedHashtagsTable->RowTemplate->Height = 31;
+			this->analysisRelatedHashtagsTable->Size = System::Drawing::Size(504, 320);
+			this->analysisRelatedHashtagsTable->TabIndex = 7;
+			// 
+			// HashtagColumn
+			// 
+			this->HashtagColumn->HeaderText = L"Hashtags";
+			this->HashtagColumn->Name = L"HashtagColumn";
+			this->HashtagColumn->ReadOnly = true;
+			this->HashtagColumn->Width = 300;
+			// 
+			// FreqColumn
+			// 
+			this->FreqColumn->HeaderText = L"Avg frequency";
+			this->FreqColumn->Name = L"FreqColumn";
+			this->FreqColumn->ReadOnly = true;
+			// 
+			// TotalColumn
+			// 
+			this->TotalColumn->HeaderText = L"Total frequency";
+			this->TotalColumn->Name = L"TotalColumn";
+			this->TotalColumn->ReadOnly = true;
+			// 
+			// analysisSelectFileButton
+			// 
+			this->analysisSelectFileButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisSelectFileButton->Location = System::Drawing::Point(12, 114);
+			this->analysisSelectFileButton->Name = L"analysisSelectFileButton";
+			this->analysisSelectFileButton->Size = System::Drawing::Size(122, 32);
+			this->analysisSelectFileButton->TabIndex = 6;
+			this->analysisSelectFileButton->Text = L"Select file";
+			this->analysisSelectFileButton->UseVisualStyleBackColor = true;
+			// 
+			// analysisFilePathLabel
+			// 
+			this->analysisFilePathLabel->AutoSize = true;
+			this->analysisFilePathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisFilePathLabel->Location = System::Drawing::Point(8, 90);
+			this->analysisFilePathLabel->Name = L"analysisFilePathLabel";
+			this->analysisFilePathLabel->Size = System::Drawing::Size(202, 20);
+			this->analysisFilePathLabel->TabIndex = 5;
+			this->analysisFilePathLabel->Text = L"File loaded: No file selected";
+			// 
+			// analysisFileLocationLabel
+			// 
+			this->analysisFileLocationLabel->AutoSize = true;
+			this->analysisFileLocationLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->analysisFileLocationLabel->Location = System::Drawing::Point(8, 62);
+			this->analysisFileLocationLabel->Name = L"analysisFileLocationLabel";
+			this->analysisFileLocationLabel->Size = System::Drawing::Size(119, 22);
+			this->analysisFileLocationLabel->TabIndex = 4;
+			this->analysisFileLocationLabel->Text = L"File location";
 			// 
 			// dataAnalysisHeaderLabel
 			// 
@@ -814,9 +1228,9 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// visualisationTab
 			// 
 			this->visualisationTab->Controls->Add(this->visualisationHeaderLabel);
-			this->visualisationTab->Location = System::Drawing::Point(12, 58);
+			this->visualisationTab->Location = System::Drawing::Point(4, 33);
 			this->visualisationTab->Name = L"visualisationTab";
-			this->visualisationTab->Size = System::Drawing::Size(836, 676);
+			this->visualisationTab->Size = System::Drawing::Size(852, 709);
 			this->visualisationTab->TabIndex = 5;
 			this->visualisationTab->Text = L"5";
 			this->visualisationTab->UseVisualStyleBackColor = true;
@@ -842,9 +1256,9 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->imageOcrTab->Controls->Add(this->imageOcrFilePathLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrDescriptionLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrHeaderLabel);
-			this->imageOcrTab->Location = System::Drawing::Point(12, 58);
+			this->imageOcrTab->Location = System::Drawing::Point(4, 33);
 			this->imageOcrTab->Name = L"imageOcrTab";
-			this->imageOcrTab->Size = System::Drawing::Size(836, 676);
+			this->imageOcrTab->Size = System::Drawing::Size(852, 709);
 			this->imageOcrTab->TabIndex = 6;
 			this->imageOcrTab->Text = L"6";
 			this->imageOcrTab->UseVisualStyleBackColor = true;
@@ -883,7 +1297,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->imageOcrFilePathHeaderLabel->AutoSize = true;
 			this->imageOcrFilePathHeaderLabel->Location = System::Drawing::Point(50, 130);
 			this->imageOcrFilePathHeaderLabel->Name = L"imageOcrFilePathHeaderLabel";
-			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(208, 37);
+			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(128, 25);
 			this->imageOcrFilePathHeaderLabel->TabIndex = 4;
 			this->imageOcrFilePathHeaderLabel->Text = L"File Location:";
 			// 
@@ -892,7 +1306,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->imageOcrFilePathValueLabel->AutoSize = true;
 			this->imageOcrFilePathValueLabel->Location = System::Drawing::Point(150, 200);
 			this->imageOcrFilePathValueLabel->Name = L"imageOcrFilePathValueLabel";
-			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(94, 37);
+			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(59, 25);
 			this->imageOcrFilePathValueLabel->TabIndex = 3;
 			this->imageOcrFilePathValueLabel->Text = L"None";
 			// 
@@ -901,7 +1315,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->imageOcrFilePathLabel->AutoSize = true;
 			this->imageOcrFilePathLabel->Location = System::Drawing::Point(50, 200);
 			this->imageOcrFilePathLabel->Name = L"imageOcrFilePathLabel";
-			this->imageOcrFilePathLabel->Size = System::Drawing::Size(182, 37);
+			this->imageOcrFilePathLabel->Size = System::Drawing::Size(113, 25);
 			this->imageOcrFilePathLabel->TabIndex = 2;
 			this->imageOcrFilePathLabel->Text = L"File loaded:";
 			// 
@@ -910,7 +1324,7 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->imageOcrDescriptionLabel->AutoSize = true;
 			this->imageOcrDescriptionLabel->Location = System::Drawing::Point(44, 73);
 			this->imageOcrDescriptionLabel->Name = L"imageOcrDescriptionLabel";
-			this->imageOcrDescriptionLabel->Size = System::Drawing::Size(2555, 37);
+			this->imageOcrDescriptionLabel->Size = System::Drawing::Size(1548, 25);
 			this->imageOcrDescriptionLabel->TabIndex = 1;
 			this->imageOcrDescriptionLabel->Text = L"*This function is currently only compatible with Instagram scraped Data. For ever"
 				L"y post in the JSON file, an ocr_text field will be appended to it whenever text "
@@ -929,9 +1343,9 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			// 
 			// aboutTab
 			// 
-			this->aboutTab->Location = System::Drawing::Point(12, 58);
+			this->aboutTab->Location = System::Drawing::Point(4, 33);
 			this->aboutTab->Name = L"aboutTab";
-			this->aboutTab->Size = System::Drawing::Size(836, 676);
+			this->aboutTab->Size = System::Drawing::Size(852, 709);
 			this->aboutTab->TabIndex = 7;
 			this->aboutTab->Text = L"7";
 			this->aboutTab->UseVisualStyleBackColor = true;
@@ -956,10 +1370,13 @@ private: System::Windows::Forms::OpenFileDialog^  imageOcrLoadFileDialog;
 			this->instagramTab->PerformLayout();
 			this->twitterTab->ResumeLayout(false);
 			this->twitterTab->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->twitterNumProfilesSelector))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->twitterNumHashtagsSelector))->EndInit();
 			this->displayJsonTab->ResumeLayout(false);
 			this->displayJsonTab->PerformLayout();
 			this->dataAnalysisTab->ResumeLayout(false);
 			this->dataAnalysisTab->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->EndInit();
 			this->visualisationTab->ResumeLayout(false);
 			this->visualisationTab->PerformLayout();
 			this->imageOcrTab->ResumeLayout(false);
@@ -1125,7 +1542,7 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 			InstagramScrapperPtr scrapper(new InstagramScrapper);
 			instagramConsole->AppendText("*Executing profile scraping procedure...\r\n");
 			try {
-				if (scrapper->scrapeByProfiles(username, password, profiles, postCap, exportFolderPath) == 1)
+				if (scrapper->scrapeByProfiles(username, password, profiles, static_cast<int>(postCap), exportFolderPath) == 1)
 					instagramConsole->AppendText("*Finished profiles scrapping procedure. \r\n");
 			} catch (...) {
 				instagramConsole->AppendText("*Error occured during profiles scraping procedure...\r\n");
