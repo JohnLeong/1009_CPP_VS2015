@@ -149,6 +149,7 @@
     <ClCompile Include="OCRUtility.cpp" />
     <ClCompile Include="SampleClass.cpp" />
     <ClCompile Include="ScrapeStorage.cpp" />
+    <ClCompile Include="ScrapeUtility.cpp" />
     <ClCompile Include="SocialMediaComment.cpp" />
     <ClCompile Include="SocialMediaPost.cpp" />
     <ClCompile Include="SocialMediaPostStorage.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="OCRUtility.h" />
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="ScrapeStorage.h" />
+    <ClInclude Include="ScrapeUtility.h" />
     <ClInclude Include="SocialMediaComment.h" />
     <ClInclude Include="SocialMediaPost.h" />
     <ClInclude Include="SocialMediaPostStorage.h" />

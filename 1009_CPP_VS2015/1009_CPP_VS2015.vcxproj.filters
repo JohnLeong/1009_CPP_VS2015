@@ -99,6 +99,9 @@
     <ClInclude Include="OCRUtility.h">
       <Filter>Header Files\OCR</Filter>
     </ClInclude>
+    <ClInclude Include="ScrapeUtility.h">
+      <Filter>Header Files\WebScrapping</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -154,6 +157,9 @@
     </ClCompile>
     <ClCompile Include="OCRUtility.cpp">
       <Filter>Source Files\OCR</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrapeUtility.cpp">
+      <Filter>Source Files\WebScrapping</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

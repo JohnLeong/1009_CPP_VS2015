@@ -1,29 +1,37 @@
 #include "TwitterScraper.h"
-//#include "twitcurl.h"
-//#include "oauthlib.h"
-
+#include <stdlib.h>
+#include <string.h>
+#include <sstream>
 
 namespace ICT1009
 {
 	namespace WebScrapping
 	{
+		const std::string TwitterScraper::scrapingCommand = "java -jar TwitterCrawler/TwitterCrawler.jar";
+		const std::string TwitterScraper::hashTagModeString = "hashtags";
+		const std::string TwitterScraper::profileModeString = "profiles";
+
 		TwitterScraper::TwitterScraper()
 		{
-			//twitCurl twitterInstance;
+		}
 
-			//twitterInstance.getOAuth().setConsumerKey("test");
-			//twitterInstance.getOAuth().setConsumerSecret("test");
-			//twitterInstance.getOAuth().setOAuthTokenKey("test");
-			//twitterInstance.getOAuth().setOAuthTokenSecret("test");
+		TwitterScraper::~TwitterScraper()
+		{
 
-			//twitterInstance.search("wuhan");
+		}
 
+		int TwitterScraper::scrapeByHashTags(const std::string username, const std::string password,
+			const std::string joinedHashTags, const unsigned int numberOfPosts, const std::string savePath)
+		{
+			system((scrapingCommand + " " + hashTagModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedHashTags).c_str());
+			return 1;
+		}
 
-			//string result;
-			//twitterInstance.getLastWebResponse(result);
-
-
-			//std::cout << result;
+		int TwitterScraper::scrapeByProfiles(const std::string username, const std::string password,
+			const std::string joinedProfiles, const unsigned int numberOfPosts, const std::string savePath)
+		{
+			system((scrapingCommand + " " + profileModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedProfiles).c_str());
+			return 1;
 		}
 	}
 }
