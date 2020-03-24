@@ -2,6 +2,9 @@
 
 
 SOCIAL_MEDIA_POST_STORAGE_NAMESPACE_START
+
+typedef std::shared_ptr<SocialMediaPost> SocialMediaPostPtr;
+
 SocialMediaPostStorage::SocialMediaPostStorage()
 	: scrapeTarget(""), targetVisibility(""), targetDescription(""),
 	postsCount(0), followersCount(0), followingCount(0)
@@ -59,5 +62,10 @@ nlohmann::json SocialMediaPostStorage::getTargetJson(const int platform, const i
 
 	return target;
 	
+}
+
+vector<SocialMediaPostPtr>* SocialMediaPostStorage::getPostListPtr()
+{
+	return &postList;
 }
 SOCIAL_MEDIA_POST_STORAGE_NAMESPACE_END

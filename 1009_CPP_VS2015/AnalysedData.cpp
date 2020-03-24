@@ -10,9 +10,14 @@ namespace ICT1009
 		{
 		}
 
-		unordered_map<string, unsigned int> AnalysedData::getRelatedHashtags()
+		vector<string>* AnalysedData::getScrapeTargets()
 		{
-			return relatedHashtags;
+			return &scrapeTargets;
+		}
+
+		unordered_map<string, unsigned int>* AnalysedData::getRelatedHashtags()
+		{
+			return &relatedHashtags;
 		}
 	}
 }

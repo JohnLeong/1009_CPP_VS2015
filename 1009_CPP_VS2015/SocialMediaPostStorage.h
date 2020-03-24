@@ -46,7 +46,7 @@ public:
 	bool addPost(SocialMediaPostPtr post);
 	nlohmann::json getTargetJson(int platform, int mode);
 	nlohmann::json getPostJson(int platform);
-
+	vector<SocialMediaPostPtr>* getPostListPtr();
 		
 };
 
