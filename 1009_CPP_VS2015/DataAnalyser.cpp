@@ -10,55 +10,68 @@ using ICT1009::DataStorage::SocialMediaPost;
 
 namespace ICT1009
 {
-	
+
 	namespace Analysis
 	{
+		const std::string DataAnalyser::wordmapCommand = "java -jar WordCloud/WordCloud.jar";
+
 		AnalysedData DataAnalyser::Analyse(DataStorage::ScrapeStorage* data)
 		{
 			AnalysedData analysedData;
 			unsigned int totalWords = 0, totalChars = 0, totalLikes = 0;
-			unordered_map<string, unsigned int>* related = &analysedData.getRelatedHashtags();
+			unordered_map<string, unsigned int>* related = analysedData.getRelatedHashtags();
+
+			vector<string> wordMapList;
 
 			//Set analysed data scrape type
 			switch (data->getMode())
 			{
 			case DataStorage::ScrapeStorage::ScrapeMode::Hashtag:
 				analysedData.setScrapeType("Hashtags");
+				break;
 			case DataStorage::ScrapeStorage::ScrapeMode::Profile:
 				analysedData.setScrapeType("Profiles");
+				break;
 			default:
 				break;
-			}		
+			}
 
-			for (vector<std::shared_ptr<SocialMediaPostStorage>>::iterator it = data->getScrapedDetails().begin(); 
-				it != data->getScrapedDetails().end(); ++it)
+			auto details = data->getScrapedDetails();
+			for (int i = 0; i < details.size(); ++i)
 			{
+				std::cout << details.at(i).get()->getScrapeTarget() << std::endl;
+
 				//Add scrape target to analysed data
-				analysedData.getScrapeTargets().push_back(it->get()->getScrapeTarget());
+				analysedData.getScrapeTargets()->push_back(details.at(i).get()->getScrapeTarget());
+
 				//Add number of posts to analysed data
-				analysedData.setNumPosts(analysedData.getNumPosts() + static_cast<unsigned int>(it->get()->getPostList().size()));
+				analysedData.setNumPosts(analysedData.getNumPosts() + static_cast<unsigned int>(details.at(i).get()->getPostList().size()));
 
 				//Get all posts for this scrape target
-				vector<std::shared_ptr<SocialMediaPost>> posts = it->get()->getPostList();
-				for (vector<std::shared_ptr<SocialMediaPost>>::iterator post = posts.begin(); post != posts.end(); ++post)
+				auto posts = details.at(i).get()->getPostList();
+				for (int j = 0; j < posts.size(); ++j)
 				{
 					//Get all words in the post caption
-					vector<string> words = getWordsInString(&post->get()->getCaption());
-					for (vector<string>::iterator word = words.begin(); word != words.end(); ++word)
+					vector<string> words = getWordsInString(&posts.at(j).get()->getCaption());
+					for (int k = 0; k < words.size(); ++k)
 					{
 						//Find hashtags
-						if ((*word).at(0) == '#')
+						if (words.at(k).length() < 1)
+							continue;
+
+						if (words.at(k).at(0) == '#')
 						{
-							if (related->count(*word) == 0)
-								(*related)[*word] = 1;
+							if (related->count(words.at(k)) < 1)
+								(*related)[words.at(k)] = 1;
 							else
-								(*related)[*word] += 1;
+								(*related)[words.at(k)] += 1;
 						}
+						wordMapList.push_back(words.at(k));
 					}
 
-					totalLikes += post->get()->getLikes();
+					totalLikes += posts.at(j).get()->getLikes();
 					totalWords += static_cast<unsigned int>(words.size());
-					totalChars += static_cast<unsigned int>(post->get()->getCaption().size());
+					totalChars += static_cast<unsigned int>(posts.at(j).get()->getCaption().size());
 				}
 			}
 
@@ -70,6 +83,13 @@ namespace ICT1009
 			analysedData.setAvgChars(static_cast<float>(totalChars) / static_cast<float>(analysedData.getNumPosts()));
 			//Calculate average hashtags for analysed data
 			analysedData.setAvgHashtags(static_cast<float>(related->size()) / static_cast<float>(analysedData.getNumPosts()));
+
+			//Create wordmap
+			string combinedWordMap = "";
+			for (string s : wordMapList)
+				combinedWordMap += s + " ";
+
+			system((wordmapCommand + " " + combinedWordMap).c_str());
 
 			return analysedData;
 		}
@@ -99,9 +119,9 @@ namespace ICT1009
 
 		vector<string> DataAnalyser::getWordsInString(string* str)
 		{
-			string buf;                 
-			std::stringstream ss(*str);    
-			vector<string> words; 
+			string buf;
+			std::stringstream ss(*str);
+			vector<string> words;
 
 			while (ss >> buf)
 				words.push_back(buf);
