@@ -14,8 +14,9 @@ namespace ICT1009
 		{
 		public:
 			DataCleanser();
-			static string printMatches(string str, regex reg);
-			static string removeExtraWhitespaces(const string& input);
+			static string removeSymbols(const string& str);
+			static string removeExtraWhitespaces(const string& str);
+			static string cleanseString(string str);
 		};
 	}
 

@@ -13,11 +13,15 @@ namespace ICT1009
 
 	namespace Analysis
 	{
+		const std::string DataAnalyser::wordmapCommand = "java -jar WordCloud/WordCloud.jar";
+
 		AnalysedData DataAnalyser::Analyse(DataStorage::ScrapeStorage* data)
 		{
 			AnalysedData analysedData;
 			unsigned int totalWords = 0, totalChars = 0, totalLikes = 0;
 			unordered_map<string, unsigned int>* related = analysedData.getRelatedHashtags();
+
+			vector<string> wordMapList;
 
 			//Set analysed data scrape type
 			switch (data->getMode())
@@ -62,6 +66,7 @@ namespace ICT1009
 							else
 								(*related)[words.at(k)] += 1;
 						}
+						wordMapList.push_back(words.at(k));
 					}
 
 					totalLikes += posts.at(j).get()->getLikes();
@@ -78,6 +83,13 @@ namespace ICT1009
 			analysedData.setAvgChars(static_cast<float>(totalChars) / static_cast<float>(analysedData.getNumPosts()));
 			//Calculate average hashtags for analysed data
 			analysedData.setAvgHashtags(static_cast<float>(related->size()) / static_cast<float>(analysedData.getNumPosts()));
+
+			//Create wordmap
+			string combinedWordMap = "";
+			for (string s : wordMapList)
+				combinedWordMap += s + " ";
+
+			system((wordmapCommand + " " + combinedWordMap).c_str());
 
 			return analysedData;
 		}

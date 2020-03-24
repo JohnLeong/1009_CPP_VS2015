@@ -18,18 +18,19 @@ namespace ICT1009
 
 		}
 
-		string DataCleanser::removeExtraWhitespaces(const string& input)
+		string DataCleanser::removeExtraWhitespaces(const string& str)
 		{
 			string new_string;
 			//output.clear();  // unless you want to add at the end of existing sring...
-			unique_copy(input.begin(), input.end(), back_insert_iterator<string>(new_string), [](char a, char b) { return isspace(a) && isspace(b);});
+			unique_copy(str.begin(), str.end(), back_insert_iterator<string>(new_string), [](char a, char b) { return isspace(a) && isspace(b);});
 			return new_string;
 			//cout << output << endl;
 		}
 
-		string DataCleanser::printMatches(string str, regex reg)
+		string DataCleanser::removeSymbols(const string& str)
 		{
 			string new_string;
+			regex reg("[a-zA-Z!,.]+");
 			sregex_iterator currentMatch(str.begin(), str.end(), reg);
 			sregex_iterator lastMatch;
 			while (currentMatch != lastMatch)
@@ -38,9 +39,13 @@ namespace ICT1009
 				// cout << match.str();
 				new_string += match.str();
 				currentMatch++;
-
 			}
 			return new_string;
+		}
+
+		string DataCleanser::cleanseString(string str)
+		{
+			return removeExtraWhitespaces(removeSymbols(str));
 		}
 	}
 }

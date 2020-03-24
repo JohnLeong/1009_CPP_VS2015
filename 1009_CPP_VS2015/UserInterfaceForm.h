@@ -188,6 +188,8 @@ private: System::Windows::Forms::Button^  visualationBtn;
 private: System::Windows::Forms::Label^  jsonVisualFilePath;
 private: System::Windows::Forms::Label^  displayJsonVisualFilePathValue;
 private: System::Windows::Forms::TextBox^  twitterConsole;
+private: System::Windows::Forms::PictureBox^  analysisWordmap;
+
 
 
 
@@ -357,6 +359,7 @@ private: System::Windows::Forms::TextBox^  twitterConsole;
 			this->displayJsonLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->displayJsonSaveFileDialog = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->imageOcrLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->analysisWordmap = (gcnew System::Windows::Forms::PictureBox());
 			this->sidePanelBacking->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sitLogo))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -371,6 +374,7 @@ private: System::Windows::Forms::TextBox^  twitterConsole;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->BeginInit();
 			this->imageOcrTab->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisWordmap))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// sidePanelBacking
@@ -1112,6 +1116,7 @@ private: System::Windows::Forms::TextBox^  twitterConsole;
 			// 
 			// dataAnalysisTab
 			// 
+			this->dataAnalysisTab->Controls->Add(this->analysisWordmap);
 			this->dataAnalysisTab->Controls->Add(this->analysisAvgPostLengthLabel);
 			this->dataAnalysisTab->Controls->Add(this->analysisAvgHashtagsLabel);
 			this->dataAnalysisTab->Controls->Add(this->analysisScrapeTargetLabel);
@@ -1545,6 +1550,16 @@ private: System::Windows::Forms::TextBox^  twitterConsole;
 			// 
 			this->imageOcrLoadFileDialog->FileName = L"openFileDialog1";
 			// 
+			// analysisWordmap
+			// 
+			this->analysisWordmap->BackColor = System::Drawing::Color::Gainsboro;
+			this->analysisWordmap->Location = System::Drawing::Point(551, 358);
+			this->analysisWordmap->Name = L"analysisWordmap";
+			this->analysisWordmap->Size = System::Drawing::Size(256, 256);
+			this->analysisWordmap->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->analysisWordmap->TabIndex = 14;
+			this->analysisWordmap->TabStop = false;
+			// 
 			// UserInterfaceForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -1576,6 +1591,7 @@ private: System::Windows::Forms::TextBox^  twitterConsole;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->EndInit();
 			this->imageOcrTab->ResumeLayout(false);
 			this->imageOcrTab->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisWordmap))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2052,18 +2068,7 @@ private: System::Void analysisSelectFileButton_Click(System::Object^  sender, Sy
 			std::string filePath = msclr::interop::marshal_as<std::string>(displayJsonLoadFileDialog->FileName);
 			ScrapeStorage data(filePath);
 
-			//std::cout << data.getScrapePlatform() << std::endl;
-
-			//for (auto details : data.getScrapedDetails())
-			//{
-			//	std::cout << "DETAIL 2" << std::endl;
-			//	for (auto post : details.get()->getPostList())
-			//	{
-			//		std::cout << "POST 2" << std::endl;
-			//		std::cout << post.get()->getCaption() << std::endl;
-			//	}
-			//}
-
+			//Display data analysis onto gui
 			AnalysedData analysedData = DataAnalyser::Analyse(&data);
 			analysisAvgLikesLabel->Text = "Avg likes: " + analysedData.getAvgLikes().ToString();
 			analysisAvgPostLengthLabel->Text = "Avg post lenth: " + analysedData.getAvgChars().ToString();
@@ -2077,11 +2082,18 @@ private: System::Void analysisSelectFileButton_Click(System::Object^  sender, Sy
 
 			analysisScrapeTargetLabel->Text = "Target " + (analysedData.getScrapeType() == "Hashtags" ? "hashtags: " : "profiles: ") + (gcnew String(scrapeTargets.c_str()));
 
+			//Populate related hashtags table
 			std::map<std::string, unsigned int> sorted_hashtags(analysedData.getRelatedHashtags()->begin(), analysedData.getRelatedHashtags()->end());
 			for (auto item = sorted_hashtags.begin(); item != sorted_hashtags.end(); ++item)
 			{
 				analysisRelatedHashtagsTable->Rows->Add(gcnew String(item->first.c_str()), (static_cast<float>(item->second) / analysedData.getNumPosts()).ToString(),item->second.ToString());
 			}
+
+			//Load wordmap
+			auto img = Image::FromFile("wordmap.png");
+			Bitmap^ bm = gcnew Bitmap(img);
+			analysisWordmap->Image = bm;
+			delete img;
 		}
 		catch (std::exception e) 
 		{

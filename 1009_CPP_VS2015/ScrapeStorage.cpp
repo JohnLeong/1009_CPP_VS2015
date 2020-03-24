@@ -1,5 +1,7 @@
 #include "ScrapeStorage.h"
 
+#include "DataCleanser.h"
+
 SCRAPE_STORAGE_NAMESPACE_START
 
 using json = nlohmann::json;
