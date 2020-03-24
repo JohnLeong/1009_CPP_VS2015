@@ -158,7 +158,7 @@ int InstagramScrapper::scrapeByProfiles(const std::string username, const std::s
 	//Profile mode wont scrape comments
 	/*typedef std::shared_ptr<SocialMediaComment> SocialMediaCommentPtr;
 	SocialMediaCommentPtr comment(new SocialMediaComment);*/
-
+	
 	storage->setMode(ScrapeStorage::Profile);
 	storage->setScrapePlatform(ScrapeStorage::Instagram);
 	

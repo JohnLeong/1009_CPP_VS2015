@@ -172,6 +172,23 @@ private: System::Windows::Forms::Label^  label1;
 private: System::Windows::Forms::Label^  label2;
 private: System::Windows::Forms::Label^  label3;
 
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  BarChart;
+
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  PieChart;
+private: System::Windows::Forms::Button^  visualationBtn;
+
+private: System::Windows::Forms::Label^  jsonVisualFilePath;
+private: System::Windows::Forms::Label^  displayJsonVisualFilePathValue;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -217,6 +234,23 @@ private: System::Windows::Forms::Label^  label3;
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series13 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -293,6 +327,11 @@ private: System::Windows::Forms::Label^  label3;
 			this->analysisFileLocationLabel = (gcnew System::Windows::Forms::Label());
 			this->dataAnalysisHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->visualisationTab = (gcnew System::Windows::Forms::TabPage());
+			this->displayJsonVisualFilePathValue = (gcnew System::Windows::Forms::Label());
+			this->jsonVisualFilePath = (gcnew System::Windows::Forms::Label());
+			this->visualationBtn = (gcnew System::Windows::Forms::Button());
+			this->PieChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->BarChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->visualisationHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->imageOcrTab = (gcnew System::Windows::Forms::TabPage());
 			this->imageOcrExecuteButton = (gcnew System::Windows::Forms::Button());
@@ -319,6 +358,8 @@ private: System::Windows::Forms::Label^  label3;
 			this->dataAnalysisTab->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->BeginInit();
 			this->visualisationTab->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->BeginInit();
 			this->imageOcrTab->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -555,10 +596,10 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramTab->Controls->Add(this->instagramPasswordLabel);
 			this->instagramTab->Controls->Add(this->instagramUsernameLabel);
 			this->instagramTab->Controls->Add(this->instagramHeaderLabel);
-			this->instagramTab->Location = System::Drawing::Point(4, 33);
+			this->instagramTab->Location = System::Drawing::Point(4, 22);
 			this->instagramTab->Name = L"instagramTab";
 			this->instagramTab->Padding = System::Windows::Forms::Padding(3);
-			this->instagramTab->Size = System::Drawing::Size(852, 709);
+			this->instagramTab->Size = System::Drawing::Size(852, 720);
 			this->instagramTab->TabIndex = 0;
 			this->instagramTab->Text = L"1";
 			this->instagramTab->UseVisualStyleBackColor = true;
@@ -578,7 +619,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramExportFolderPathValueLabel->AutoSize = true;
 			this->instagramExportFolderPathValueLabel->Location = System::Drawing::Point(275, 120);
 			this->instagramExportFolderPathValueLabel->Name = L"instagramExportFolderPathValueLabel";
-			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(33, 13);
 			this->instagramExportFolderPathValueLabel->TabIndex = 21;
 			this->instagramExportFolderPathValueLabel->Text = L"None";
 			// 
@@ -597,7 +638,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramExportFolderPathLabel->AutoSize = true;
 			this->instagramExportFolderPathLabel->Location = System::Drawing::Point(25, 130);
 			this->instagramExportFolderPathLabel->Name = L"instagramExportFolderPathLabel";
-			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(123, 25);
+			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(67, 13);
 			this->instagramExportFolderPathLabel->TabIndex = 19;
 			this->instagramExportFolderPathLabel->Text = L"Folder Path: ";
 			// 
@@ -606,7 +647,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramExportLabel->AutoSize = true;
 			this->instagramExportLabel->Location = System::Drawing::Point(25, 93);
 			this->instagramExportLabel->Name = L"instagramExportLabel";
-			this->instagramExportLabel->Size = System::Drawing::Size(134, 25);
+			this->instagramExportLabel->Size = System::Drawing::Size(72, 13);
 			this->instagramExportLabel->TabIndex = 19;
 			this->instagramExportLabel->Text = L"Export Folder:";
 			// 
@@ -643,7 +684,7 @@ private: System::Windows::Forms::Label^  label3;
 			// 
 			this->instagramProfilePostCountTextBox->Location = System::Drawing::Point(399, 284);
 			this->instagramProfilePostCountTextBox->Name = L"instagramProfilePostCountTextBox";
-			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramProfilePostCountTextBox->TabIndex = 15;
 			// 
 			// instagramHashTagsTextBox
@@ -658,7 +699,7 @@ private: System::Windows::Forms::Label^  label3;
 			// 
 			this->instagramHashTagPostCountTextBox->Location = System::Drawing::Point(32, 284);
 			this->instagramHashTagPostCountTextBox->Name = L"instagramHashTagPostCountTextBox";
-			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramHashTagPostCountTextBox->TabIndex = 13;
 			// 
 			// instagramUsernamePasswordTextBox
@@ -666,7 +707,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramUsernamePasswordTextBox->Location = System::Drawing::Point(556, 56);
 			this->instagramUsernamePasswordTextBox->Name = L"instagramUsernamePasswordTextBox";
 			this->instagramUsernamePasswordTextBox->PasswordChar = '*';
-			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramUsernamePasswordTextBox->TabIndex = 10;
 			this->instagramUsernamePasswordTextBox->Text = L"Password12345";
 			// 
@@ -674,7 +715,7 @@ private: System::Windows::Forms::Label^  label3;
 			// 
 			this->instagramUsernameTextBox->Location = System::Drawing::Point(204, 62);
 			this->instagramUsernameTextBox->Name = L"instagramUsernameTextBox";
-			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramUsernameTextBox->TabIndex = 9;
 			this->instagramUsernameTextBox->Text = L"hehebongesher";
 			// 
@@ -683,7 +724,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramProfilesLabel->AutoSize = true;
 			this->instagramProfilesLabel->Location = System::Drawing::Point(392, 333);
 			this->instagramProfilesLabel->Name = L"instagramProfilesLabel";
-			this->instagramProfilesLabel->Size = System::Drawing::Size(76, 25);
+			this->instagramProfilesLabel->Size = System::Drawing::Size(41, 13);
 			this->instagramProfilesLabel->TabIndex = 8;
 			this->instagramProfilesLabel->Text = L"Profiles";
 			this->instagramProfilesLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramProfilesLabel_Click);
@@ -693,7 +734,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramHashTagsLabel->AutoSize = true;
 			this->instagramHashTagsLabel->Location = System::Drawing::Point(25, 333);
 			this->instagramHashTagsLabel->Name = L"instagramHashTagsLabel";
-			this->instagramHashTagsLabel->Size = System::Drawing::Size(103, 25);
+			this->instagramHashTagsLabel->Size = System::Drawing::Size(56, 13);
 			this->instagramHashTagsLabel->TabIndex = 7;
 			this->instagramHashTagsLabel->Text = L"HashTags";
 			// 
@@ -702,7 +743,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramProfileNumberOfPostLabel->AutoSize = true;
 			this->instagramProfileNumberOfPostLabel->Location = System::Drawing::Point(392, 248);
 			this->instagramProfileNumberOfPostLabel->Name = L"instagramProfileNumberOfPostLabel";
-			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
+			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(85, 13);
 			this->instagramProfileNumberOfPostLabel->TabIndex = 6;
 			this->instagramProfileNumberOfPostLabel->Text = L"Number of Posts";
 			// 
@@ -711,7 +752,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramHashTagNumberOfPostLabel->AutoSize = true;
 			this->instagramHashTagNumberOfPostLabel->Location = System::Drawing::Point(25, 248);
 			this->instagramHashTagNumberOfPostLabel->Name = L"instagramHashTagNumberOfPostLabel";
-			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
+			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(85, 13);
 			this->instagramHashTagNumberOfPostLabel->TabIndex = 5;
 			this->instagramHashTagNumberOfPostLabel->Text = L"Number of Posts";
 			// 
@@ -720,7 +761,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramProfileModeLabel->AutoSize = true;
 			this->instagramProfileModeLabel->Location = System::Drawing::Point(392, 201);
 			this->instagramProfileModeLabel->Name = L"instagramProfileModeLabel";
-			this->instagramProfileModeLabel->Size = System::Drawing::Size(121, 25);
+			this->instagramProfileModeLabel->Size = System::Drawing::Size(66, 13);
 			this->instagramProfileModeLabel->TabIndex = 4;
 			this->instagramProfileModeLabel->Text = L"Profile Mode";
 			// 
@@ -729,7 +770,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramHashTagModeLabel->AutoSize = true;
 			this->instagramHashTagModeLabel->Location = System::Drawing::Point(25, 201);
 			this->instagramHashTagModeLabel->Name = L"instagramHashTagModeLabel";
-			this->instagramHashTagModeLabel->Size = System::Drawing::Size(148, 25);
+			this->instagramHashTagModeLabel->Size = System::Drawing::Size(81, 13);
 			this->instagramHashTagModeLabel->TabIndex = 3;
 			this->instagramHashTagModeLabel->Text = L"HashTag Mode";
 			// 
@@ -738,7 +779,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramPasswordLabel->AutoSize = true;
 			this->instagramPasswordLabel->Location = System::Drawing::Point(362, 56);
 			this->instagramPasswordLabel->Name = L"instagramPasswordLabel";
-			this->instagramPasswordLabel->Size = System::Drawing::Size(104, 25);
+			this->instagramPasswordLabel->Size = System::Drawing::Size(56, 13);
 			this->instagramPasswordLabel->TabIndex = 2;
 			this->instagramPasswordLabel->Text = L"Password:";
 			// 
@@ -747,7 +788,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->instagramUsernameLabel->AutoSize = true;
 			this->instagramUsernameLabel->Location = System::Drawing::Point(25, 56);
 			this->instagramUsernameLabel->Name = L"instagramUsernameLabel";
-			this->instagramUsernameLabel->Size = System::Drawing::Size(108, 25);
+			this->instagramUsernameLabel->Size = System::Drawing::Size(58, 13);
 			this->instagramUsernameLabel->TabIndex = 1;
 			this->instagramUsernameLabel->Text = L"Username:";
 			this->instagramUsernameLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramUsernameLabel_Click);
@@ -781,10 +822,10 @@ private: System::Windows::Forms::Label^  label3;
 			this->twitterTab->Controls->Add(this->twitterExportPathLabel);
 			this->twitterTab->Controls->Add(this->twitterExportLabel);
 			this->twitterTab->Controls->Add(this->twitterHeaderLabel);
-			this->twitterTab->Location = System::Drawing::Point(4, 33);
+			this->twitterTab->Location = System::Drawing::Point(4, 22);
 			this->twitterTab->Name = L"twitterTab";
 			this->twitterTab->Padding = System::Windows::Forms::Padding(3);
-			this->twitterTab->Size = System::Drawing::Size(852, 709);
+			this->twitterTab->Size = System::Drawing::Size(852, 720);
 			this->twitterTab->TabIndex = 2;
 			this->twitterTab->Text = L"2";
 			this->twitterTab->UseVisualStyleBackColor = true;
@@ -848,7 +889,7 @@ private: System::Windows::Forms::Label^  label3;
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->twitterProfileModeLabel->Location = System::Drawing::Point(12, 400);
 			this->twitterProfileModeLabel->Name = L"twitterProfileModeLabel";
-			this->twitterProfileModeLabel->Size = System::Drawing::Size(163, 29);
+			this->twitterProfileModeLabel->Size = System::Drawing::Size(146, 26);
 			this->twitterProfileModeLabel->TabIndex = 20;
 			this->twitterProfileModeLabel->Text = L"Profile Mode";
 			// 
@@ -911,7 +952,7 @@ private: System::Windows::Forms::Label^  label3;
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->twitterHashtagModeLabel->Location = System::Drawing::Point(12, 175);
 			this->twitterHashtagModeLabel->Name = L"twitterHashtagModeLabel";
-			this->twitterHashtagModeLabel->Size = System::Drawing::Size(181, 29);
+			this->twitterHashtagModeLabel->Size = System::Drawing::Size(165, 26);
 			this->twitterHashtagModeLabel->TabIndex = 4;
 			this->twitterHashtagModeLabel->Text = L"Hashtag Mode";
 			// 
@@ -944,7 +985,7 @@ private: System::Windows::Forms::Label^  label3;
 				static_cast<System::Byte>(0)));
 			this->twitterExportLabel->Location = System::Drawing::Point(8, 62);
 			this->twitterExportLabel->Name = L"twitterExportLabel";
-			this->twitterExportLabel->Size = System::Drawing::Size(144, 22);
+			this->twitterExportLabel->Size = System::Drawing::Size(135, 20);
 			this->twitterExportLabel->TabIndex = 1;
 			this->twitterExportLabel->Text = L"Export location";
 			// 
@@ -968,9 +1009,9 @@ private: System::Windows::Forms::Label^  label3;
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathHeaderLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonHeaderLabel);
-			this->displayJsonTab->Location = System::Drawing::Point(4, 33);
+			this->displayJsonTab->Location = System::Drawing::Point(4, 22);
 			this->displayJsonTab->Name = L"displayJsonTab";
-			this->displayJsonTab->Size = System::Drawing::Size(852, 709);
+			this->displayJsonTab->Size = System::Drawing::Size(852, 720);
 			this->displayJsonTab->TabIndex = 3;
 			this->displayJsonTab->Text = L"3";
 			this->displayJsonTab->UseVisualStyleBackColor = true;
@@ -988,7 +1029,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->displayJsonFilePathValueLabel->AutoSize = true;
 			this->displayJsonFilePathValueLabel->Location = System::Drawing::Point(100, 150);
 			this->displayJsonFilePathValueLabel->Name = L"displayJsonFilePathValueLabel";
-			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(33, 13);
 			this->displayJsonFilePathValueLabel->TabIndex = 5;
 			this->displayJsonFilePathValueLabel->Text = L"None";
 			// 
@@ -1017,7 +1058,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->displayJsonFilePathLabel->AutoSize = true;
 			this->displayJsonFilePathLabel->Location = System::Drawing::Point(48, 150);
 			this->displayJsonFilePathLabel->Name = L"displayJsonFilePathLabel";
-			this->displayJsonFilePathLabel->Size = System::Drawing::Size(64, 25);
+			this->displayJsonFilePathLabel->Size = System::Drawing::Size(35, 13);
 			this->displayJsonFilePathLabel->TabIndex = 2;
 			this->displayJsonFilePathLabel->Text = L"label1";
 			// 
@@ -1026,7 +1067,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->displayJsonFilePathHeaderLabel->AutoSize = true;
 			this->displayJsonFilePathHeaderLabel->Location = System::Drawing::Point(48, 100);
 			this->displayJsonFilePathHeaderLabel->Name = L"displayJsonFilePathHeaderLabel";
-			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(142, 25);
+			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(76, 13);
 			this->displayJsonFilePathHeaderLabel->TabIndex = 1;
 			this->displayJsonFilePathHeaderLabel->Text = L"Json File Path:";
 			// 
@@ -1054,9 +1095,9 @@ private: System::Windows::Forms::Label^  label3;
 			this->dataAnalysisTab->Controls->Add(this->analysisFilePathLabel);
 			this->dataAnalysisTab->Controls->Add(this->analysisFileLocationLabel);
 			this->dataAnalysisTab->Controls->Add(this->dataAnalysisHeaderLabel);
-			this->dataAnalysisTab->Location = System::Drawing::Point(4, 33);
+			this->dataAnalysisTab->Location = System::Drawing::Point(4, 22);
 			this->dataAnalysisTab->Name = L"dataAnalysisTab";
-			this->dataAnalysisTab->Size = System::Drawing::Size(852, 709);
+			this->dataAnalysisTab->Size = System::Drawing::Size(852, 720);
 			this->dataAnalysisTab->TabIndex = 4;
 			this->dataAnalysisTab->Text = L"4";
 			this->dataAnalysisTab->UseVisualStyleBackColor = true;
@@ -1210,7 +1251,7 @@ private: System::Windows::Forms::Label^  label3;
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->analysisFileLocationLabel->Location = System::Drawing::Point(8, 62);
 			this->analysisFileLocationLabel->Name = L"analysisFileLocationLabel";
-			this->analysisFileLocationLabel->Size = System::Drawing::Size(119, 22);
+			this->analysisFileLocationLabel->Size = System::Drawing::Size(112, 20);
 			this->analysisFileLocationLabel->TabIndex = 4;
 			this->analysisFileLocationLabel->Text = L"File location";
 			// 
@@ -1227,13 +1268,134 @@ private: System::Windows::Forms::Label^  label3;
 			// 
 			// visualisationTab
 			// 
+			this->visualisationTab->Controls->Add(this->displayJsonVisualFilePathValue);
+			this->visualisationTab->Controls->Add(this->jsonVisualFilePath);
+			this->visualisationTab->Controls->Add(this->visualationBtn);
+			this->visualisationTab->Controls->Add(this->PieChart);
+			this->visualisationTab->Controls->Add(this->BarChart);
 			this->visualisationTab->Controls->Add(this->visualisationHeaderLabel);
-			this->visualisationTab->Location = System::Drawing::Point(4, 33);
+			this->visualisationTab->Location = System::Drawing::Point(4, 22);
 			this->visualisationTab->Name = L"visualisationTab";
-			this->visualisationTab->Size = System::Drawing::Size(852, 709);
+			this->visualisationTab->Size = System::Drawing::Size(852, 720);
 			this->visualisationTab->TabIndex = 5;
 			this->visualisationTab->Text = L"5";
 			this->visualisationTab->UseVisualStyleBackColor = true;
+			// 
+			// displayJsonVisualFilePathValue
+			// 
+			this->displayJsonVisualFilePathValue->AutoSize = true;
+			this->displayJsonVisualFilePathValue->Location = System::Drawing::Point(321, 74);
+			this->displayJsonVisualFilePathValue->Name = L"displayJsonVisualFilePathValue";
+			this->displayJsonVisualFilePathValue->Size = System::Drawing::Size(38, 13);
+			this->displayJsonVisualFilePathValue->TabIndex = 9;
+			this->displayJsonVisualFilePathValue->Text = L"NONE";
+			// 
+			// jsonVisualFilePath
+			// 
+			this->jsonVisualFilePath->AutoSize = true;
+			this->jsonVisualFilePath->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 9.818182F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->jsonVisualFilePath->Location = System::Drawing::Point(225, 69);
+			this->jsonVisualFilePath->Name = L"jsonVisualFilePath";
+			this->jsonVisualFilePath->Size = System::Drawing::Size(90, 22);
+			this->jsonVisualFilePath->TabIndex = 8;
+			this->jsonVisualFilePath->Text = L"File Path: ";
+			// 
+			// visualationBtn
+			// 
+			this->visualationBtn->Font = (gcnew System::Drawing::Font(L"Arial", 7.854546F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->visualationBtn->Location = System::Drawing::Point(28, 59);
+			this->visualationBtn->Name = L"visualationBtn";
+			this->visualationBtn->Size = System::Drawing::Size(149, 32);
+			this->visualationBtn->TabIndex = 7;
+			this->visualationBtn->Text = L"Select File";
+			this->visualationBtn->UseVisualStyleBackColor = true;
+			this->visualationBtn->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualationBtn_Click_1);
+			// 
+			// PieChart
+			// 
+			chartArea1->Name = L"ChartArea1";
+			this->PieChart->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			legend1->Title = L"Visualation Number Of Location Base On Post";
+			this->PieChart->Legends->Add(legend1);
+			this->PieChart->Location = System::Drawing::Point(44, 381);
+			this->PieChart->Name = L"PieChart";
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series1->EmptyPointStyle->Name = L"Location";
+			series1->Legend = L"Legend1";
+			series1->Name = L"Location1";
+			series1->YValuesPerPoint = 4;
+			this->PieChart->Series->Add(series1);
+			this->PieChart->Size = System::Drawing::Size(770, 300);
+			this->PieChart->TabIndex = 6;
+			this->PieChart->Text = L"PieChart";
+			// 
+			// BarChart
+			// 
+			chartArea2->Name = L"ChartArea1";
+			this->BarChart->ChartAreas->Add(chartArea2);
+			legend2->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
+			legend2->IsEquallySpacedItems = true;
+			legend2->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
+			legend2->Name = L"VisualationNumberOfPostPerMonth";
+			legend2->Title = L"Visualation Number Of Post Per Month";
+			this->BarChart->Legends->Add(legend2);
+			this->BarChart->Location = System::Drawing::Point(6, 108);
+			this->BarChart->Name = L"BarChart";
+			series2->ChartArea = L"ChartArea1";
+			series2->Legend = L"VisualationNumberOfPostPerMonth";
+			series2->Name = L"JAN";
+			series3->ChartArea = L"ChartArea1";
+			series3->Legend = L"VisualationNumberOfPostPerMonth";
+			series3->Name = L"FEB";
+			series4->ChartArea = L"ChartArea1";
+			series4->Legend = L"VisualationNumberOfPostPerMonth";
+			series4->Name = L"MARCH";
+			series5->ChartArea = L"ChartArea1";
+			series5->Legend = L"VisualationNumberOfPostPerMonth";
+			series5->Name = L"APRIL";
+			series6->ChartArea = L"ChartArea1";
+			series6->Legend = L"VisualationNumberOfPostPerMonth";
+			series6->Name = L"MAY";
+			series7->ChartArea = L"ChartArea1";
+			series7->Legend = L"VisualationNumberOfPostPerMonth";
+			series7->Name = L"JUNE";
+			series8->ChartArea = L"ChartArea1";
+			series8->Legend = L"VisualationNumberOfPostPerMonth";
+			series8->Name = L"JULY";
+			series9->ChartArea = L"ChartArea1";
+			series9->Legend = L"VisualationNumberOfPostPerMonth";
+			series9->Name = L"AUG";
+			series10->ChartArea = L"ChartArea1";
+			series10->Legend = L"VisualationNumberOfPostPerMonth";
+			series10->Name = L"SEPT";
+			series11->ChartArea = L"ChartArea1";
+			series11->Legend = L"VisualationNumberOfPostPerMonth";
+			series11->Name = L"OCT";
+			series12->ChartArea = L"ChartArea1";
+			series12->Legend = L"VisualationNumberOfPostPerMonth";
+			series12->Name = L"NOV";
+			series13->ChartArea = L"ChartArea1";
+			series13->Legend = L"VisualationNumberOfPostPerMonth";
+			series13->Name = L"DEC";
+			this->BarChart->Series->Add(series2);
+			this->BarChart->Series->Add(series3);
+			this->BarChart->Series->Add(series4);
+			this->BarChart->Series->Add(series5);
+			this->BarChart->Series->Add(series6);
+			this->BarChart->Series->Add(series7);
+			this->BarChart->Series->Add(series8);
+			this->BarChart->Series->Add(series9);
+			this->BarChart->Series->Add(series10);
+			this->BarChart->Series->Add(series11);
+			this->BarChart->Series->Add(series12);
+			this->BarChart->Series->Add(series13);
+			this->BarChart->Size = System::Drawing::Size(803, 283);
+			this->BarChart->TabIndex = 1;
+			this->BarChart->Text = L"BarChart";
 			// 
 			// visualisationHeaderLabel
 			// 
@@ -1256,9 +1418,9 @@ private: System::Windows::Forms::Label^  label3;
 			this->imageOcrTab->Controls->Add(this->imageOcrFilePathLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrDescriptionLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrHeaderLabel);
-			this->imageOcrTab->Location = System::Drawing::Point(4, 33);
+			this->imageOcrTab->Location = System::Drawing::Point(4, 22);
 			this->imageOcrTab->Name = L"imageOcrTab";
-			this->imageOcrTab->Size = System::Drawing::Size(852, 709);
+			this->imageOcrTab->Size = System::Drawing::Size(852, 720);
 			this->imageOcrTab->TabIndex = 6;
 			this->imageOcrTab->Text = L"6";
 			this->imageOcrTab->UseVisualStyleBackColor = true;
@@ -1297,7 +1459,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->imageOcrFilePathHeaderLabel->AutoSize = true;
 			this->imageOcrFilePathHeaderLabel->Location = System::Drawing::Point(50, 130);
 			this->imageOcrFilePathHeaderLabel->Name = L"imageOcrFilePathHeaderLabel";
-			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(128, 25);
+			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(70, 13);
 			this->imageOcrFilePathHeaderLabel->TabIndex = 4;
 			this->imageOcrFilePathHeaderLabel->Text = L"File Location:";
 			// 
@@ -1306,7 +1468,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->imageOcrFilePathValueLabel->AutoSize = true;
 			this->imageOcrFilePathValueLabel->Location = System::Drawing::Point(150, 200);
 			this->imageOcrFilePathValueLabel->Name = L"imageOcrFilePathValueLabel";
-			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(33, 13);
 			this->imageOcrFilePathValueLabel->TabIndex = 3;
 			this->imageOcrFilePathValueLabel->Text = L"None";
 			// 
@@ -1315,7 +1477,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->imageOcrFilePathLabel->AutoSize = true;
 			this->imageOcrFilePathLabel->Location = System::Drawing::Point(50, 200);
 			this->imageOcrFilePathLabel->Name = L"imageOcrFilePathLabel";
-			this->imageOcrFilePathLabel->Size = System::Drawing::Size(113, 25);
+			this->imageOcrFilePathLabel->Size = System::Drawing::Size(61, 13);
 			this->imageOcrFilePathLabel->TabIndex = 2;
 			this->imageOcrFilePathLabel->Text = L"File loaded:";
 			// 
@@ -1324,7 +1486,7 @@ private: System::Windows::Forms::Label^  label3;
 			this->imageOcrDescriptionLabel->AutoSize = true;
 			this->imageOcrDescriptionLabel->Location = System::Drawing::Point(44, 73);
 			this->imageOcrDescriptionLabel->Name = L"imageOcrDescriptionLabel";
-			this->imageOcrDescriptionLabel->Size = System::Drawing::Size(1548, 25);
+			this->imageOcrDescriptionLabel->Size = System::Drawing::Size(848, 13);
 			this->imageOcrDescriptionLabel->TabIndex = 1;
 			this->imageOcrDescriptionLabel->Text = L"*This function is currently only compatible with Instagram scraped Data. For ever"
 				L"y post in the JSON file, an ocr_text field will be appended to it whenever text "
@@ -1343,9 +1505,9 @@ private: System::Windows::Forms::Label^  label3;
 			// 
 			// aboutTab
 			// 
-			this->aboutTab->Location = System::Drawing::Point(4, 33);
+			this->aboutTab->Location = System::Drawing::Point(4, 22);
 			this->aboutTab->Name = L"aboutTab";
-			this->aboutTab->Size = System::Drawing::Size(852, 709);
+			this->aboutTab->Size = System::Drawing::Size(852, 720);
 			this->aboutTab->TabIndex = 7;
 			this->aboutTab->Text = L"7";
 			this->aboutTab->UseVisualStyleBackColor = true;
@@ -1379,6 +1541,8 @@ private: System::Windows::Forms::Label^  label3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->EndInit();
 			this->visualisationTab->ResumeLayout(false);
 			this->visualisationTab->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->EndInit();
 			this->imageOcrTab->ResumeLayout(false);
 			this->imageOcrTab->PerformLayout();
 			this->ResumeLayout(false);
@@ -1619,6 +1783,150 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 		}
 	}
 
+
+private: System::Void visualationBtn_Click_1(System::Object^  sender, System::EventArgs^  e)
+{
+	if (displayJsonLoadFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		displayJsonVisualFilePathValue->Text = displayJsonLoadFileDialog->FileName;
+		using json = nlohmann::json;
+
+		try {
+			std::string fileName = msclr::interop::marshal_as<std::string>(displayJsonLoadFileDialog->FileName);
+			std::ifstream i(fileName);
+			json jsonObject;
+			i >> jsonObject; i.close(); //Parse file into json object;
+			string tempLoc;
+			int counterLoc = 0;
+			int location[15];
+			location[0] = 0; location[1] = 0; location[2] = 0; location[3] = 0; location[4] = 0;
+			location[5] = 0; location[6] = 0; location[7] = 0; location[8] = 0; location[9] = 0;
+			location[10] = 0; location[11] = 0; location[12] = 0; location[13] = 0; location[14] = 0;
+			string locationName[15];
+			string tempDate;
+			int totalCaptions = 0;
+			int months[13];
+			months[1] = 0; months[2] = 0; months[3] = 0; months[4] = 0; months[5] = 0; months[6] = 0;
+			months[7] = 0; months[8] = 0; months[9] = 0; months[10] = 0; months[11] = 0; months[12] = 0; months[0] = 0;
+			for (auto &detail : jsonObject["details"])
+			{
+				for (auto &post : detail["extracted_posts"])
+				{
+
+					tempLoc = post["location"].get<string>();
+					//std::cout << tempLoc<<"\n";
+					if (locationName[counterLoc] != tempLoc && tempLoc != "None" && counterLoc < 15) { locationName[counterLoc] = tempLoc; counterLoc++; }
+					else { continue; }
+				}
+
+				for (auto &post : detail["extracted_posts"])
+				{
+
+					tempLoc = post["location"].get<string>();
+					//std::cout << tempLoc<<"\n";
+					for (int y = 0; y < 15; y++)
+					{
+						if (tempLoc == locationName[y])
+						{
+							location[y]++;
+							break;
+						}
+						else
+						{
+							continue;
+						}
+					}
+				}
+			}
+			for (auto &detail : jsonObject["details"]) {
+
+				for (auto &post : detail["extracted_posts"]) {
+
+					tempDate = post["date_time"].get<string>();
+					totalCaptions += 1;
+					if (tempDate[5] == '0')
+					{
+						if (tempDate[6] == '1')
+						{
+							months[1] += 1;
+						}
+						else if (tempDate[6] == '2')
+						{
+							months[2] += 1;
+						}
+						else if (tempDate[6] == '3')
+						{
+							months[3] += 1;
+						}
+						else if (tempDate[6] == '4')
+						{
+							months[4] += 1;
+						}
+						else if (tempDate[6] == '5')
+						{
+							months[5] += 1;
+						}
+						else if (tempDate[6] == '6')
+						{
+							months[6] += 1;
+						}
+						else if (tempDate[6] == '7')
+						{
+							months[7] += 1;
+						}
+						else if (tempDate[6] == '8')
+						{
+							months[8] += 1;
+						}
+						else if (tempDate[6] == '9')
+						{
+							months[9] += 1;
+						}
+					}
+					else
+					{
+						if (tempDate[6] == '0')
+						{
+							months[10] += 1;
+						}
+						else if (tempDate[6] == '1')
+						{
+							months[11] += 1;
+						}
+						else if (tempDate[6] == '2')
+						{
+							months[12] += 1;
+						}
+					}
+
+				}
+			}
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 1", location[0]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 2", location[1]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 3", location[2]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 4", location[3]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 5", location[4]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 6", location[5]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 7", location[6]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 8", location[7]);
+			this->PieChart->Series["Location1"]->Points->AddXY("Loc 9", location[8]);
+
+			this->BarChart->Series["JAN"]->Points->Add(months[1]);
+			this->BarChart->Series["FEB"]->Points->Add(months[2]);
+			this->BarChart->Series["MARCH"]->Points->Add(months[3]);
+			this->BarChart->Series["APRIL"]->Points->Add(months[4]);
+			this->BarChart->Series["MAY"]->Points->Add(months[5]);
+			this->BarChart->Series["JUNE"]->Points->Add(months[6]);
+			this->BarChart->Series["JULY"]->Points->Add(months[7]);
+			this->BarChart->Series["AUG"]->Points->Add(months[8]);
+			this->BarChart->Series["SEPT"]->Points->Add(months[9]);
+			this->BarChart->Series["OCT"]->Points->Add(months[10]);
+			this->BarChart->Series["NOV"]->Points->Add(months[11]);
+			this->BarChart->Series["DEC"]->Points->Add(months[12]);
+		}
+		catch (...) {
+		}
+	}
+}
 
 }; //Endpoint
 }

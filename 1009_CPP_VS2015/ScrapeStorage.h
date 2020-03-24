@@ -20,7 +20,6 @@ public:
 	/*
 		Enum in c++ dont use all caps will colide with macros naming.
 	*/
-	
 	enum Platform {
 		Instagram = 0,
 		Twitter = 1
@@ -36,14 +35,11 @@ public:
 	PV_GET_SET(ScrapeMode, ScrapeStorage, mode, Mode)
 	PV_GET_SET(vector<SocialMediaPostStoragePtr>, ScrapeStorage, scrapedDetails, ScrapedDetails)
 	
-
-
 public:
 	ScrapeStorage();
 	ScrapeStorage(const string filePath);
 	~ScrapeStorage();
 
-	//
 	bool saveToFile(const string filePath);
 	string getJsonString();
 	nlohmann::json getOutputJsonObject();

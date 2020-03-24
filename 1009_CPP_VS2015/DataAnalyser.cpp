@@ -10,6 +10,7 @@ using ICT1009::DataStorage::SocialMediaPost;
 
 namespace ICT1009
 {
+	
 	namespace Analysis
 	{
 		AnalysedData DataAnalyser::Analyse(DataStorage::ScrapeStorage* data)
