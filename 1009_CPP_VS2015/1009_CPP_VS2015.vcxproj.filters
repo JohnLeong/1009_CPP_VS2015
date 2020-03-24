@@ -102,6 +102,12 @@
     <ClInclude Include="ScrapeUtility.h">
       <Filter>Header Files\WebScrapping</Filter>
     </ClInclude>
+    <ClInclude Include="DataCleanser.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -160,6 +166,12 @@
     </ClCompile>
     <ClCompile Include="ScrapeUtility.cpp">
       <Filter>Source Files\WebScrapping</Filter>
+    </ClCompile>
+    <ClCompile Include="DataCleanser.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
