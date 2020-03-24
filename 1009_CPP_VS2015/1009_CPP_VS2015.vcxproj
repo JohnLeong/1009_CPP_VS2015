@@ -141,6 +141,8 @@
     <ClCompile Include="Bridge.cpp" />
     <ClCompile Include="CurlObj.cpp" />
     <ClCompile Include="DataAnalyser.cpp" />
+    <ClCompile Include="DataCleanser.cpp" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="DateTimeUtility.cpp" />
     <ClCompile Include="FileUtility.cpp" />
     <ClCompile Include="InstagramPost.cpp" />
@@ -162,6 +164,8 @@
     <ClInclude Include="Bridge.h" />
     <ClInclude Include="CurlObj.h" />
     <ClInclude Include="DataAnalyser.h" />
+    <ClInclude Include="DataCleanser.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="DateTimeUtility.h" />
     <ClInclude Include="FileUtility.h" />
     <ClInclude Include="InstagramPost.h" />
