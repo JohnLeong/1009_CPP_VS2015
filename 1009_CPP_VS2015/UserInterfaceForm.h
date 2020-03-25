@@ -2083,11 +2083,10 @@ private: System::Void analysisSelectFileButton_Click(System::Object^  sender, Sy
 			analysisScrapeTargetLabel->Text = "Target " + (analysedData.getScrapeType() == "Hashtags" ? "hashtags: " : "profiles: ") + (gcnew String(scrapeTargets.c_str()));
 
 			//Populate related hashtags table
+			analysisRelatedHashtagsTable->Rows->Clear();
 			std::map<std::string, unsigned int> sorted_hashtags(analysedData.getRelatedHashtags()->begin(), analysedData.getRelatedHashtags()->end());
 			for (auto item = sorted_hashtags.begin(); item != sorted_hashtags.end(); ++item)
-			{
 				analysisRelatedHashtagsTable->Rows->Add(gcnew String(item->first.c_str()), (static_cast<float>(item->second) / analysedData.getNumPosts()).ToString(),item->second.ToString());
-			}
 
 			//Load wordmap
 			auto img = Image::FromFile("wordmap.png");
