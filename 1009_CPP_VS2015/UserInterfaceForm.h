@@ -267,27 +267,6 @@ private: System::Windows::Forms::Label^  label6;
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
-<<<<<<< HEAD
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle19 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle20 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea19 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series118 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea20 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend20 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series119 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series120 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series121 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series122 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series123 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series124 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series125 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series126 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series127 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series128 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series129 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series130 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-=======
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
@@ -307,7 +286,6 @@ private: System::Windows::Forms::Label^  label6;
 			System::Windows::Forms::DataVisualization::Charting::Series^  series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series13 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -405,7 +383,6 @@ private: System::Windows::Forms::Label^  label6;
 			this->displayJsonLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->displayJsonSaveFileDialog = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->imageOcrLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
-<<<<<<< HEAD
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
@@ -426,9 +403,7 @@ private: System::Windows::Forms::Label^  label6;
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-=======
 			this->analysisWordmap = (gcnew System::Windows::Forms::PictureBox());
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->sidePanelBacking->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sitLogo))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -443,7 +418,6 @@ private: System::Windows::Forms::Label^  label6;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->BeginInit();
 			this->imageOcrTab->SuspendLayout();
-<<<<<<< HEAD
 			this->aboutTab->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
@@ -457,9 +431,7 @@ private: System::Windows::Forms::Label^  label6;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
-=======
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisWordmap))->BeginInit();
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->SuspendLayout();
 			// 
 			// sidePanelBacking
@@ -1290,17 +1262,6 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			this->analysisRelatedHashtagsTable->AllowUserToAddRows = false;
 			this->analysisRelatedHashtagsTable->AllowUserToDeleteRows = false;
-<<<<<<< HEAD
-			dataGridViewCellStyle19->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle19->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle19->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle19->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle19->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle19->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-=======
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
 			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
@@ -1310,23 +1271,11 @@ private: System::Windows::Forms::Label^  label6;
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->analysisRelatedHashtagsTable->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->analysisRelatedHashtagsTable->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->HashtagColumn,
 					this->FreqColumn, this->TotalColumn
 			});
-<<<<<<< HEAD
-			dataGridViewCellStyle20->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle20->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle20->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle20->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle20->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle20->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle20;
-=======
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
 			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
@@ -1336,7 +1285,6 @@ private: System::Windows::Forms::Label^  label6;
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle2;
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->analysisRelatedHashtagsTable->Location = System::Drawing::Point(12, 339);
 			this->analysisRelatedHashtagsTable->Name = L"analysisRelatedHashtagsTable";
 			this->analysisRelatedHashtagsTable->ReadOnly = true;
@@ -1458,22 +1406,6 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// PieChart
 			// 
-<<<<<<< HEAD
-			chartArea19->Name = L"ChartArea1";
-			this->PieChart->ChartAreas->Add(chartArea19);
-			legend19->Name = L"Legend1";
-			legend19->Title = L"Visualation Number Of Location Base On Post";
-			this->PieChart->Legends->Add(legend19);
-			this->PieChart->Location = System::Drawing::Point(44, 381);
-			this->PieChart->Name = L"PieChart";
-			series118->ChartArea = L"ChartArea1";
-			series118->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
-			series118->EmptyPointStyle->Name = L"Location";
-			series118->Legend = L"Legend1";
-			series118->Name = L"Location1";
-			series118->YValuesPerPoint = 4;
-			this->PieChart->Series->Add(series118);
-=======
 			chartArea1->Name = L"ChartArea1";
 			this->PieChart->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
@@ -1488,73 +1420,12 @@ private: System::Windows::Forms::Label^  label6;
 			series1->Name = L"Location1";
 			series1->YValuesPerPoint = 4;
 			this->PieChart->Series->Add(series1);
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->PieChart->Size = System::Drawing::Size(770, 300);
 			this->PieChart->TabIndex = 6;
 			this->PieChart->Text = L"PieChart";
 			// 
 			// BarChart
 			// 
-<<<<<<< HEAD
-			chartArea20->Name = L"ChartArea1";
-			this->BarChart->ChartAreas->Add(chartArea20);
-			legend20->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
-			legend20->IsEquallySpacedItems = true;
-			legend20->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
-			legend20->Name = L"VisualationNumberOfPostPerMonth";
-			legend20->Title = L"Visualation Number Of Post Per Month";
-			this->BarChart->Legends->Add(legend20);
-			this->BarChart->Location = System::Drawing::Point(6, 108);
-			this->BarChart->Name = L"BarChart";
-			series119->ChartArea = L"ChartArea1";
-			series119->Legend = L"VisualationNumberOfPostPerMonth";
-			series119->Name = L"JAN";
-			series120->ChartArea = L"ChartArea1";
-			series120->Legend = L"VisualationNumberOfPostPerMonth";
-			series120->Name = L"FEB";
-			series121->ChartArea = L"ChartArea1";
-			series121->Legend = L"VisualationNumberOfPostPerMonth";
-			series121->Name = L"MARCH";
-			series122->ChartArea = L"ChartArea1";
-			series122->Legend = L"VisualationNumberOfPostPerMonth";
-			series122->Name = L"APRIL";
-			series123->ChartArea = L"ChartArea1";
-			series123->Legend = L"VisualationNumberOfPostPerMonth";
-			series123->Name = L"MAY";
-			series124->ChartArea = L"ChartArea1";
-			series124->Legend = L"VisualationNumberOfPostPerMonth";
-			series124->Name = L"JUNE";
-			series125->ChartArea = L"ChartArea1";
-			series125->Legend = L"VisualationNumberOfPostPerMonth";
-			series125->Name = L"JULY";
-			series126->ChartArea = L"ChartArea1";
-			series126->Legend = L"VisualationNumberOfPostPerMonth";
-			series126->Name = L"AUG";
-			series127->ChartArea = L"ChartArea1";
-			series127->Legend = L"VisualationNumberOfPostPerMonth";
-			series127->Name = L"SEPT";
-			series128->ChartArea = L"ChartArea1";
-			series128->Legend = L"VisualationNumberOfPostPerMonth";
-			series128->Name = L"OCT";
-			series129->ChartArea = L"ChartArea1";
-			series129->Legend = L"VisualationNumberOfPostPerMonth";
-			series129->Name = L"NOV";
-			series130->ChartArea = L"ChartArea1";
-			series130->Legend = L"VisualationNumberOfPostPerMonth";
-			series130->Name = L"DEC";
-			this->BarChart->Series->Add(series119);
-			this->BarChart->Series->Add(series120);
-			this->BarChart->Series->Add(series121);
-			this->BarChart->Series->Add(series122);
-			this->BarChart->Series->Add(series123);
-			this->BarChart->Series->Add(series124);
-			this->BarChart->Series->Add(series125);
-			this->BarChart->Series->Add(series126);
-			this->BarChart->Series->Add(series127);
-			this->BarChart->Series->Add(series128);
-			this->BarChart->Series->Add(series129);
-			this->BarChart->Series->Add(series130);
-=======
 			chartArea2->Name = L"ChartArea1";
 			this->BarChart->ChartAreas->Add(chartArea2);
 			legend2->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
@@ -1613,7 +1484,6 @@ private: System::Windows::Forms::Label^  label6;
 			this->BarChart->Series->Add(series11);
 			this->BarChart->Series->Add(series12);
 			this->BarChart->Series->Add(series13);
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->BarChart->Size = System::Drawing::Size(803, 283);
 			this->BarChart->TabIndex = 1;
 			this->BarChart->Text = L"BarChart";
@@ -1758,7 +1628,6 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			this->imageOcrLoadFileDialog->FileName = L"openFileDialog1";
 			// 
-<<<<<<< HEAD
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
@@ -1810,7 +1679,6 @@ private: System::Windows::Forms::Label^  label6;
 			this->label1->Size = System::Drawing::Size(209, 18);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"PATRICK KANG (1902132)";
-			this->label1->Click += gcnew System::EventHandler(this, &UserInterfaceForm::label1_Click);
 			// 
 			// label2
 			// 
@@ -1949,7 +1817,6 @@ private: System::Windows::Forms::Label^  label6;
 			this->label4->Size = System::Drawing::Size(374, 51);
 			this->label4->TabIndex = 20;
 			this->label4->Text = L"Technologies Used";
-			this->label4->Click += gcnew System::EventHandler(this, &UserInterfaceForm::label4_Click);
 			// 
 			// label5
 			// 
@@ -1974,7 +1841,7 @@ private: System::Windows::Forms::Label^  label6;
 			this->label8->Size = System::Drawing::Size(183, 53);
 			this->label8->TabIndex = 22;
 			this->label8->Text = L"Member";
-=======
+			//
 			// analysisWordmap
 			// 
 			this->analysisWordmap->BackColor = System::Drawing::Color::Gainsboro;
@@ -1984,7 +1851,6 @@ private: System::Windows::Forms::Label^  label6;
 			this->analysisWordmap->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->analysisWordmap->TabIndex = 14;
 			this->analysisWordmap->TabStop = false;
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			// 
 			// UserInterfaceForm
 			// 
@@ -2017,7 +1883,6 @@ private: System::Windows::Forms::Label^  label6;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->EndInit();
 			this->imageOcrTab->ResumeLayout(false);
 			this->imageOcrTab->PerformLayout();
-<<<<<<< HEAD
 			this->aboutTab->ResumeLayout(false);
 			this->aboutTab->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -2032,9 +1897,7 @@ private: System::Windows::Forms::Label^  label6;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
-=======
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisWordmap))->EndInit();
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 			this->ResumeLayout(false);
 
 		}
@@ -2496,11 +2359,6 @@ private: System::Void twitterScrapeProfilesButton_Click(System::Object^  sender,
 		twitterScrapeInProgress = false;
 	}
 }
-<<<<<<< HEAD
-private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
-=======
 private: System::Void analysisSelectFileButton_Click(System::Object^  sender, System::EventArgs^  e) 
 {
 	using ICT1009::Analysis::DataAnalyser;
@@ -2548,7 +2406,6 @@ private: System::Void analysisSelectFileButton_Click(System::Object^  sender, Sy
 			std::cout << e.what() << std::endl;
 		}
 	}
->>>>>>> 4f152c8087f6de6321551a60da412784cc48e120
 }
 }; //Endpoint
 }
