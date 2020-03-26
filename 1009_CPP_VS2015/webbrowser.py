@@ -1,5 +1,6 @@
 import sys
 import os
+sys.path.append(os.getcwd()+"\\python-3.8.2-embed-amd64")
 import time
 import json
 import requests
@@ -342,34 +343,6 @@ class WebDriver:
 
 		with open(self.TMP_SAVE_HASHTAGS, 'w', encoding='utf-8') as outfile:
 			json.dump(hashtags, outfile, ensure_ascii=False)
-
-		# print("done")
-			# Layer 3
-			# p_details["display_image_url"] = something
-			# p_details["posted_by"] = something
-			# p_details["no_of_comments"] = something
-			# p_details["location"] = something
-			# p_details["date_time"] = something
-
-			
-			# System.out.println("Putting number of likes");
-			# if (likes > -1) {
-			# 	post.put("no_of_likes", likes);
-			# 	post.put("no_of_views", 0
-			# 	post.put("type", "image")
-			
-			# else {
-			# 	double numberOfViews = this.getNumberOfViewsInPost();
-			# 	post.put("no_of_likes", 0);
-			# 	post.put("no_of_views", numberOfViews)
-			# 	post.put("type", "video")
-
-
-
-
-
-
-
 
 
 	def scrape_profiles_suburls(self, username, password, joined_profiles, post_cap):		

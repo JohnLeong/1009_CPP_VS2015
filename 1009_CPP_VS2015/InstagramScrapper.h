@@ -19,10 +19,11 @@
 #include "Bridge.h"
 #include "curl\curl.h"
 #include "ScrapeStorage.h"
+#include "ScrapeUtility.h"
 using ICT1009::Utility::FileUtility;
 
 INSTAGRAM_NAMESPACE_START
-class InstagramScrapper
+class InstagramScrapper: public WebScrapping::ScrapeUtility
 {
 	typedef std::shared_ptr<ICT1009::WebScrapping::Bridge> BridgePtr;
 	BridgePtr bridge;					// To execute Tessearct Executable.

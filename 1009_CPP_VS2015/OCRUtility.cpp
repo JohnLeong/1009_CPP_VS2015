@@ -55,7 +55,7 @@ int OCRUtility::appendImagesTextToJson(std::string jsonPath)
 		Remove temp image text file if possible
 	*/
 	bridge->setExecutable(this->executablePath);
-
+	int extractedCount = 0;
 	for (auto &detail : j["details"]) {
 		for (auto &post : detail["extracted_posts"]) {
 			if (downloadImage(post["display_image_url"].get<std::string>())) {
