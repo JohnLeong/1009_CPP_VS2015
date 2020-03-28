@@ -6,8 +6,10 @@
 #include "SocialMediaPostStorage.h"
 #include "FileUtility.h"
 #include "DateTimeUtility.h"
+#include <ostream>
 
 using std::vector;
+using std::ostream;
 
 SCRAPE_STORAGE_NAMESPACE_START
 class ScrapeStorage
@@ -47,6 +49,7 @@ public:
 	//To append items into SocialMediaPost Vector
 	bool addDetails(SocialMediaPostStoragePtr details);
 
+	friend ostream& operator<<(ostream& os, const ScrapeStorage& storage);
 };
 SCRAPE_STORAGE_NAMESPACE_END
 #endif

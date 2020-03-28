@@ -3,6 +3,7 @@
 #include <cctype>
 #include <sstream>
 #include <unordered_map>
+#include <fstream>
 
 using std::unordered_map;
 using ICT1009::DataStorage::SocialMediaPostStorage;
@@ -89,11 +90,13 @@ namespace ICT1009
 			analysedData.setAvgHashtags(static_cast<float>(related->size()) / static_cast<float>(analysedData.getNumPosts()));
 
 			//Create wordmap
-			string combinedWordMap = "";
+			std::ofstream file;
+			file.open("wordlist.txt");
 			for (string s : wordMapList)
-				combinedWordMap += s + " ";
+				file << s << "\n";
+			file.close();
 
-			system((wordmapCommand + " " + combinedWordMap).c_str());
+			system(wordmapCommand.c_str());
 
 			return analysedData;
 		}

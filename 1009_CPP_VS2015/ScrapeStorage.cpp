@@ -119,4 +119,10 @@ bool ScrapeStorage::addDetails(SocialMediaPostStoragePtr details)
 		return false;
 	}				
 }
+
+ostream& operator<<(ostream& os, const ScrapeStorage& storage)
+{
+	os << "Number of targets: " << storage.scrapedDetails.size();
+	return os;
+}
 SCRAPE_STORAGE_NAMESPACE_END

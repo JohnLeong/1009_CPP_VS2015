@@ -40,4 +40,10 @@ void SocialMediaPost::printAttributes()
 	for (std::size_t i = 0; i < this->commentList.size(); this->commentList[i++]->printAttributes());
 }
 
+ostream& operator<<(ostream& os, const SocialMediaPost& post)
+{
+	os << "Caption: " << post.caption << std::endl << "Likes: " << post.likes;
+	return os;
+}
+
 SOCIAL_MEDIA_COMMENT_NAMESPACE_END

@@ -6,8 +6,10 @@
 
 #include <vector>
 #include <memory>
+#include <ostream>
 #include "SocialMediaComment.h"
 
+using std::ostream;
 using std::string;
 using std::vector;
 
@@ -33,6 +35,7 @@ public:
 	void printAttributes();
 	virtual nlohmann::json getPostJson();
 	
+	friend ostream& operator<<(ostream& os, const SocialMediaPost& post);
 };
 SOCIAL_MEDIA_POST_NAMESPACE_END
 
