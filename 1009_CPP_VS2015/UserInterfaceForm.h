@@ -190,30 +190,47 @@ private: System::Windows::Forms::Label^  jsonVisualFilePath;
 private: System::Windows::Forms::Label^  displayJsonVisualFilePathValue;
 private: System::Windows::Forms::TextBox^  twitterConsole;
 private: System::Windows::Forms::PictureBox^  analysisWordmap;
+private: System::Windows::Forms::PictureBox^  aboutSeleniumPicture;
 
 
-private: System::Windows::Forms::PictureBox^  pictureBox12;
-private: System::Windows::Forms::PictureBox^  pictureBox11;
-private: System::Windows::Forms::PictureBox^  pictureBox10;
-private: System::Windows::Forms::PictureBox^  pictureBox9;
-private: System::Windows::Forms::PictureBox^  pictureBox8;
-private: System::Windows::Forms::PictureBox^  pictureBox7;
-private: System::Windows::Forms::PictureBox^  pictureBox6;
-private: System::Windows::Forms::PictureBox^  pictureBox5;
 
 
-private: System::Windows::Forms::Label^  label2;
-private: System::Windows::Forms::Label^  label1;
-private: System::Windows::Forms::PictureBox^  pictureBox4;
-private: System::Windows::Forms::PictureBox^  pictureBox3;
-private: System::Windows::Forms::PictureBox^  pictureBox2;
-private: System::Windows::Forms::PictureBox^  pictureBox1;
-private: System::Windows::Forms::Label^  label8;
-private: System::Windows::Forms::Label^  label5;
-private: System::Windows::Forms::Label^  label4;
-private: System::Windows::Forms::Label^  label7;
-private: System::Windows::Forms::Label^  label3;
-private: System::Windows::Forms::Label^  label6;
+
+
+
+private: System::Windows::Forms::PictureBox^  aboutCppPicture;
+
+
+
+
+
+
+private: System::Windows::Forms::Label^  aboutMember1Label;
+
+private: System::Windows::Forms::PictureBox^  aboutMember4Picture;
+
+private: System::Windows::Forms::PictureBox^  aboutMember3Picture;
+
+private: System::Windows::Forms::PictureBox^  aboutMember2Picture;
+
+private: System::Windows::Forms::PictureBox^  aboutMember1Picture;
+
+private: System::Windows::Forms::Label^  aboutMemberLabel;
+
+private: System::Windows::Forms::Label^  aboutGroup34Label;
+
+private: System::Windows::Forms::Label^  aboutTechnologiesLabel;
+private: System::Windows::Forms::Label^  aboutMember4Label;
+
+
+private: System::Windows::Forms::Label^  aboutMember3Label;
+
+private: System::Windows::Forms::Label^  aboutMember2Label;
+
+private: System::Windows::Forms::PictureBox^  aboutInstagramPicture;
+
+private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
+
 
 
 
@@ -268,25 +285,25 @@ private: System::Windows::Forms::Label^  label6;
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series13 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series14 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series15 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series16 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series17 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series18 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series20 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series21 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series22 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series23 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series24 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series25 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series26 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -381,26 +398,21 @@ private: System::Windows::Forms::Label^  label6;
 			this->imageOcrDescriptionLabel = (gcnew System::Windows::Forms::Label());
 			this->imageOcrHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->aboutTab = (gcnew System::Windows::Forms::TabPage());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox12 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox11 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox10 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox9 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox8 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutInstagramPicture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutTwitterPicture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutMemberLabel = (gcnew System::Windows::Forms::Label());
+			this->aboutGroup34Label = (gcnew System::Windows::Forms::Label());
+			this->aboutTechnologiesLabel = (gcnew System::Windows::Forms::Label());
+			this->aboutMember4Label = (gcnew System::Windows::Forms::Label());
+			this->aboutMember3Label = (gcnew System::Windows::Forms::Label());
+			this->aboutMember2Label = (gcnew System::Windows::Forms::Label());
+			this->aboutSeleniumPicture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutCppPicture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutMember1Label = (gcnew System::Windows::Forms::Label());
+			this->aboutMember4Picture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutMember3Picture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutMember2Picture = (gcnew System::Windows::Forms::PictureBox());
+			this->aboutMember1Picture = (gcnew System::Windows::Forms::PictureBox());
 			this->instagramFolderDialog = (gcnew System::Windows::Forms::FolderBrowserDialog());
 			this->displayJsonLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->displayJsonSaveFileDialog = (gcnew System::Windows::Forms::SaveFileDialog());
@@ -421,18 +433,14 @@ private: System::Windows::Forms::Label^  label6;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->BeginInit();
 			this->imageOcrTab->SuspendLayout();
 			this->aboutTab->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutInstagramPicture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutTwitterPicture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutSeleniumPicture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutCppPicture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember4Picture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember3Picture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember2Picture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember1Picture))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// sidePanelBacking
@@ -678,28 +686,34 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// instagramConsole
 			// 
-			this->instagramConsole->Location = System::Drawing::Point(32, 505);
+			this->instagramConsole->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+				static_cast<System::Byte>(0)));
+			this->instagramConsole->Location = System::Drawing::Point(12, 559);
 			this->instagramConsole->Multiline = true;
 			this->instagramConsole->Name = L"instagramConsole";
 			this->instagramConsole->ReadOnly = true;
 			this->instagramConsole->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->instagramConsole->Size = System::Drawing::Size(686, 83);
+			this->instagramConsole->Size = System::Drawing::Size(819, 102);
 			this->instagramConsole->TabIndex = 22;
 			// 
 			// instagramExportFolderPathValueLabel
 			// 
 			this->instagramExportFolderPathValueLabel->AutoSize = true;
-			this->instagramExportFolderPathValueLabel->Location = System::Drawing::Point(139, 139);
+			this->instagramExportFolderPathValueLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramExportFolderPathValueLabel->Location = System::Drawing::Point(51, 90);
 			this->instagramExportFolderPathValueLabel->Name = L"instagramExportFolderPathValueLabel";
-			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->instagramExportFolderPathValueLabel->Size = System::Drawing::Size(47, 20);
 			this->instagramExportFolderPathValueLabel->TabIndex = 21;
 			this->instagramExportFolderPathValueLabel->Text = L"None";
 			// 
 			// instagramBrowseExportFolderButton
 			// 
-			this->instagramBrowseExportFolderButton->Location = System::Drawing::Point(39, 165);
+			this->instagramBrowseExportFolderButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramBrowseExportFolderButton->Location = System::Drawing::Point(12, 114);
 			this->instagramBrowseExportFolderButton->Name = L"instagramBrowseExportFolderButton";
-			this->instagramBrowseExportFolderButton->Size = System::Drawing::Size(101, 28);
+			this->instagramBrowseExportFolderButton->Size = System::Drawing::Size(122, 32);
 			this->instagramBrowseExportFolderButton->TabIndex = 20;
 			this->instagramBrowseExportFolderButton->Text = L"Select folder path";
 			this->instagramBrowseExportFolderButton->UseVisualStyleBackColor = true;
@@ -708,28 +722,32 @@ private: System::Windows::Forms::Label^  label6;
 			// instagramExportFolderPathLabel
 			// 
 			this->instagramExportFolderPathLabel->AutoSize = true;
-			this->instagramExportFolderPathLabel->Location = System::Drawing::Point(32, 139);
+			this->instagramExportFolderPathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramExportFolderPathLabel->Location = System::Drawing::Point(8, 90);
 			this->instagramExportFolderPathLabel->Name = L"instagramExportFolderPathLabel";
-			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(123, 25);
+			this->instagramExportFolderPathLabel->Size = System::Drawing::Size(50, 20);
 			this->instagramExportFolderPathLabel->TabIndex = 19;
-			this->instagramExportFolderPathLabel->Text = L"Folder Path: ";
+			this->instagramExportFolderPathLabel->Text = L"Path: ";
 			// 
 			// instagramExportLabel
 			// 
 			this->instagramExportLabel->AutoSize = true;
-			this->instagramExportLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->instagramExportLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->instagramExportLabel->Location = System::Drawing::Point(31, 100);
+			this->instagramExportLabel->Location = System::Drawing::Point(8, 62);
 			this->instagramExportLabel->Name = L"instagramExportLabel";
-			this->instagramExportLabel->Size = System::Drawing::Size(179, 29);
+			this->instagramExportLabel->Size = System::Drawing::Size(137, 22);
 			this->instagramExportLabel->TabIndex = 19;
 			this->instagramExportLabel->Text = L"Export Folder:";
 			// 
 			// instagramProfileExecuteButton
 			// 
-			this->instagramProfileExecuteButton->Location = System::Drawing::Point(399, 458);
+			this->instagramProfileExecuteButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramProfileExecuteButton->Location = System::Drawing::Point(431, 496);
 			this->instagramProfileExecuteButton->Name = L"instagramProfileExecuteButton";
-			this->instagramProfileExecuteButton->Size = System::Drawing::Size(280, 35);
+			this->instagramProfileExecuteButton->Size = System::Drawing::Size(350, 35);
 			this->instagramProfileExecuteButton->TabIndex = 18;
 			this->instagramProfileExecuteButton->Text = L"Execute";
 			this->instagramProfileExecuteButton->UseVisualStyleBackColor = true;
@@ -737,9 +755,11 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// instagramHashTagExecuteButton
 			// 
-			this->instagramHashTagExecuteButton->Location = System::Drawing::Point(39, 458);
+			this->instagramHashTagExecuteButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramHashTagExecuteButton->Location = System::Drawing::Point(12, 496);
 			this->instagramHashTagExecuteButton->Name = L"instagramHashTagExecuteButton";
-			this->instagramHashTagExecuteButton->Size = System::Drawing::Size(280, 35);
+			this->instagramHashTagExecuteButton->Size = System::Drawing::Size(350, 35);
 			this->instagramHashTagExecuteButton->TabIndex = 17;
 			this->instagramHashTagExecuteButton->Text = L"Execute";
 			this->instagramHashTagExecuteButton->UseVisualStyleBackColor = true;
@@ -747,60 +767,64 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// instagramProfilesTextBox
 			// 
-			this->instagramProfilesTextBox->Location = System::Drawing::Point(399, 382);
+			this->instagramProfilesTextBox->Location = System::Drawing::Point(431, 358);
 			this->instagramProfilesTextBox->Multiline = true;
 			this->instagramProfilesTextBox->Name = L"instagramProfilesTextBox";
-			this->instagramProfilesTextBox->Size = System::Drawing::Size(280, 70);
+			this->instagramProfilesTextBox->Size = System::Drawing::Size(350, 132);
 			this->instagramProfilesTextBox->TabIndex = 16;
 			this->instagramProfilesTextBox->TextChanged += gcnew System::EventHandler(this, &UserInterfaceForm::textBox8_TextChanged);
 			// 
 			// instagramProfilePostCountTextBox
 			// 
-			this->instagramProfilePostCountTextBox->Location = System::Drawing::Point(399, 308);
+			this->instagramProfilePostCountTextBox->Location = System::Drawing::Point(431, 303);
 			this->instagramProfilePostCountTextBox->Name = L"instagramProfilePostCountTextBox";
 			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramProfilePostCountTextBox->TabIndex = 15;
 			// 
 			// instagramHashTagsTextBox
 			// 
-			this->instagramHashTagsTextBox->Location = System::Drawing::Point(39, 382);
+			this->instagramHashTagsTextBox->Location = System::Drawing::Point(12, 358);
 			this->instagramHashTagsTextBox->Multiline = true;
 			this->instagramHashTagsTextBox->Name = L"instagramHashTagsTextBox";
-			this->instagramHashTagsTextBox->Size = System::Drawing::Size(280, 70);
+			this->instagramHashTagsTextBox->Size = System::Drawing::Size(350, 132);
 			this->instagramHashTagsTextBox->TabIndex = 14;
 			// 
 			// instagramHashTagPostCountTextBox
 			// 
-			this->instagramHashTagPostCountTextBox->Location = System::Drawing::Point(39, 308);
+			this->instagramHashTagPostCountTextBox->Location = System::Drawing::Point(12, 303);
 			this->instagramHashTagPostCountTextBox->Name = L"instagramHashTagPostCountTextBox";
 			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 29);
 			this->instagramHashTagPostCountTextBox->TabIndex = 13;
 			// 
 			// instagramUsernamePasswordTextBox
 			// 
-			this->instagramUsernamePasswordTextBox->Location = System::Drawing::Point(500, 56);
+			this->instagramUsernamePasswordTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramUsernamePasswordTextBox->Location = System::Drawing::Point(444, 184);
 			this->instagramUsernamePasswordTextBox->Name = L"instagramUsernamePasswordTextBox";
 			this->instagramUsernamePasswordTextBox->PasswordChar = '*';
-			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramUsernamePasswordTextBox->Size = System::Drawing::Size(126, 26);
 			this->instagramUsernamePasswordTextBox->TabIndex = 10;
 			this->instagramUsernamePasswordTextBox->Text = L"Password12345";
 			// 
 			// instagramUsernameTextBox
 			// 
-			this->instagramUsernameTextBox->Location = System::Drawing::Point(160, 56);
+			this->instagramUsernameTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramUsernameTextBox->Location = System::Drawing::Point(104, 184);
 			this->instagramUsernameTextBox->Name = L"instagramUsernameTextBox";
-			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramUsernameTextBox->Size = System::Drawing::Size(126, 26);
 			this->instagramUsernameTextBox->TabIndex = 9;
 			this->instagramUsernameTextBox->Text = L"hehebongesher";
 			// 
 			// instagramProfilesLabel
 			// 
 			this->instagramProfilesLabel->AutoSize = true;
-			this->instagramProfilesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->instagramProfilesLabel->Location = System::Drawing::Point(392, 355);
+			this->instagramProfilesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramProfilesLabel->Location = System::Drawing::Point(427, 338);
 			this->instagramProfilesLabel->Name = L"instagramProfilesLabel";
-			this->instagramProfilesLabel->Size = System::Drawing::Size(103, 29);
+			this->instagramProfilesLabel->Size = System::Drawing::Size(69, 20);
 			this->instagramProfilesLabel->TabIndex = 8;
 			this->instagramProfilesLabel->Text = L"Profiles";
 			this->instagramProfilesLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramProfilesLabel_Click);
@@ -808,69 +832,77 @@ private: System::Windows::Forms::Label^  label6;
 			// instagramHashTagsLabel
 			// 
 			this->instagramHashTagsLabel->AutoSize = true;
-			this->instagramHashTagsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->instagramHashTagsLabel->Location = System::Drawing::Point(31, 355);
+			this->instagramHashTagsLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramHashTagsLabel->Location = System::Drawing::Point(8, 338);
 			this->instagramHashTagsLabel->Name = L"instagramHashTagsLabel";
-			this->instagramHashTagsLabel->Size = System::Drawing::Size(131, 29);
+			this->instagramHashTagsLabel->Size = System::Drawing::Size(90, 20);
 			this->instagramHashTagsLabel->TabIndex = 7;
 			this->instagramHashTagsLabel->Text = L"HashTags";
 			// 
 			// instagramProfileNumberOfPostLabel
 			// 
 			this->instagramProfileNumberOfPostLabel->AutoSize = true;
-			this->instagramProfileNumberOfPostLabel->Location = System::Drawing::Point(393, 268);
+			this->instagramProfileNumberOfPostLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramProfileNumberOfPostLabel->Location = System::Drawing::Point(426, 277);
 			this->instagramProfileNumberOfPostLabel->Name = L"instagramProfileNumberOfPostLabel";
-			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
+			this->instagramProfileNumberOfPostLabel->Size = System::Drawing::Size(127, 20);
 			this->instagramProfileNumberOfPostLabel->TabIndex = 6;
 			this->instagramProfileNumberOfPostLabel->Text = L"Number of Posts";
 			// 
 			// instagramHashTagNumberOfPostLabel
 			// 
 			this->instagramHashTagNumberOfPostLabel->AutoSize = true;
-			this->instagramHashTagNumberOfPostLabel->Location = System::Drawing::Point(32, 268);
+			this->instagramHashTagNumberOfPostLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramHashTagNumberOfPostLabel->Location = System::Drawing::Point(7, 277);
 			this->instagramHashTagNumberOfPostLabel->Name = L"instagramHashTagNumberOfPostLabel";
-			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(156, 25);
+			this->instagramHashTagNumberOfPostLabel->Size = System::Drawing::Size(127, 20);
 			this->instagramHashTagNumberOfPostLabel->TabIndex = 5;
 			this->instagramHashTagNumberOfPostLabel->Text = L"Number of Posts";
 			// 
 			// instagramProfileModeLabel
 			// 
 			this->instagramProfileModeLabel->AutoSize = true;
-			this->instagramProfileModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->instagramProfileModeLabel->Location = System::Drawing::Point(389, 217);
+			this->instagramProfileModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramProfileModeLabel->Location = System::Drawing::Point(427, 245);
 			this->instagramProfileModeLabel->Name = L"instagramProfileModeLabel";
-			this->instagramProfileModeLabel->Size = System::Drawing::Size(187, 32);
+			this->instagramProfileModeLabel->Size = System::Drawing::Size(122, 22);
 			this->instagramProfileModeLabel->TabIndex = 4;
 			this->instagramProfileModeLabel->Text = L"Profile Mode";
 			// 
 			// instagramHashTagModeLabel
 			// 
 			this->instagramHashTagModeLabel->AutoSize = true;
-			this->instagramHashTagModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->instagramHashTagModeLabel->Location = System::Drawing::Point(29, 217);
+			this->instagramHashTagModeLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramHashTagModeLabel->Location = System::Drawing::Point(8, 245);
 			this->instagramHashTagModeLabel->Name = L"instagramHashTagModeLabel";
-			this->instagramHashTagModeLabel->Size = System::Drawing::Size(220, 32);
+			this->instagramHashTagModeLabel->Size = System::Drawing::Size(145, 22);
 			this->instagramHashTagModeLabel->TabIndex = 3;
 			this->instagramHashTagModeLabel->Text = L"HashTag Mode";
 			// 
 			// instagramPasswordLabel
 			// 
 			this->instagramPasswordLabel->AutoSize = true;
-			this->instagramPasswordLabel->Location = System::Drawing::Point(362, 56);
+			this->instagramPasswordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramPasswordLabel->Location = System::Drawing::Point(344, 187);
 			this->instagramPasswordLabel->Name = L"instagramPasswordLabel";
-			this->instagramPasswordLabel->Size = System::Drawing::Size(104, 25);
+			this->instagramPasswordLabel->Size = System::Drawing::Size(88, 20);
 			this->instagramPasswordLabel->TabIndex = 2;
 			this->instagramPasswordLabel->Text = L"Password:";
 			// 
 			// instagramUsernameLabel
 			// 
 			this->instagramUsernameLabel->AutoSize = true;
-			this->instagramUsernameLabel->Location = System::Drawing::Point(25, 56);
+			this->instagramUsernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->instagramUsernameLabel->Location = System::Drawing::Point(7, 187);
 			this->instagramUsernameLabel->Name = L"instagramUsernameLabel";
-			this->instagramUsernameLabel->Size = System::Drawing::Size(108, 25);
+			this->instagramUsernameLabel->Size = System::Drawing::Size(91, 20);
 			this->instagramUsernameLabel->TabIndex = 1;
 			this->instagramUsernameLabel->Text = L"Username:";
 			this->instagramUsernameLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramUsernameLabel_Click);
@@ -1118,26 +1150,32 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// displayJsonFileOutputRichTextBox
 			// 
-			this->displayJsonFileOutputRichTextBox->Location = System::Drawing::Point(54, 250);
+			this->displayJsonFileOutputRichTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonFileOutputRichTextBox->Location = System::Drawing::Point(12, 152);
 			this->displayJsonFileOutputRichTextBox->Name = L"displayJsonFileOutputRichTextBox";
-			this->displayJsonFileOutputRichTextBox->Size = System::Drawing::Size(744, 313);
+			this->displayJsonFileOutputRichTextBox->Size = System::Drawing::Size(819, 518);
 			this->displayJsonFileOutputRichTextBox->TabIndex = 6;
 			this->displayJsonFileOutputRichTextBox->Text = L"";
 			// 
 			// displayJsonFilePathValueLabel
 			// 
 			this->displayJsonFilePathValueLabel->AutoSize = true;
-			this->displayJsonFilePathValueLabel->Location = System::Drawing::Point(100, 150);
+			this->displayJsonFilePathValueLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonFilePathValueLabel->Location = System::Drawing::Point(97, 90);
 			this->displayJsonFilePathValueLabel->Name = L"displayJsonFilePathValueLabel";
-			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->displayJsonFilePathValueLabel->Size = System::Drawing::Size(47, 20);
 			this->displayJsonFilePathValueLabel->TabIndex = 5;
 			this->displayJsonFilePathValueLabel->Text = L"None";
 			// 
 			// displayJsonSaveAsButton
 			// 
-			this->displayJsonSaveAsButton->Location = System::Drawing::Point(190, 199);
+			this->displayJsonSaveAsButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonSaveAsButton->Location = System::Drawing::Point(144, 114);
 			this->displayJsonSaveAsButton->Name = L"displayJsonSaveAsButton";
-			this->displayJsonSaveAsButton->Size = System::Drawing::Size(108, 45);
+			this->displayJsonSaveAsButton->Size = System::Drawing::Size(122, 32);
 			this->displayJsonSaveAsButton->TabIndex = 4;
 			this->displayJsonSaveAsButton->Text = L"Save As";
 			this->displayJsonSaveAsButton->UseVisualStyleBackColor = true;
@@ -1145,9 +1183,11 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// displayJsonSelectJsonButton
 			// 
-			this->displayJsonSelectJsonButton->Location = System::Drawing::Point(55, 199);
+			this->displayJsonSelectJsonButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonSelectJsonButton->Location = System::Drawing::Point(12, 114);
 			this->displayJsonSelectJsonButton->Name = L"displayJsonSelectJsonButton";
-			this->displayJsonSelectJsonButton->Size = System::Drawing::Size(108, 45);
+			this->displayJsonSelectJsonButton->Size = System::Drawing::Size(122, 32);
 			this->displayJsonSelectJsonButton->TabIndex = 3;
 			this->displayJsonSelectJsonButton->Text = L"Select file";
 			this->displayJsonSelectJsonButton->UseVisualStyleBackColor = true;
@@ -1156,20 +1196,24 @@ private: System::Windows::Forms::Label^  label6;
 			// displayJsonFilePathLabel
 			// 
 			this->displayJsonFilePathLabel->AutoSize = true;
-			this->displayJsonFilePathLabel->Location = System::Drawing::Point(48, 150);
+			this->displayJsonFilePathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonFilePathLabel->Location = System::Drawing::Point(8, 90);
 			this->displayJsonFilePathLabel->Name = L"displayJsonFilePathLabel";
-			this->displayJsonFilePathLabel->Size = System::Drawing::Size(54, 25);
+			this->displayJsonFilePathLabel->Size = System::Drawing::Size(94, 20);
 			this->displayJsonFilePathLabel->TabIndex = 2;
-			this->displayJsonFilePathLabel->Text = L"File: ";
+			this->displayJsonFilePathLabel->Text = L"File loaded: ";
 			// 
 			// displayJsonFilePathHeaderLabel
 			// 
 			this->displayJsonFilePathHeaderLabel->AutoSize = true;
-			this->displayJsonFilePathHeaderLabel->Location = System::Drawing::Point(48, 100);
+			this->displayJsonFilePathHeaderLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->displayJsonFilePathHeaderLabel->Location = System::Drawing::Point(8, 62);
 			this->displayJsonFilePathHeaderLabel->Name = L"displayJsonFilePathHeaderLabel";
-			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(142, 25);
+			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(119, 22);
 			this->displayJsonFilePathHeaderLabel->TabIndex = 1;
-			this->displayJsonFilePathHeaderLabel->Text = L"Json File Path:";
+			this->displayJsonFilePathHeaderLabel->Text = L"File location";
 			// 
 			// displayJsonHeaderLabel
 			// 
@@ -1284,29 +1328,29 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			this->analysisRelatedHashtagsTable->AllowUserToAddRows = false;
 			this->analysisRelatedHashtagsTable->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->analysisRelatedHashtagsTable->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->analysisRelatedHashtagsTable->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->HashtagColumn,
 					this->FreqColumn, this->TotalColumn
 			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle4;
 			this->analysisRelatedHashtagsTable->Location = System::Drawing::Point(12, 339);
 			this->analysisRelatedHashtagsTable->Name = L"analysisRelatedHashtagsTable";
 			this->analysisRelatedHashtagsTable->ReadOnly = true;
@@ -1428,84 +1472,84 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			// PieChart
 			// 
-			chartArea1->Name = L"ChartArea1";
-			this->PieChart->ChartAreas->Add(chartArea1);
-			legend1->Name = L"Legend1";
-			legend1->Title = L"Visualation Number Of Location Base On Post";
-			this->PieChart->Legends->Add(legend1);
+			chartArea3->Name = L"ChartArea1";
+			this->PieChart->ChartAreas->Add(chartArea3);
+			legend3->Name = L"Legend1";
+			legend3->Title = L"Visualation Number Of Location Base On Post";
+			this->PieChart->Legends->Add(legend3);
 			this->PieChart->Location = System::Drawing::Point(44, 381);
 			this->PieChart->Name = L"PieChart";
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
-			series1->EmptyPointStyle->Name = L"Location";
-			series1->Legend = L"Legend1";
-			series1->Name = L"Location1";
-			series1->YValuesPerPoint = 4;
-			this->PieChart->Series->Add(series1);
+			series14->ChartArea = L"ChartArea1";
+			series14->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series14->EmptyPointStyle->Name = L"Location";
+			series14->Legend = L"Legend1";
+			series14->Name = L"Location1";
+			series14->YValuesPerPoint = 4;
+			this->PieChart->Series->Add(series14);
 			this->PieChart->Size = System::Drawing::Size(770, 300);
 			this->PieChart->TabIndex = 6;
 			this->PieChart->Text = L"PieChart";
 			// 
 			// BarChart
 			// 
-			chartArea2->Name = L"ChartArea1";
-			this->BarChart->ChartAreas->Add(chartArea2);
-			legend2->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
-			legend2->IsEquallySpacedItems = true;
-			legend2->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
-			legend2->Name = L"VisualationNumberOfPostPerMonth";
-			legend2->Title = L"Visualation Number Of Post Per Month";
-			this->BarChart->Legends->Add(legend2);
+			chartArea4->Name = L"ChartArea1";
+			this->BarChart->ChartAreas->Add(chartArea4);
+			legend4->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
+			legend4->IsEquallySpacedItems = true;
+			legend4->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
+			legend4->Name = L"VisualationNumberOfPostPerMonth";
+			legend4->Title = L"Visualation Number Of Post Per Month";
+			this->BarChart->Legends->Add(legend4);
 			this->BarChart->Location = System::Drawing::Point(6, 108);
 			this->BarChart->Name = L"BarChart";
-			series2->ChartArea = L"ChartArea1";
-			series2->Legend = L"VisualationNumberOfPostPerMonth";
-			series2->Name = L"JAN";
-			series3->ChartArea = L"ChartArea1";
-			series3->Legend = L"VisualationNumberOfPostPerMonth";
-			series3->Name = L"FEB";
-			series4->ChartArea = L"ChartArea1";
-			series4->Legend = L"VisualationNumberOfPostPerMonth";
-			series4->Name = L"MARCH";
-			series5->ChartArea = L"ChartArea1";
-			series5->Legend = L"VisualationNumberOfPostPerMonth";
-			series5->Name = L"APRIL";
-			series6->ChartArea = L"ChartArea1";
-			series6->Legend = L"VisualationNumberOfPostPerMonth";
-			series6->Name = L"MAY";
-			series7->ChartArea = L"ChartArea1";
-			series7->Legend = L"VisualationNumberOfPostPerMonth";
-			series7->Name = L"JUNE";
-			series8->ChartArea = L"ChartArea1";
-			series8->Legend = L"VisualationNumberOfPostPerMonth";
-			series8->Name = L"JULY";
-			series9->ChartArea = L"ChartArea1";
-			series9->Legend = L"VisualationNumberOfPostPerMonth";
-			series9->Name = L"AUG";
-			series10->ChartArea = L"ChartArea1";
-			series10->Legend = L"VisualationNumberOfPostPerMonth";
-			series10->Name = L"SEPT";
-			series11->ChartArea = L"ChartArea1";
-			series11->Legend = L"VisualationNumberOfPostPerMonth";
-			series11->Name = L"OCT";
-			series12->ChartArea = L"ChartArea1";
-			series12->Legend = L"VisualationNumberOfPostPerMonth";
-			series12->Name = L"NOV";
-			series13->ChartArea = L"ChartArea1";
-			series13->Legend = L"VisualationNumberOfPostPerMonth";
-			series13->Name = L"DEC";
-			this->BarChart->Series->Add(series2);
-			this->BarChart->Series->Add(series3);
-			this->BarChart->Series->Add(series4);
-			this->BarChart->Series->Add(series5);
-			this->BarChart->Series->Add(series6);
-			this->BarChart->Series->Add(series7);
-			this->BarChart->Series->Add(series8);
-			this->BarChart->Series->Add(series9);
-			this->BarChart->Series->Add(series10);
-			this->BarChart->Series->Add(series11);
-			this->BarChart->Series->Add(series12);
-			this->BarChart->Series->Add(series13);
+			series15->ChartArea = L"ChartArea1";
+			series15->Legend = L"VisualationNumberOfPostPerMonth";
+			series15->Name = L"JAN";
+			series16->ChartArea = L"ChartArea1";
+			series16->Legend = L"VisualationNumberOfPostPerMonth";
+			series16->Name = L"FEB";
+			series17->ChartArea = L"ChartArea1";
+			series17->Legend = L"VisualationNumberOfPostPerMonth";
+			series17->Name = L"MARCH";
+			series18->ChartArea = L"ChartArea1";
+			series18->Legend = L"VisualationNumberOfPostPerMonth";
+			series18->Name = L"APRIL";
+			series19->ChartArea = L"ChartArea1";
+			series19->Legend = L"VisualationNumberOfPostPerMonth";
+			series19->Name = L"MAY";
+			series20->ChartArea = L"ChartArea1";
+			series20->Legend = L"VisualationNumberOfPostPerMonth";
+			series20->Name = L"JUNE";
+			series21->ChartArea = L"ChartArea1";
+			series21->Legend = L"VisualationNumberOfPostPerMonth";
+			series21->Name = L"JULY";
+			series22->ChartArea = L"ChartArea1";
+			series22->Legend = L"VisualationNumberOfPostPerMonth";
+			series22->Name = L"AUG";
+			series23->ChartArea = L"ChartArea1";
+			series23->Legend = L"VisualationNumberOfPostPerMonth";
+			series23->Name = L"SEPT";
+			series24->ChartArea = L"ChartArea1";
+			series24->Legend = L"VisualationNumberOfPostPerMonth";
+			series24->Name = L"OCT";
+			series25->ChartArea = L"ChartArea1";
+			series25->Legend = L"VisualationNumberOfPostPerMonth";
+			series25->Name = L"NOV";
+			series26->ChartArea = L"ChartArea1";
+			series26->Legend = L"VisualationNumberOfPostPerMonth";
+			series26->Name = L"DEC";
+			this->BarChart->Series->Add(series15);
+			this->BarChart->Series->Add(series16);
+			this->BarChart->Series->Add(series17);
+			this->BarChart->Series->Add(series18);
+			this->BarChart->Series->Add(series19);
+			this->BarChart->Series->Add(series20);
+			this->BarChart->Series->Add(series21);
+			this->BarChart->Series->Add(series22);
+			this->BarChart->Series->Add(series23);
+			this->BarChart->Series->Add(series24);
+			this->BarChart->Series->Add(series25);
+			this->BarChart->Series->Add(series26);
 			this->BarChart->Size = System::Drawing::Size(803, 283);
 			this->BarChart->TabIndex = 1;
 			this->BarChart->Text = L"BarChart";
@@ -1621,245 +1665,190 @@ private: System::Windows::Forms::Label^  label6;
 			// 
 			this->aboutTab->BackColor = System::Drawing::Color::Transparent;
 			this->aboutTab->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->aboutTab->Controls->Add(this->label8);
-			this->aboutTab->Controls->Add(this->label5);
-			this->aboutTab->Controls->Add(this->label4);
-			this->aboutTab->Controls->Add(this->label7);
-			this->aboutTab->Controls->Add(this->label3);
-			this->aboutTab->Controls->Add(this->label6);
-			this->aboutTab->Controls->Add(this->pictureBox12);
-			this->aboutTab->Controls->Add(this->pictureBox11);
-			this->aboutTab->Controls->Add(this->pictureBox10);
-			this->aboutTab->Controls->Add(this->pictureBox9);
-			this->aboutTab->Controls->Add(this->pictureBox8);
-			this->aboutTab->Controls->Add(this->pictureBox7);
-			this->aboutTab->Controls->Add(this->pictureBox6);
-			this->aboutTab->Controls->Add(this->pictureBox5);
-			this->aboutTab->Controls->Add(this->label2);
-			this->aboutTab->Controls->Add(this->label1);
-			this->aboutTab->Controls->Add(this->pictureBox4);
-			this->aboutTab->Controls->Add(this->pictureBox3);
-			this->aboutTab->Controls->Add(this->pictureBox2);
-			this->aboutTab->Controls->Add(this->pictureBox1);
+			this->aboutTab->Controls->Add(this->aboutInstagramPicture);
+			this->aboutTab->Controls->Add(this->aboutTwitterPicture);
+			this->aboutTab->Controls->Add(this->aboutMemberLabel);
+			this->aboutTab->Controls->Add(this->aboutGroup34Label);
+			this->aboutTab->Controls->Add(this->aboutTechnologiesLabel);
+			this->aboutTab->Controls->Add(this->aboutMember4Label);
+			this->aboutTab->Controls->Add(this->aboutMember3Label);
+			this->aboutTab->Controls->Add(this->aboutMember2Label);
+			this->aboutTab->Controls->Add(this->aboutSeleniumPicture);
+			this->aboutTab->Controls->Add(this->aboutCppPicture);
+			this->aboutTab->Controls->Add(this->aboutMember1Label);
+			this->aboutTab->Controls->Add(this->aboutMember4Picture);
+			this->aboutTab->Controls->Add(this->aboutMember3Picture);
+			this->aboutTab->Controls->Add(this->aboutMember2Picture);
+			this->aboutTab->Controls->Add(this->aboutMember1Picture);
 			this->aboutTab->Location = System::Drawing::Point(4, 33);
 			this->aboutTab->Name = L"aboutTab";
 			this->aboutTab->Size = System::Drawing::Size(852, 709);
 			this->aboutTab->TabIndex = 7;
 			this->aboutTab->Text = L"7";
 			// 
-			// label8
+			// aboutInstagramPicture
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft PhagsPa", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutInstagramPicture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutInstagramPicture.Image")));
+			this->aboutInstagramPicture->Location = System::Drawing::Point(629, 113);
+			this->aboutInstagramPicture->Name = L"aboutInstagramPicture";
+			this->aboutInstagramPicture->Size = System::Drawing::Size(179, 163);
+			this->aboutInstagramPicture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->aboutInstagramPicture->TabIndex = 24;
+			this->aboutInstagramPicture->TabStop = false;
+			// 
+			// aboutTwitterPicture
+			// 
+			this->aboutTwitterPicture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutTwitterPicture.Image")));
+			this->aboutTwitterPicture->Location = System::Drawing::Point(409, 107);
+			this->aboutTwitterPicture->Name = L"aboutTwitterPicture";
+			this->aboutTwitterPicture->Size = System::Drawing::Size(172, 169);
+			this->aboutTwitterPicture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->aboutTwitterPicture->TabIndex = 23;
+			this->aboutTwitterPicture->TabStop = false;
+			// 
+			// aboutMemberLabel
+			// 
+			this->aboutMemberLabel->AutoSize = true;
+			this->aboutMemberLabel->Font = (gcnew System::Drawing::Font(L"Microsoft PhagsPa", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label8->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label8->Location = System::Drawing::Point(338, 341);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(317, 92);
-			this->label8->TabIndex = 22;
-			this->label8->Text = L"Member";
+			this->aboutMemberLabel->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutMemberLabel->Location = System::Drawing::Point(352, 343);
+			this->aboutMemberLabel->Name = L"aboutMemberLabel";
+			this->aboutMemberLabel->Size = System::Drawing::Size(141, 41);
+			this->aboutMemberLabel->TabIndex = 22;
+			this->aboutMemberLabel->Text = L"Member";
 			// 
-			// label5
+			// aboutGroup34Label
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft PhagsPa", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutGroup34Label->AutoSize = true;
+			this->aboutGroup34Label->Font = (gcnew System::Drawing::Font(L"Microsoft PhagsPa", 35, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label5->Location = System::Drawing::Point(357, 394);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(232, 62);
-			this->label5->TabIndex = 21;
-			this->label5->Text = L"Group 34";
+			this->aboutGroup34Label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutGroup34Label->Location = System::Drawing::Point(334, 296);
+			this->aboutGroup34Label->Name = L"aboutGroup34Label";
+			this->aboutGroup34Label->Size = System::Drawing::Size(178, 47);
+			this->aboutGroup34Label->TabIndex = 21;
+			this->aboutGroup34Label->Text = L"Group 34";
 			// 
-			// label4
+			// aboutTechnologiesLabel
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutTechnologiesLabel->AutoSize = true;
+			this->aboutTechnologiesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label4->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label4->Location = System::Drawing::Point(245, 13);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(655, 89);
-			this->label4->TabIndex = 20;
-			this->label4->Text = L"Technologies Used";
+			this->aboutTechnologiesLabel->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutTechnologiesLabel->Location = System::Drawing::Point(1, 63);
+			this->aboutTechnologiesLabel->Name = L"aboutTechnologiesLabel";
+			this->aboutTechnologiesLabel->Size = System::Drawing::Size(292, 40);
+			this->aboutTechnologiesLabel->TabIndex = 20;
+			this->aboutTechnologiesLabel->Text = L"Technologies Used";
 			// 
-			// label7
+			// aboutMember4Label
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutMember4Label->AutoSize = true;
+			this->aboutMember4Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label7->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label7->Location = System::Drawing::Point(637, 656);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(346, 31);
-			this->label7->TabIndex = 19;
-			this->label7->Text = L"AARON CHUA (1902146)";
+			this->aboutMember4Label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutMember4Label->Location = System::Drawing::Point(637, 626);
+			this->aboutMember4Label->Name = L"aboutMember4Label";
+			this->aboutMember4Label->Size = System::Drawing::Size(189, 17);
+			this->aboutMember4Label->TabIndex = 19;
+			this->aboutMember4Label->Text = L"AARON CHUA (1902146)";
 			// 
-			// label3
+			// aboutMember3Label
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutMember3Label->AutoSize = true;
+			this->aboutMember3Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label3->Location = System::Drawing::Point(430, 656);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(330, 31);
-			this->label3->TabIndex = 18;
-			this->label3->Text = L"DAMON ANG (1902707)";
+			this->aboutMember3Label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutMember3Label->Location = System::Drawing::Point(430, 626);
+			this->aboutMember3Label->Name = L"aboutMember3Label";
+			this->aboutMember3Label->Size = System::Drawing::Size(182, 17);
+			this->aboutMember3Label->TabIndex = 18;
+			this->aboutMember3Label->Text = L"DAMON ANG (1902707)";
 			// 
-			// label6
+			// aboutMember2Label
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->aboutMember2Label->AutoSize = true;
+			this->aboutMember2Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label6->Location = System::Drawing::Point(225, 656);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(341, 31);
-			this->label6->TabIndex = 17;
-			this->label6->Text = L"JOHN LEONG (1902605)";
+			this->aboutMember2Label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutMember2Label->Location = System::Drawing::Point(225, 626);
+			this->aboutMember2Label->Name = L"aboutMember2Label";
+			this->aboutMember2Label->Size = System::Drawing::Size(189, 17);
+			this->aboutMember2Label->TabIndex = 17;
+			this->aboutMember2Label->Text = L"JOHN LEONG (1902605)";
 			// 
-			// pictureBox12
+			// aboutSeleniumPicture
 			// 
-			this->pictureBox12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox12.Image")));
-			this->pictureBox12->Location = System::Drawing::Point(656, 233);
-			this->pictureBox12->Name = L"pictureBox12";
-			this->pictureBox12->Size = System::Drawing::Size(153, 111);
-			this->pictureBox12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox12->TabIndex = 15;
-			this->pictureBox12->TabStop = false;
+			this->aboutSeleniumPicture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutSeleniumPicture.Image")));
+			this->aboutSeleniumPicture->Location = System::Drawing::Point(228, 125);
+			this->aboutSeleniumPicture->Name = L"aboutSeleniumPicture";
+			this->aboutSeleniumPicture->Size = System::Drawing::Size(134, 131);
+			this->aboutSeleniumPicture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->aboutSeleniumPicture->TabIndex = 11;
+			this->aboutSeleniumPicture->TabStop = false;
 			// 
-			// pictureBox11
+			// aboutCppPicture
 			// 
-			this->pictureBox11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox11.Image")));
-			this->pictureBox11->Location = System::Drawing::Point(443, 256);
-			this->pictureBox11->Name = L"pictureBox11";
-			this->pictureBox11->Size = System::Drawing::Size(169, 73);
-			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox11->TabIndex = 14;
-			this->pictureBox11->TabStop = false;
+			this->aboutCppPicture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutCppPicture.Image")));
+			this->aboutCppPicture->Location = System::Drawing::Point(41, 125);
+			this->aboutCppPicture->Name = L"aboutCppPicture";
+			this->aboutCppPicture->Size = System::Drawing::Size(134, 131);
+			this->aboutCppPicture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->aboutCppPicture->TabIndex = 8;
+			this->aboutCppPicture->TabStop = false;
 			// 
-			// pictureBox10
+			// aboutMember1Label
 			// 
-			this->pictureBox10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox10.Image")));
-			this->pictureBox10->Location = System::Drawing::Point(185, 243);
-			this->pictureBox10->Name = L"pictureBox10";
-			this->pictureBox10->Size = System::Drawing::Size(252, 86);
-			this->pictureBox10->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox10->TabIndex = 13;
-			this->pictureBox10->TabStop = false;
-			// 
-			// pictureBox9
-			// 
-			this->pictureBox9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox9.Image")));
-			this->pictureBox9->Location = System::Drawing::Point(41, 233);
-			this->pictureBox9->Name = L"pictureBox9";
-			this->pictureBox9->Size = System::Drawing::Size(134, 124);
-			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox9->TabIndex = 12;
-			this->pictureBox9->TabStop = false;
-			// 
-			// pictureBox8
-			// 
-			this->pictureBox8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox8.Image")));
-			this->pictureBox8->Location = System::Drawing::Point(656, 85);
-			this->pictureBox8->Name = L"pictureBox8";
-			this->pictureBox8->Size = System::Drawing::Size(142, 131);
-			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox8->TabIndex = 11;
-			this->pictureBox8->TabStop = false;
-			// 
-			// pictureBox7
-			// 
-			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
-			this->pictureBox7->Location = System::Drawing::Point(443, 85);
-			this->pictureBox7->Name = L"pictureBox7";
-			this->pictureBox7->Size = System::Drawing::Size(145, 131);
-			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox7->TabIndex = 10;
-			this->pictureBox7->TabStop = false;
-			// 
-			// pictureBox6
-			// 
-			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
-			this->pictureBox6->Location = System::Drawing::Point(239, 85);
-			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(148, 131);
-			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox6->TabIndex = 9;
-			this->pictureBox6->TabStop = false;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(41, 85);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(143, 131);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 8;
-			this->pictureBox5->TabStop = false;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+			this->aboutMember1Label->AutoSize = true;
+			this->aboutMember1Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(293, 605);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(0, 12);
-			this->label2->TabIndex = 5;
+			this->aboutMember1Label->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->aboutMember1Label->Location = System::Drawing::Point(10, 626);
+			this->aboutMember1Label->Name = L"aboutMember1Label";
+			this->aboutMember1Label->Size = System::Drawing::Size(201, 17);
+			this->aboutMember1Label->TabIndex = 4;
+			this->aboutMember1Label->Text = L"PATRICK KANG (1902132)";
 			// 
-			// label1
+			// aboutMember4Picture
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label1->Location = System::Drawing::Point(10, 656);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(369, 31);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"PATRICK KANG (1902132)";
+			this->aboutMember4Picture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutMember4Picture.Image")));
+			this->aboutMember4Picture->Location = System::Drawing::Point(640, 398);
+			this->aboutMember4Picture->Name = L"aboutMember4Picture";
+			this->aboutMember4Picture->Size = System::Drawing::Size(179, 211);
+			this->aboutMember4Picture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->aboutMember4Picture->TabIndex = 3;
+			this->aboutMember4Picture->TabStop = false;
 			// 
-			// pictureBox4
+			// aboutMember3Picture
 			// 
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(640, 433);
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(179, 211);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox4->TabIndex = 3;
-			this->pictureBox4->TabStop = false;
+			this->aboutMember3Picture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutMember3Picture.Image")));
+			this->aboutMember3Picture->Location = System::Drawing::Point(433, 398);
+			this->aboutMember3Picture->Name = L"aboutMember3Picture";
+			this->aboutMember3Picture->Size = System::Drawing::Size(179, 211);
+			this->aboutMember3Picture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->aboutMember3Picture->TabIndex = 2;
+			this->aboutMember3Picture->TabStop = false;
 			// 
-			// pictureBox3
+			// aboutMember2Picture
 			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(433, 433);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(179, 211);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 2;
-			this->pictureBox3->TabStop = false;
+			this->aboutMember2Picture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutMember2Picture.Image")));
+			this->aboutMember2Picture->Location = System::Drawing::Point(228, 398);
+			this->aboutMember2Picture->Name = L"aboutMember2Picture";
+			this->aboutMember2Picture->Size = System::Drawing::Size(179, 211);
+			this->aboutMember2Picture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->aboutMember2Picture->TabIndex = 1;
+			this->aboutMember2Picture->TabStop = false;
 			// 
-			// pictureBox2
+			// aboutMember1Picture
 			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(228, 433);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(179, 211);
-			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox2->TabIndex = 1;
-			this->pictureBox2->TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(18, 433);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(179, 211);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
+			this->aboutMember1Picture->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"aboutMember1Picture.Image")));
+			this->aboutMember1Picture->Location = System::Drawing::Point(18, 398);
+			this->aboutMember1Picture->Name = L"aboutMember1Picture";
+			this->aboutMember1Picture->Size = System::Drawing::Size(179, 211);
+			this->aboutMember1Picture->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->aboutMember1Picture->TabIndex = 0;
+			this->aboutMember1Picture->TabStop = false;
 			// 
 			// imageOcrLoadFileDialog
 			// 
@@ -1899,18 +1888,14 @@ private: System::Windows::Forms::Label^  label6;
 			this->imageOcrTab->PerformLayout();
 			this->aboutTab->ResumeLayout(false);
 			this->aboutTab->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox12))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox11))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox10))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox9))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox8))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutInstagramPicture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutTwitterPicture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutSeleniumPicture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutCppPicture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember4Picture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember3Picture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember2Picture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutMember1Picture))->EndInit();
 			this->ResumeLayout(false);
 
 		}

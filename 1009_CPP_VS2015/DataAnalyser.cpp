@@ -15,6 +15,12 @@ namespace ICT1009
 	{
 		const std::string DataAnalyser::wordmapCommand = "java -jar WordCloud/WordCloud.jar";
 
+		/**
+		* Analyses a data from a scraping procedure and generates a wordmap
+		*
+		* @param data		The data to analyse
+		* @return			An AnalysedData object which contains all the annalysed properties
+		*/
 		AnalysedData DataAnalyser::Analyse(DataStorage::ScrapeStorage* data)
 		{
 			AnalysedData analysedData;
@@ -94,6 +100,12 @@ namespace ICT1009
 			return analysedData;
 		}
 
+		/**
+		* Counts the number of words in a string
+		*
+		* @param str		The target string
+		* @return			The number of words in the string
+		*/
 		unsigned int DataAnalyser::CountWords(const char* str)
 		{
 			if (str == NULL)
@@ -117,6 +129,12 @@ namespace ICT1009
 			return numWords;
 		}
 
+		/**
+		* Splits a string into individual words
+		*
+		* @param str		The string to split
+		* @return			A vector list containing the split words
+		*/
 		vector<string> DataAnalyser::getWordsInString(string* str)
 		{
 			string buf;
