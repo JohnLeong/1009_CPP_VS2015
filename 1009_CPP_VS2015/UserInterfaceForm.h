@@ -6,6 +6,7 @@
 #include "FileUtility.h"
 #include "OCRUtility.h"
 #include "DataAnalyser.h"
+#include "SentimentAnalyser.h"
 #define nullptr __nullptr
 #include "json.hpp"
 #undef nullptr
@@ -178,16 +179,19 @@ private: System::Windows::Forms::Label^  analysisAvgPostLengthLabel;
 
 private: System::Windows::Forms::Label^  analysisAvgHashtagsLabel;
 private: System::Windows::Forms::Label^  analysisScrapeTargetLabel;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisationMonthlyChart;
 
 
 
-private: System::Windows::Forms::DataVisualization::Charting::Chart^  BarChart;
 
-private: System::Windows::Forms::DataVisualization::Charting::Chart^  PieChart;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisationLocationChart;
+
+
 private: System::Windows::Forms::Button^  visualationBtn;
 
 private: System::Windows::Forms::Label^  jsonVisualFilePath;
-private: System::Windows::Forms::Label^  displayJsonVisualFilePathValue;
+private: System::Windows::Forms::Label^  visualisationFilePathLabel;
+
 private: System::Windows::Forms::TextBox^  twitterConsole;
 private: System::Windows::Forms::PictureBox^  analysisWordmap;
 private: System::Windows::Forms::PictureBox^  aboutSeleniumPicture;
@@ -230,6 +234,12 @@ private: System::Windows::Forms::Label^  aboutMember2Label;
 private: System::Windows::Forms::PictureBox^  aboutInstagramPicture;
 
 private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
+private: System::Windows::Forms::Button^  visualisationLocationButton;
+
+private: System::Windows::Forms::Button^  visualisationMonthlyButton;
+private: System::Windows::Forms::Button^  visualisationSentimentButton;
+private: System::Windows::Forms::OpenFileDialog^  visualisationLoadFileDialog;
+private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisationSentimentChart;
 
 
 
@@ -287,13 +297,14 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series14 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series15 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series16 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series17 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series18 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
@@ -304,6 +315,8 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			System::Windows::Forms::DataVisualization::Charting::Series^  series24 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series25 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			System::Windows::Forms::DataVisualization::Charting::Series^  series26 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series27 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series28 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -382,11 +395,15 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			this->analysisFileLocationLabel = (gcnew System::Windows::Forms::Label());
 			this->dataAnalysisHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->visualisationTab = (gcnew System::Windows::Forms::TabPage());
-			this->displayJsonVisualFilePathValue = (gcnew System::Windows::Forms::Label());
+			this->visualisationSentimentChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->visualisationLocationButton = (gcnew System::Windows::Forms::Button());
+			this->visualisationMonthlyButton = (gcnew System::Windows::Forms::Button());
+			this->visualisationSentimentButton = (gcnew System::Windows::Forms::Button());
+			this->visualisationFilePathLabel = (gcnew System::Windows::Forms::Label());
 			this->jsonVisualFilePath = (gcnew System::Windows::Forms::Label());
 			this->visualationBtn = (gcnew System::Windows::Forms::Button());
-			this->PieChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			this->BarChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->visualisationLocationChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->visualisationMonthlyChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->visualisationHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->imageOcrTab = (gcnew System::Windows::Forms::TabPage());
 			this->imageOcrExecuteButton = (gcnew System::Windows::Forms::Button());
@@ -417,6 +434,7 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			this->displayJsonLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->displayJsonSaveFileDialog = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->imageOcrLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->visualisationLoadFileDialog = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->sidePanelBacking->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sitLogo))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -429,8 +447,9 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisWordmap))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->BeginInit();
 			this->visualisationTab->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationSentimentChart))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationLocationChart))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationMonthlyChart))->BeginInit();
 			this->imageOcrTab->SuspendLayout();
 			this->aboutTab->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->aboutInstagramPicture))->BeginInit();
@@ -1425,11 +1444,15 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			// 
 			// visualisationTab
 			// 
-			this->visualisationTab->Controls->Add(this->displayJsonVisualFilePathValue);
+			this->visualisationTab->Controls->Add(this->visualisationFilePathLabel);
+			this->visualisationTab->Controls->Add(this->visualisationSentimentChart);
+			this->visualisationTab->Controls->Add(this->visualisationLocationButton);
+			this->visualisationTab->Controls->Add(this->visualisationMonthlyButton);
+			this->visualisationTab->Controls->Add(this->visualisationSentimentButton);
 			this->visualisationTab->Controls->Add(this->jsonVisualFilePath);
 			this->visualisationTab->Controls->Add(this->visualationBtn);
-			this->visualisationTab->Controls->Add(this->PieChart);
-			this->visualisationTab->Controls->Add(this->BarChart);
+			this->visualisationTab->Controls->Add(this->visualisationLocationChart);
+			this->visualisationTab->Controls->Add(this->visualisationMonthlyChart);
 			this->visualisationTab->Controls->Add(this->visualisationHeaderLabel);
 			this->visualisationTab->Location = System::Drawing::Point(4, 33);
 			this->visualisationTab->Name = L"visualisationTab";
@@ -1438,121 +1461,176 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			this->visualisationTab->Text = L"5";
 			this->visualisationTab->UseVisualStyleBackColor = true;
 			// 
-			// displayJsonVisualFilePathValue
+			// visualisationSentimentChart
 			// 
-			this->displayJsonVisualFilePathValue->AutoSize = true;
-			this->displayJsonVisualFilePathValue->Location = System::Drawing::Point(321, 74);
-			this->displayJsonVisualFilePathValue->Name = L"displayJsonVisualFilePathValue";
-			this->displayJsonVisualFilePathValue->Size = System::Drawing::Size(69, 25);
-			this->displayJsonVisualFilePathValue->TabIndex = 9;
-			this->displayJsonVisualFilePathValue->Text = L"NONE";
+			chartArea4->Name = L"ChartArea1";
+			this->visualisationSentimentChart->ChartAreas->Add(chartArea4);
+			legend4->Name = L"Legend1";
+			this->visualisationSentimentChart->Legends->Add(legend4);
+			this->visualisationSentimentChart->Location = System::Drawing::Point(269, 90);
+			this->visualisationSentimentChart->Name = L"visualisationSentimentChart";
+			series15->ChartArea = L"ChartArea1";
+			series15->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series15->Legend = L"Legend1";
+			series15->Name = L"Series1";
+			this->visualisationSentimentChart->Series->Add(series15);
+			this->visualisationSentimentChart->Size = System::Drawing::Size(550, 395);
+			this->visualisationSentimentChart->TabIndex = 13;
+			this->visualisationSentimentChart->Text = L"chart1";
+			// 
+			// visualisationLocationButton
+			// 
+			this->visualisationLocationButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->visualisationLocationButton->Location = System::Drawing::Point(12, 311);
+			this->visualisationLocationButton->Name = L"visualisationLocationButton";
+			this->visualisationLocationButton->Size = System::Drawing::Size(139, 51);
+			this->visualisationLocationButton->TabIndex = 12;
+			this->visualisationLocationButton->Text = L"View posts by location";
+			this->visualisationLocationButton->UseVisualStyleBackColor = true;
+			this->visualisationLocationButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualisationLocationButton_Click);
+			// 
+			// visualisationMonthlyButton
+			// 
+			this->visualisationMonthlyButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->visualisationMonthlyButton->Location = System::Drawing::Point(12, 246);
+			this->visualisationMonthlyButton->Name = L"visualisationMonthlyButton";
+			this->visualisationMonthlyButton->Size = System::Drawing::Size(139, 51);
+			this->visualisationMonthlyButton->TabIndex = 11;
+			this->visualisationMonthlyButton->Text = L"View monthly posts";
+			this->visualisationMonthlyButton->UseVisualStyleBackColor = true;
+			this->visualisationMonthlyButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualisationMonthlyButton_Click);
+			// 
+			// visualisationSentimentButton
+			// 
+			this->visualisationSentimentButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->visualisationSentimentButton->Location = System::Drawing::Point(12, 181);
+			this->visualisationSentimentButton->Name = L"visualisationSentimentButton";
+			this->visualisationSentimentButton->Size = System::Drawing::Size(139, 51);
+			this->visualisationSentimentButton->TabIndex = 10;
+			this->visualisationSentimentButton->Text = L"View sentiment analysis";
+			this->visualisationSentimentButton->UseVisualStyleBackColor = true;
+			this->visualisationSentimentButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualisationSentimentButton_Click);
+			// 
+			// visualisationFilePathLabel
+			// 
+			this->visualisationFilePathLabel->AutoSize = true;
+			this->visualisationFilePathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->visualisationFilePathLabel->Location = System::Drawing::Point(8, 90);
+			this->visualisationFilePathLabel->Name = L"visualisationFilePathLabel";
+			this->visualisationFilePathLabel->Size = System::Drawing::Size(190, 20);
+			this->visualisationFilePathLabel->TabIndex = 9;
+			this->visualisationFilePathLabel->Text = L"File loaded: No file loaded";
 			// 
 			// jsonVisualFilePath
 			// 
 			this->jsonVisualFilePath->AutoSize = true;
-			this->jsonVisualFilePath->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 9.818182F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->jsonVisualFilePath->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->jsonVisualFilePath->Location = System::Drawing::Point(225, 69);
+			this->jsonVisualFilePath->Location = System::Drawing::Point(8, 62);
 			this->jsonVisualFilePath->Name = L"jsonVisualFilePath";
-			this->jsonVisualFilePath->Size = System::Drawing::Size(128, 31);
+			this->jsonVisualFilePath->Size = System::Drawing::Size(102, 22);
 			this->jsonVisualFilePath->TabIndex = 8;
 			this->jsonVisualFilePath->Text = L"File Path: ";
 			// 
 			// visualationBtn
 			// 
-			this->visualationBtn->Font = (gcnew System::Drawing::Font(L"Arial", 7.854546F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->visualationBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			this->visualationBtn->Location = System::Drawing::Point(28, 59);
+			this->visualationBtn->Location = System::Drawing::Point(12, 112);
 			this->visualationBtn->Name = L"visualationBtn";
-			this->visualationBtn->Size = System::Drawing::Size(149, 32);
+			this->visualationBtn->Size = System::Drawing::Size(122, 32);
 			this->visualationBtn->TabIndex = 7;
 			this->visualationBtn->Text = L"Select File";
 			this->visualationBtn->UseVisualStyleBackColor = true;
 			this->visualationBtn->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualationBtn_Click_1);
 			// 
-			// PieChart
+			// visualisationLocationChart
 			// 
-			chartArea3->Name = L"ChartArea1";
-			this->PieChart->ChartAreas->Add(chartArea3);
-			legend3->Name = L"Legend1";
-			legend3->Title = L"Visualation Number Of Location Base On Post";
-			this->PieChart->Legends->Add(legend3);
-			this->PieChart->Location = System::Drawing::Point(44, 381);
-			this->PieChart->Name = L"PieChart";
-			series14->ChartArea = L"ChartArea1";
-			series14->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
-			series14->EmptyPointStyle->Name = L"Location";
-			series14->Legend = L"Legend1";
-			series14->Name = L"Location1";
-			series14->YValuesPerPoint = 4;
-			this->PieChart->Series->Add(series14);
-			this->PieChart->Size = System::Drawing::Size(770, 300);
-			this->PieChart->TabIndex = 6;
-			this->PieChart->Text = L"PieChart";
-			// 
-			// BarChart
-			// 
-			chartArea4->Name = L"ChartArea1";
-			this->BarChart->ChartAreas->Add(chartArea4);
-			legend4->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
-			legend4->IsEquallySpacedItems = true;
-			legend4->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
-			legend4->Name = L"VisualationNumberOfPostPerMonth";
-			legend4->Title = L"Visualation Number Of Post Per Month";
-			this->BarChart->Legends->Add(legend4);
-			this->BarChart->Location = System::Drawing::Point(6, 108);
-			this->BarChart->Name = L"BarChart";
-			series15->ChartArea = L"ChartArea1";
-			series15->Legend = L"VisualationNumberOfPostPerMonth";
-			series15->Name = L"JAN";
+			chartArea5->Name = L"ChartArea1";
+			this->visualisationLocationChart->ChartAreas->Add(chartArea5);
+			legend5->Name = L"Legend1";
+			legend5->Title = L"Visualation Number Of Location Base On Post";
+			this->visualisationLocationChart->Legends->Add(legend5);
+			this->visualisationLocationChart->Location = System::Drawing::Point(269, 90);
+			this->visualisationLocationChart->Name = L"visualisationLocationChart";
 			series16->ChartArea = L"ChartArea1";
-			series16->Legend = L"VisualationNumberOfPostPerMonth";
-			series16->Name = L"FEB";
+			series16->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series16->EmptyPointStyle->Name = L"Location";
+			series16->Legend = L"Legend1";
+			series16->Name = L"Location1";
+			series16->YValuesPerPoint = 4;
+			this->visualisationLocationChart->Series->Add(series16);
+			this->visualisationLocationChart->Size = System::Drawing::Size(565, 451);
+			this->visualisationLocationChart->TabIndex = 6;
+			this->visualisationLocationChart->Text = L"PieChart";
+			// 
+			// visualisationMonthlyChart
+			// 
+			chartArea6->Name = L"ChartArea1";
+			this->visualisationMonthlyChart->ChartAreas->Add(chartArea6);
+			legend6->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
+			legend6->IsEquallySpacedItems = true;
+			legend6->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
+			legend6->Name = L"VisualationNumberOfPostPerMonth";
+			legend6->Title = L"Visualation Number Of Post Per Month";
+			this->visualisationMonthlyChart->Legends->Add(legend6);
+			this->visualisationMonthlyChart->Location = System::Drawing::Point(257, 105);
+			this->visualisationMonthlyChart->Name = L"visualisationMonthlyChart";
 			series17->ChartArea = L"ChartArea1";
 			series17->Legend = L"VisualationNumberOfPostPerMonth";
-			series17->Name = L"MARCH";
+			series17->Name = L"JAN";
 			series18->ChartArea = L"ChartArea1";
 			series18->Legend = L"VisualationNumberOfPostPerMonth";
-			series18->Name = L"APRIL";
+			series18->Name = L"FEB";
 			series19->ChartArea = L"ChartArea1";
 			series19->Legend = L"VisualationNumberOfPostPerMonth";
-			series19->Name = L"MAY";
+			series19->Name = L"MARCH";
 			series20->ChartArea = L"ChartArea1";
 			series20->Legend = L"VisualationNumberOfPostPerMonth";
-			series20->Name = L"JUNE";
+			series20->Name = L"APRIL";
 			series21->ChartArea = L"ChartArea1";
 			series21->Legend = L"VisualationNumberOfPostPerMonth";
-			series21->Name = L"JULY";
+			series21->Name = L"MAY";
 			series22->ChartArea = L"ChartArea1";
 			series22->Legend = L"VisualationNumberOfPostPerMonth";
-			series22->Name = L"AUG";
+			series22->Name = L"JUNE";
 			series23->ChartArea = L"ChartArea1";
 			series23->Legend = L"VisualationNumberOfPostPerMonth";
-			series23->Name = L"SEPT";
+			series23->Name = L"JULY";
 			series24->ChartArea = L"ChartArea1";
 			series24->Legend = L"VisualationNumberOfPostPerMonth";
-			series24->Name = L"OCT";
+			series24->Name = L"AUG";
 			series25->ChartArea = L"ChartArea1";
 			series25->Legend = L"VisualationNumberOfPostPerMonth";
-			series25->Name = L"NOV";
+			series25->Name = L"SEPT";
 			series26->ChartArea = L"ChartArea1";
 			series26->Legend = L"VisualationNumberOfPostPerMonth";
-			series26->Name = L"DEC";
-			this->BarChart->Series->Add(series15);
-			this->BarChart->Series->Add(series16);
-			this->BarChart->Series->Add(series17);
-			this->BarChart->Series->Add(series18);
-			this->BarChart->Series->Add(series19);
-			this->BarChart->Series->Add(series20);
-			this->BarChart->Series->Add(series21);
-			this->BarChart->Series->Add(series22);
-			this->BarChart->Series->Add(series23);
-			this->BarChart->Series->Add(series24);
-			this->BarChart->Series->Add(series25);
-			this->BarChart->Series->Add(series26);
-			this->BarChart->Size = System::Drawing::Size(803, 283);
-			this->BarChart->TabIndex = 1;
-			this->BarChart->Text = L"BarChart";
+			series26->Name = L"OCT";
+			series27->ChartArea = L"ChartArea1";
+			series27->Legend = L"VisualationNumberOfPostPerMonth";
+			series27->Name = L"NOV";
+			series28->ChartArea = L"ChartArea1";
+			series28->Legend = L"VisualationNumberOfPostPerMonth";
+			series28->Name = L"DEC";
+			this->visualisationMonthlyChart->Series->Add(series17);
+			this->visualisationMonthlyChart->Series->Add(series18);
+			this->visualisationMonthlyChart->Series->Add(series19);
+			this->visualisationMonthlyChart->Series->Add(series20);
+			this->visualisationMonthlyChart->Series->Add(series21);
+			this->visualisationMonthlyChart->Series->Add(series22);
+			this->visualisationMonthlyChart->Series->Add(series23);
+			this->visualisationMonthlyChart->Series->Add(series24);
+			this->visualisationMonthlyChart->Series->Add(series25);
+			this->visualisationMonthlyChart->Series->Add(series26);
+			this->visualisationMonthlyChart->Series->Add(series27);
+			this->visualisationMonthlyChart->Series->Add(series28);
+			this->visualisationMonthlyChart->Size = System::Drawing::Size(562, 380);
+			this->visualisationMonthlyChart->TabIndex = 1;
+			this->visualisationMonthlyChart->Text = L"BarChart";
 			// 
 			// visualisationHeaderLabel
 			// 
@@ -1882,8 +1960,9 @@ private: System::Windows::Forms::PictureBox^  aboutTwitterPicture;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->analysisRelatedHashtagsTable))->EndInit();
 			this->visualisationTab->ResumeLayout(false);
 			this->visualisationTab->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PieChart))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->BarChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationSentimentChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationLocationChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->visualisationMonthlyChart))->EndInit();
 			this->imageOcrTab->ResumeLayout(false);
 			this->imageOcrTab->PerformLayout();
 			this->aboutTab->ResumeLayout(false);
@@ -2136,145 +2215,9 @@ private: System::Void folderBrowserDialog1_HelpRequest(System::Object^  sender, 
 
 private: System::Void visualationBtn_Click_1(System::Object^  sender, System::EventArgs^  e)
 {
-	if (displayJsonLoadFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
-		displayJsonVisualFilePathValue->Text = displayJsonLoadFileDialog->FileName;
-		using json = nlohmann::json;
-
-		try {
-			std::string fileName = msclr::interop::marshal_as<std::string>(displayJsonLoadFileDialog->FileName);
-			std::ifstream i(fileName);
-			json jsonObject;
-			i >> jsonObject; i.close(); //Parse file into json object;
-			string tempLoc;
-			int counterLoc = 0;
-			int location[15];
-			location[0] = 0; location[1] = 0; location[2] = 0; location[3] = 0; location[4] = 0;
-			location[5] = 0; location[6] = 0; location[7] = 0; location[8] = 0; location[9] = 0;
-			location[10] = 0; location[11] = 0; location[12] = 0; location[13] = 0; location[14] = 0;
-			string locationName[15];
-			string tempDate;
-			int totalCaptions = 0;
-			int months[13];
-			months[1] = 0; months[2] = 0; months[3] = 0; months[4] = 0; months[5] = 0; months[6] = 0;
-			months[7] = 0; months[8] = 0; months[9] = 0; months[10] = 0; months[11] = 0; months[12] = 0; months[0] = 0;
-			for (auto &detail : jsonObject["details"])
-			{
-				for (auto &post : detail["extracted_posts"])
-				{
-
-					tempLoc = post["location"].get<string>();
-					//std::cout << tempLoc<<"\n";
-					if (locationName[counterLoc] != tempLoc && tempLoc != "None" && counterLoc < 15) { locationName[counterLoc] = tempLoc; counterLoc++; }
-					else { continue; }
-				}
-
-				for (auto &post : detail["extracted_posts"])
-				{
-
-					tempLoc = post["location"].get<string>();
-					//std::cout << tempLoc<<"\n";
-					for (int y = 0; y < 15; y++)
-					{
-						if (tempLoc == locationName[y])
-						{
-							location[y]++;
-							break;
-						}
-						else
-						{
-							continue;
-						}
-					}
-				}
-			}
-			for (auto &detail : jsonObject["details"]) {
-
-				for (auto &post : detail["extracted_posts"]) {
-
-					tempDate = post["date_time"].get<string>();
-					totalCaptions += 1;
-					if (tempDate[5] == '0')
-					{
-						if (tempDate[6] == '1')
-						{
-							months[1] += 1;
-						}
-						else if (tempDate[6] == '2')
-						{
-							months[2] += 1;
-						}
-						else if (tempDate[6] == '3')
-						{
-							months[3] += 1;
-						}
-						else if (tempDate[6] == '4')
-						{
-							months[4] += 1;
-						}
-						else if (tempDate[6] == '5')
-						{
-							months[5] += 1;
-						}
-						else if (tempDate[6] == '6')
-						{
-							months[6] += 1;
-						}
-						else if (tempDate[6] == '7')
-						{
-							months[7] += 1;
-						}
-						else if (tempDate[6] == '8')
-						{
-							months[8] += 1;
-						}
-						else if (tempDate[6] == '9')
-						{
-							months[9] += 1;
-						}
-					}
-					else
-					{
-						if (tempDate[6] == '0')
-						{
-							months[10] += 1;
-						}
-						else if (tempDate[6] == '1')
-						{
-							months[11] += 1;
-						}
-						else if (tempDate[6] == '2')
-						{
-							months[12] += 1;
-						}
-					}
-
-				}
-			}
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 1", location[0]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 2", location[1]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 3", location[2]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 4", location[3]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 5", location[4]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 6", location[5]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 7", location[6]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 8", location[7]);
-			this->PieChart->Series["Location1"]->Points->AddXY("Loc 9", location[8]);
-
-			this->BarChart->Series["JAN"]->Points->Add(months[1]);
-			this->BarChart->Series["FEB"]->Points->Add(months[2]);
-			this->BarChart->Series["MARCH"]->Points->Add(months[3]);
-			this->BarChart->Series["APRIL"]->Points->Add(months[4]);
-			this->BarChart->Series["MAY"]->Points->Add(months[5]);
-			this->BarChart->Series["JUNE"]->Points->Add(months[6]);
-			this->BarChart->Series["JULY"]->Points->Add(months[7]);
-			this->BarChart->Series["AUG"]->Points->Add(months[8]);
-			this->BarChart->Series["SEPT"]->Points->Add(months[9]);
-			this->BarChart->Series["OCT"]->Points->Add(months[10]);
-			this->BarChart->Series["NOV"]->Points->Add(months[11]);
-			this->BarChart->Series["DEC"]->Points->Add(months[12]);
-		}
-		catch (...) {
-		}
+	if (visualisationLoadFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK) 
+	{
+		visualisationFilePathLabel->Text = visualisationLoadFileDialog->FileName;
 	}
 }
 
@@ -2410,6 +2353,230 @@ private: System::Void analysisWordmap_Click(System::Object^  sender, System::Eve
 	if (!wordmapGenerated)
 		return;
 	System::Diagnostics::Process::Start("wordmap.png");
+}
+private: System::Void visualisationSentimentButton_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (visualisationLoadFileDialog->FileName->Length < 1)
+	{
+		MessageBox::Show("Please select a file");
+		return;
+	}
+
+	visualisationSentimentChart->Visible = true;
+	visualisationMonthlyChart->Visible = false;
+	visualisationLocationChart->Visible = false;
+
+	std::string fileName = msclr::interop::marshal_as<std::string>(visualisationLoadFileDialog->FileName);
+
+	std::cout << "Starting sentiment analysis" << std::endl;
+	ICT1009::DataStorage::ScrapeStorage data(fileName);
+	auto results = ICT1009::Analysis::SentimentAnalyser::analyseSentiment(&data);
+	
+	visualisationSentimentChart->Series[0]->Points->Clear();
+	for (auto it = results.cbegin(); it != results.cend(); ++it)
+	{
+		visualisationSentimentChart->Series[0]->Points->AddXY(gcnew String(it->first.c_str()), it->second);
+		std::cout << it->first << " " << it->second << " " << "\n";
+	}
+	std::cout << "Sentiment analysis done" << std::endl;
+}
+private: System::Void visualisationMonthlyButton_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (visualisationLoadFileDialog->FileName->Length < 1)
+	{
+		MessageBox::Show("Please select a file");
+		return;
+	}
+
+	visualisationSentimentChart->Visible = false;
+	visualisationMonthlyChart->Visible = true;
+	visualisationLocationChart->Visible = false;
+
+	std::string fileName = msclr::interop::marshal_as<std::string>(visualisationLoadFileDialog->FileName);
+
+	using json = nlohmann::json;
+
+	try {
+		std::ifstream i(fileName);
+		json jsonObject;
+		i >> jsonObject; i.close(); //Parse file into json object;
+		int counterLoc = 0;
+		string tempDate;
+		int totalCaptions = 0;
+		int months[13];
+		months[1] = 0; months[2] = 0; months[3] = 0; months[4] = 0; months[5] = 0; months[6] = 0;
+		months[7] = 0; months[8] = 0; months[9] = 0; months[10] = 0; months[11] = 0; months[12] = 0; months[0] = 0;
+		for (auto &detail : jsonObject["details"]) {
+
+			for (auto &post : detail["extracted_posts"]) {
+
+				tempDate = post["date_time"].get<string>();
+				totalCaptions += 1;
+				if (tempDate[5] == '0')
+				{
+					if (tempDate[6] == '1')
+					{
+						months[1] += 1;
+					}
+					else if (tempDate[6] == '2')
+					{
+						months[2] += 1;
+					}
+					else if (tempDate[6] == '3')
+					{
+						months[3] += 1;
+					}
+					else if (tempDate[6] == '4')
+					{
+						months[4] += 1;
+					}
+					else if (tempDate[6] == '5')
+					{
+						months[5] += 1;
+					}
+					else if (tempDate[6] == '6')
+					{
+						months[6] += 1;
+					}
+					else if (tempDate[6] == '7')
+					{
+						months[7] += 1;
+					}
+					else if (tempDate[6] == '8')
+					{
+						months[8] += 1;
+					}
+					else if (tempDate[6] == '9')
+					{
+						months[9] += 1;
+					}
+				}
+				else
+				{
+					if (tempDate[6] == '0')
+					{
+						months[10] += 1;
+					}
+					else if (tempDate[6] == '1')
+					{
+						months[11] += 1;
+					}
+					else if (tempDate[6] == '2')
+					{
+						months[12] += 1;
+					}
+				}
+
+			}
+		}
+		this->visualisationMonthlyChart->Series["JAN"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["JAN"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["FEB"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["MARCH"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["APRIL"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["MAY"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["JUNE"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["JULY"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["AUG"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["SEPT"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["OCT"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["NOV"]->Points->Clear();
+		this->visualisationMonthlyChart->Series["DEC"]->Points->Clear();
+
+		this->visualisationMonthlyChart->Series["JAN"]->Points->Add(months[1]);
+		this->visualisationMonthlyChart->Series["FEB"]->Points->Add(months[2]);
+		this->visualisationMonthlyChart->Series["MARCH"]->Points->Add(months[3]);
+		this->visualisationMonthlyChart->Series["APRIL"]->Points->Add(months[4]);
+		this->visualisationMonthlyChart->Series["MAY"]->Points->Add(months[5]);
+		this->visualisationMonthlyChart->Series["JUNE"]->Points->Add(months[6]);
+		this->visualisationMonthlyChart->Series["JULY"]->Points->Add(months[7]);
+		this->visualisationMonthlyChart->Series["AUG"]->Points->Add(months[8]);
+		this->visualisationMonthlyChart->Series["SEPT"]->Points->Add(months[9]);
+		this->visualisationMonthlyChart->Series["OCT"]->Points->Add(months[10]);
+		this->visualisationMonthlyChart->Series["NOV"]->Points->Add(months[11]);
+		this->visualisationMonthlyChart->Series["DEC"]->Points->Add(months[12]);
+	}
+	catch (...) {
+	}
+
+}
+private: System::Void visualisationLocationButton_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (visualisationLoadFileDialog->FileName->Length < 1)
+	{
+		MessageBox::Show("Please select a file");
+		return;
+	}
+
+	visualisationSentimentChart->Visible = false;
+	visualisationMonthlyChart->Visible = false;
+	visualisationLocationChart->Visible = true;
+
+	std::string fileName = msclr::interop::marshal_as<std::string>(visualisationLoadFileDialog->FileName);
+
+	using json = nlohmann::json;
+
+	try {
+		std::ifstream i(fileName);
+		json jsonObject;
+		i >> jsonObject; i.close(); //Parse file into json object;
+		string tempLoc;
+		int counterLoc = 0;
+		int location[15];
+		location[0] = 0; location[1] = 0; location[2] = 0; location[3] = 0; location[4] = 0;
+		location[5] = 0; location[6] = 0; location[7] = 0; location[8] = 0; location[9] = 0;
+		location[10] = 0; location[11] = 0; location[12] = 0; location[13] = 0; location[14] = 0;
+		string locationName[15];
+		string tempDate;
+		int totalCaptions = 0;
+		if (jsonObject["platform"].get<string>() == "twitter")
+		{
+			MessageBox::Show("Location visualisation only works for Instagram data!");
+			return;
+		}
+		for (auto &detail : jsonObject["details"])
+		{
+			for (auto &post : detail["extracted_posts"])
+			{
+
+				tempLoc = post["location"].get<string>();
+				//std::cout << tempLoc<<"\n";
+				if (locationName[counterLoc] != tempLoc && tempLoc != "None" && counterLoc < 15) { locationName[counterLoc] = tempLoc; counterLoc++; }
+				else { continue; }
+			}
+
+			for (auto &post : detail["extracted_posts"])
+			{
+
+				tempLoc = post["location"].get<string>();
+				//std::cout << tempLoc<<"\n";
+				for (int y = 0; y < 15; y++)
+				{
+					if (tempLoc == locationName[y])
+					{
+						location[y]++;
+						break;
+					}
+					else
+					{
+						continue;
+					}
+				}
+			}
+		}
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 1", location[0]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 2", location[1]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 3", location[2]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 4", location[3]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 5", location[4]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 6", location[5]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 7", location[6]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 8", location[7]);
+		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 9", location[8]);
+	}
+	catch (...) {
+	}
+
 }
 }; //Endpoint
 }

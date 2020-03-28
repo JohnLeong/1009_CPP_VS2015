@@ -152,6 +152,7 @@
     <ClCompile Include="SampleClass.cpp" />
     <ClCompile Include="ScrapeStorage.cpp" />
     <ClCompile Include="ScrapeUtility.cpp" />
+    <ClCompile Include="SentimentAnalyser.cpp" />
     <ClCompile Include="SocialMediaComment.cpp" />
     <ClCompile Include="SocialMediaPost.cpp" />
     <ClCompile Include="SocialMediaPostStorage.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="ScrapeStorage.h" />
     <ClInclude Include="ScrapeUtility.h" />
+    <ClInclude Include="SentimentAnalyser.h" />
     <ClInclude Include="SocialMediaComment.h" />
     <ClInclude Include="SocialMediaPost.h" />
     <ClInclude Include="SocialMediaPostStorage.h" />

@@ -18,6 +18,12 @@ namespace ICT1009
 
 		}
 
+		/**
+		* Removes all duplicate whitespaces in a string
+		*
+		* @param data		The target string
+		* @return			The modified string without duplicate whitespaces
+		*/
 		string DataCleanser::removeExtraWhitespaces(const string& str)
 		{
 			string new_string;
@@ -27,6 +33,12 @@ namespace ICT1009
 			//cout << output << endl;
 		}
 
+		/**
+		* Removes all unwanted characters in a string
+		*
+		* @param data		The target string
+		* @return			The modified string without unwanted characters
+		*/
 		string DataCleanser::removeSymbols(const string& str)
 		{
 			string new_string;
@@ -43,6 +55,12 @@ namespace ICT1009
 			return new_string;
 		}
 
+		/**
+		* Removes all unwanted characters and duplicate whitespaces in a string
+		*
+		* @param data		The target string
+		* @return			The modified string
+		*/
 		string DataCleanser::cleanseString(string str)
 		{
 			return removeExtraWhitespaces(removeSymbols(str));

@@ -108,6 +108,9 @@
     <ClInclude Include="Date.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="SentimentAnalyser.h">
+      <Filter>Header Files\Analysis</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UserInterfaceForm.cpp">
@@ -172,6 +175,9 @@
     </ClCompile>
     <ClCompile Include="Date.cpp">
       <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="SentimentAnalyser.cpp">
+      <Filter>Source Files\Analysis</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

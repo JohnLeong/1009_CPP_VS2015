@@ -45,8 +45,6 @@ namespace ICT1009
 			auto details = data->getScrapedDetails();
 			for (int i = 0; i < details.size(); ++i)
 			{
-				std::cout << details.at(i).get()->getScrapeTarget() << std::endl;
-
 				//Add scrape target to analysed data
 				analysedData.getScrapeTargets()->push_back(details.at(i).get()->getScrapeTarget());
 

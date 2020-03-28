@@ -48,7 +48,7 @@ ScrapeStorage::ScrapeStorage(string filePath)
 		for (auto &post : detail["extracted_posts"]) 
 		{
 			SocialMediaPostPtr new_post(new SocialMediaPost);
-			new_post.get()->setCaption(post["caption"].get<std::string>());
+			new_post.get()->setCaption(ICT1009::Utility::DataCleanser::cleanseString(post["caption"].get<std::string>()));
 			postStorage.get()->getPostListPtr()->push_back(new_post);
 			new_post.get()->setLikes(post["no_of_likes"].get<int>());
 		}
