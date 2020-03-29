@@ -2403,98 +2403,27 @@ private: System::Void visualisationMonthlyButton_Click(System::Object^  sender, 
 		int counterLoc = 0;
 		string tempDate;
 		int totalCaptions = 0;
-		int months[13];
-		months[1] = 0; months[2] = 0; months[3] = 0; months[4] = 0; months[5] = 0; months[6] = 0;
-		months[7] = 0; months[8] = 0; months[9] = 0; months[10] = 0; months[11] = 0; months[12] = 0; months[0] = 0;
+
+		string monthNames[] = { "JAN", "FEB", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUG", "SEPT", "OCT", "NOV", "DEC" };
+		int months[12];
+		for (int i = 0; i < 12; ++i)
+			months[i] = 0;
+
 		for (auto &detail : jsonObject["details"]) {
 
 			for (auto &post : detail["extracted_posts"]) {
 
 				tempDate = post["date_time"].get<string>();
+				int month = std::stoi(string() + tempDate[5] + tempDate[6]);
 				totalCaptions += 1;
-				if (tempDate[5] == '0')
-				{
-					if (tempDate[6] == '1')
-					{
-						months[1] += 1;
-					}
-					else if (tempDate[6] == '2')
-					{
-						months[2] += 1;
-					}
-					else if (tempDate[6] == '3')
-					{
-						months[3] += 1;
-					}
-					else if (tempDate[6] == '4')
-					{
-						months[4] += 1;
-					}
-					else if (tempDate[6] == '5')
-					{
-						months[5] += 1;
-					}
-					else if (tempDate[6] == '6')
-					{
-						months[6] += 1;
-					}
-					else if (tempDate[6] == '7')
-					{
-						months[7] += 1;
-					}
-					else if (tempDate[6] == '8')
-					{
-						months[8] += 1;
-					}
-					else if (tempDate[6] == '9')
-					{
-						months[9] += 1;
-					}
-				}
-				else
-				{
-					if (tempDate[6] == '0')
-					{
-						months[10] += 1;
-					}
-					else if (tempDate[6] == '1')
-					{
-						months[11] += 1;
-					}
-					else if (tempDate[6] == '2')
-					{
-						months[12] += 1;
-					}
-				}
-
+				months[month - 1] += 1;
 			}
 		}
-		this->visualisationMonthlyChart->Series["JAN"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["JAN"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["FEB"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["MARCH"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["APRIL"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["MAY"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["JUNE"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["JULY"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["AUG"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["SEPT"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["OCT"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["NOV"]->Points->Clear();
-		this->visualisationMonthlyChart->Series["DEC"]->Points->Clear();
 
-		this->visualisationMonthlyChart->Series["JAN"]->Points->Add(months[1]);
-		this->visualisationMonthlyChart->Series["FEB"]->Points->Add(months[2]);
-		this->visualisationMonthlyChart->Series["MARCH"]->Points->Add(months[3]);
-		this->visualisationMonthlyChart->Series["APRIL"]->Points->Add(months[4]);
-		this->visualisationMonthlyChart->Series["MAY"]->Points->Add(months[5]);
-		this->visualisationMonthlyChart->Series["JUNE"]->Points->Add(months[6]);
-		this->visualisationMonthlyChart->Series["JULY"]->Points->Add(months[7]);
-		this->visualisationMonthlyChart->Series["AUG"]->Points->Add(months[8]);
-		this->visualisationMonthlyChart->Series["SEPT"]->Points->Add(months[9]);
-		this->visualisationMonthlyChart->Series["OCT"]->Points->Add(months[10]);
-		this->visualisationMonthlyChart->Series["NOV"]->Points->Add(months[11]);
-		this->visualisationMonthlyChart->Series["DEC"]->Points->Add(months[12]);
+		for (int i = 0; i < 12; ++i)
+			this->visualisationMonthlyChart->Series[gcnew String(monthNames[i].c_str())]->Points->Clear();
+		for (int i = 0; i < 12; ++i)
+			this->visualisationMonthlyChart->Series[gcnew String(monthNames[i].c_str())]->Points->Add(months[i]);
 	}
 	catch (...) {
 	}
