@@ -42,7 +42,7 @@ namespace ICT1009
 		string DataCleanser::removeSymbols(const string& str)
 		{
 			string new_string;
-			regex reg("[a-zA-Z!,.# ]+");
+			regex reg("[a-zA-Z0-9!,.# ]+");
 			sregex_iterator currentMatch(str.begin(), str.end(), reg);
 			sregex_iterator lastMatch;
 			while (currentMatch != lastMatch)
