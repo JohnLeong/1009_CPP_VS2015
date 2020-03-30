@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+1009_CPP_VS2015/wordlist.txt
+1009_CPP_VS2015/wordmap.png

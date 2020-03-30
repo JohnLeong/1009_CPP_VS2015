@@ -185,4 +185,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd">
+      <Filter>Header Files\DataStorage</Filter>
+    </None>
+  </ItemGroup>
 </Project>
