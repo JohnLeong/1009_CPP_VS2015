@@ -65,5 +65,17 @@ namespace ICT1009
 		{
 			return removeExtraWhitespaces(removeSymbols(str));
 		}
+
+		/**
+		* Compares two objects with the same class type
+		*
+		* @param a			The first object to compare
+		* @param a			The second object to compare
+		*/
+		template <class T>
+		T DataCleanser::CompareData(T a, T b)
+		{
+			return a < b;
+		}
 	}
 }

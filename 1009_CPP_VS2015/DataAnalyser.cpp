@@ -136,7 +136,7 @@ namespace ICT1009
 		* @param str		The string to split
 		* @return			A vector list containing the split words
 		*/
-		vector<string> DataAnalyser::getWordsInString(string* str)
+		inline vector<string> DataAnalyser::getWordsInString(string* str)
 		{
 			string buf;
 			std::stringstream ss(*str);

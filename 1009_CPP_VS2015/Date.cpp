@@ -49,6 +49,18 @@ int Date::getYears()
 	return years;
 }
 
+void Date::setDate(short d, short m, int y)
+{
+	days = d;
+	months = m;
+	years = y;
+}
+
+void Date::setDate(std::string dateString)
+{
+
+}
+
 void Date::print()
 {
 	cout << setfill('0') << setw(2) << getDays() << "/"

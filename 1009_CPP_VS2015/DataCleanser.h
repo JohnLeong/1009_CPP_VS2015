@@ -17,6 +17,9 @@ namespace ICT1009
 			static string removeSymbols(const string& str);
 			static string removeExtraWhitespaces(const string& str);
 			static string cleanseString(string str);
+
+			template <class T>
+			static T CompareData(T a, T b);
 		};
 	}
 

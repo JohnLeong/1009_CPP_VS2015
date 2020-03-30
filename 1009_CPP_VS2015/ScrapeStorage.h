@@ -33,9 +33,9 @@ public:
 	};
 
 
-	PV_GET_SET(Platform, ScrapeStorage, scrapePlatform, ScrapePlatform)
-	PV_GET_SET(ScrapeMode, ScrapeStorage, mode, Mode)
-	PV_GET_SET(vector<SocialMediaPostStoragePtr>, ScrapeStorage, scrapedDetails, ScrapedDetails)
+	PV_GET_SET(Platform, ScrapeStorage, scrapePlatform, ScrapePlatform)		//The scrape platform, twitter/instagram
+	PV_GET_SET(ScrapeMode, ScrapeStorage, mode, Mode)						//The scrape mode, hashtags/profile
+	PV_GET_SET(vector<SocialMediaPostStoragePtr>, ScrapeStorage, scrapedDetails, ScrapedDetails)	//The list of scraped details
 	
 public:
 	ScrapeStorage();

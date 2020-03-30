@@ -14,7 +14,7 @@ namespace ICT1009
 		public:
 			static AnalysedData Analyse(DataStorage::ScrapeStorage* data);
 			static unsigned int CountWords(const char* str);
-			static vector<string> getWordsInString(string* str);
+			static inline vector<string> getWordsInString(string* str);
 
 		private:
 			const static std::string wordmapCommand;

@@ -13,6 +13,8 @@ class Date {
 		void setDays(short d);
 		void setMonths(short m);
 		void setYears(int y);
+		void setDate(short d, short m, int y);
+		void setDate(std::string dateString);
 
 		short getDays();
 		short getMonths();
