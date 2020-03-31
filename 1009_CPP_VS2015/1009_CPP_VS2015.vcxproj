@@ -173,6 +173,7 @@
     <ClInclude Include="InstagramScrapper.h" />
     <ClInclude Include="macros.h" />
     <ClInclude Include="OCRUtility.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SampleClass.h" />
     <ClInclude Include="ScrapeStorage.h" />
     <ClInclude Include="ScrapeUtility.h" />
@@ -193,6 +194,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="1009_CPP_VS2015.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\ICT1008\1008 Project\source\images\icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

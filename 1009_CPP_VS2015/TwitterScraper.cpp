@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sstream>
+#include <Windows.h>
 
 namespace ICT1009
 {
@@ -23,14 +24,16 @@ namespace ICT1009
 		int TwitterScraper::scrapeByHashTags(const std::string username, const std::string password,
 			const std::string joinedHashTags, const unsigned int numberOfPosts, const std::string savePath)
 		{
-			system((scrapingCommand + " " + hashTagModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedHashTags).c_str());
+			WinExec((scrapingCommand + " " + hashTagModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedHashTags).c_str(), SW_HIDE);
+			//system((scrapingCommand + " " + hashTagModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedHashTags).c_str());
 			return 1;
 		}
 
 		int TwitterScraper::scrapeByProfiles(const std::string username, const std::string password,
 			const std::string joinedProfiles, const unsigned int numberOfPosts, const std::string savePath)
 		{
-			system((scrapingCommand + " " + profileModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedProfiles).c_str());
+			WinExec((scrapingCommand + " " + profileModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedProfiles).c_str(), SW_HIDE);
+			//system((scrapingCommand + " " + profileModeString + " " + std::to_string(numberOfPosts) + " \"" + savePath + "\" " + joinedProfiles).c_str());
 			return 1;
 		}
 	}

@@ -695,10 +695,10 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->instagramTab->Controls->Add(this->instagramPasswordLabel);
 			this->instagramTab->Controls->Add(this->instagramUsernameLabel);
 			this->instagramTab->Controls->Add(this->instagramHeaderLabel);
-			this->instagramTab->Location = System::Drawing::Point(4, 33);
+			this->instagramTab->Location = System::Drawing::Point(4, 22);
 			this->instagramTab->Name = L"instagramTab";
 			this->instagramTab->Padding = System::Windows::Forms::Padding(3);
-			this->instagramTab->Size = System::Drawing::Size(852, 709);
+			this->instagramTab->Size = System::Drawing::Size(852, 720);
 			this->instagramTab->TabIndex = 0;
 			this->instagramTab->Text = L"1";
 			this->instagramTab->UseVisualStyleBackColor = true;
@@ -756,7 +756,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				static_cast<System::Byte>(0)));
 			this->instagramExportLabel->Location = System::Drawing::Point(8, 62);
 			this->instagramExportLabel->Name = L"instagramExportLabel";
-			this->instagramExportLabel->Size = System::Drawing::Size(137, 22);
+			this->instagramExportLabel->Size = System::Drawing::Size(128, 20);
 			this->instagramExportLabel->TabIndex = 19;
 			this->instagramExportLabel->Text = L"Export Folder:";
 			// 
@@ -797,7 +797,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			// 
 			this->instagramProfilePostCountTextBox->Location = System::Drawing::Point(431, 303);
 			this->instagramProfilePostCountTextBox->Name = L"instagramProfilePostCountTextBox";
-			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramProfilePostCountTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramProfilePostCountTextBox->TabIndex = 15;
 			// 
 			// instagramHashTagsTextBox
@@ -812,7 +812,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			// 
 			this->instagramHashTagPostCountTextBox->Location = System::Drawing::Point(12, 303);
 			this->instagramHashTagPostCountTextBox->Name = L"instagramHashTagPostCountTextBox";
-			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 29);
+			this->instagramHashTagPostCountTextBox->Size = System::Drawing::Size(126, 20);
 			this->instagramHashTagPostCountTextBox->TabIndex = 13;
 			// 
 			// instagramUsernamePasswordTextBox
@@ -888,7 +888,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->instagramProfileModeLabel->Location = System::Drawing::Point(427, 245);
 			this->instagramProfileModeLabel->Name = L"instagramProfileModeLabel";
-			this->instagramProfileModeLabel->Size = System::Drawing::Size(122, 22);
+			this->instagramProfileModeLabel->Size = System::Drawing::Size(115, 20);
 			this->instagramProfileModeLabel->TabIndex = 4;
 			this->instagramProfileModeLabel->Text = L"Profile Mode";
 			// 
@@ -899,7 +899,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->instagramHashTagModeLabel->Location = System::Drawing::Point(8, 245);
 			this->instagramHashTagModeLabel->Name = L"instagramHashTagModeLabel";
-			this->instagramHashTagModeLabel->Size = System::Drawing::Size(145, 22);
+			this->instagramHashTagModeLabel->Size = System::Drawing::Size(135, 20);
 			this->instagramHashTagModeLabel->TabIndex = 3;
 			this->instagramHashTagModeLabel->Text = L"HashTag Mode";
 			// 
@@ -910,7 +910,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->instagramPasswordLabel->Location = System::Drawing::Point(344, 187);
 			this->instagramPasswordLabel->Name = L"instagramPasswordLabel";
-			this->instagramPasswordLabel->Size = System::Drawing::Size(88, 20);
+			this->instagramPasswordLabel->Size = System::Drawing::Size(82, 20);
 			this->instagramPasswordLabel->TabIndex = 2;
 			this->instagramPasswordLabel->Text = L"Password:";
 			// 
@@ -921,7 +921,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->instagramUsernameLabel->Location = System::Drawing::Point(7, 187);
 			this->instagramUsernameLabel->Name = L"instagramUsernameLabel";
-			this->instagramUsernameLabel->Size = System::Drawing::Size(91, 20);
+			this->instagramUsernameLabel->Size = System::Drawing::Size(87, 20);
 			this->instagramUsernameLabel->TabIndex = 1;
 			this->instagramUsernameLabel->Text = L"Username:";
 			this->instagramUsernameLabel->Click += gcnew System::EventHandler(this, &UserInterfaceForm::instagramUsernameLabel_Click);
@@ -956,10 +956,10 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->twitterTab->Controls->Add(this->twitterExportPathLabel);
 			this->twitterTab->Controls->Add(this->twitterExportLabel);
 			this->twitterTab->Controls->Add(this->twitterHeaderLabel);
-			this->twitterTab->Location = System::Drawing::Point(4, 33);
+			this->twitterTab->Location = System::Drawing::Point(4, 22);
 			this->twitterTab->Name = L"twitterTab";
 			this->twitterTab->Padding = System::Windows::Forms::Padding(3);
-			this->twitterTab->Size = System::Drawing::Size(852, 709);
+			this->twitterTab->Size = System::Drawing::Size(852, 720);
 			this->twitterTab->TabIndex = 2;
 			this->twitterTab->Text = L"2";
 			this->twitterTab->UseVisualStyleBackColor = true;
@@ -1036,7 +1036,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->twitterProfileModeLabel->Location = System::Drawing::Point(12, 344);
 			this->twitterProfileModeLabel->Name = L"twitterProfileModeLabel";
-			this->twitterProfileModeLabel->Size = System::Drawing::Size(163, 29);
+			this->twitterProfileModeLabel->Size = System::Drawing::Size(146, 26);
 			this->twitterProfileModeLabel->TabIndex = 20;
 			this->twitterProfileModeLabel->Text = L"Profile Mode";
 			// 
@@ -1102,7 +1102,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->twitterHashtagModeLabel->Location = System::Drawing::Point(12, 158);
 			this->twitterHashtagModeLabel->Name = L"twitterHashtagModeLabel";
-			this->twitterHashtagModeLabel->Size = System::Drawing::Size(181, 29);
+			this->twitterHashtagModeLabel->Size = System::Drawing::Size(165, 26);
 			this->twitterHashtagModeLabel->TabIndex = 4;
 			this->twitterHashtagModeLabel->Text = L"Hashtag Mode";
 			// 
@@ -1136,7 +1136,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				static_cast<System::Byte>(0)));
 			this->twitterExportLabel->Location = System::Drawing::Point(8, 62);
 			this->twitterExportLabel->Name = L"twitterExportLabel";
-			this->twitterExportLabel->Size = System::Drawing::Size(144, 22);
+			this->twitterExportLabel->Size = System::Drawing::Size(135, 20);
 			this->twitterExportLabel->TabIndex = 1;
 			this->twitterExportLabel->Text = L"Export location";
 			// 
@@ -1160,9 +1160,9 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonFilePathHeaderLabel);
 			this->displayJsonTab->Controls->Add(this->displayJsonHeaderLabel);
-			this->displayJsonTab->Location = System::Drawing::Point(4, 33);
+			this->displayJsonTab->Location = System::Drawing::Point(4, 22);
 			this->displayJsonTab->Name = L"displayJsonTab";
-			this->displayJsonTab->Size = System::Drawing::Size(852, 709);
+			this->displayJsonTab->Size = System::Drawing::Size(852, 720);
 			this->displayJsonTab->TabIndex = 3;
 			this->displayJsonTab->Text = L"3";
 			this->displayJsonTab->UseVisualStyleBackColor = true;
@@ -1230,7 +1230,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->displayJsonFilePathHeaderLabel->Location = System::Drawing::Point(8, 62);
 			this->displayJsonFilePathHeaderLabel->Name = L"displayJsonFilePathHeaderLabel";
-			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(119, 22);
+			this->displayJsonFilePathHeaderLabel->Size = System::Drawing::Size(112, 20);
 			this->displayJsonFilePathHeaderLabel->TabIndex = 1;
 			this->displayJsonFilePathHeaderLabel->Text = L"File location";
 			// 
@@ -1259,9 +1259,9 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->dataAnalysisTab->Controls->Add(this->analysisFilePathLabel);
 			this->dataAnalysisTab->Controls->Add(this->analysisFileLocationLabel);
 			this->dataAnalysisTab->Controls->Add(this->dataAnalysisHeaderLabel);
-			this->dataAnalysisTab->Location = System::Drawing::Point(4, 33);
+			this->dataAnalysisTab->Location = System::Drawing::Point(4, 22);
 			this->dataAnalysisTab->Name = L"dataAnalysisTab";
-			this->dataAnalysisTab->Size = System::Drawing::Size(852, 709);
+			this->dataAnalysisTab->Size = System::Drawing::Size(852, 720);
 			this->dataAnalysisTab->TabIndex = 4;
 			this->dataAnalysisTab->Text = L"4";
 			this->dataAnalysisTab->UseVisualStyleBackColor = true;
@@ -1427,7 +1427,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
 			this->analysisFileLocationLabel->Location = System::Drawing::Point(8, 62);
 			this->analysisFileLocationLabel->Name = L"analysisFileLocationLabel";
-			this->analysisFileLocationLabel->Size = System::Drawing::Size(119, 22);
+			this->analysisFileLocationLabel->Size = System::Drawing::Size(112, 20);
 			this->analysisFileLocationLabel->TabIndex = 4;
 			this->analysisFileLocationLabel->Text = L"File location";
 			// 
@@ -1454,9 +1454,9 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->visualisationTab->Controls->Add(this->visualisationLocationChart);
 			this->visualisationTab->Controls->Add(this->visualisationMonthlyChart);
 			this->visualisationTab->Controls->Add(this->visualisationHeaderLabel);
-			this->visualisationTab->Location = System::Drawing::Point(4, 33);
+			this->visualisationTab->Location = System::Drawing::Point(4, 22);
 			this->visualisationTab->Name = L"visualisationTab";
-			this->visualisationTab->Size = System::Drawing::Size(852, 709);
+			this->visualisationTab->Size = System::Drawing::Size(852, 720);
 			this->visualisationTab->TabIndex = 5;
 			this->visualisationTab->Text = L"5";
 			this->visualisationTab->UseVisualStyleBackColor = true;
@@ -1532,7 +1532,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				static_cast<System::Byte>(0)));
 			this->jsonVisualFilePath->Location = System::Drawing::Point(8, 62);
 			this->jsonVisualFilePath->Name = L"jsonVisualFilePath";
-			this->jsonVisualFilePath->Size = System::Drawing::Size(102, 22);
+			this->jsonVisualFilePath->Size = System::Drawing::Size(96, 20);
 			this->jsonVisualFilePath->TabIndex = 8;
 			this->jsonVisualFilePath->Text = L"File Path: ";
 			// 
@@ -1558,7 +1558,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->visualisationLocationChart->Location = System::Drawing::Point(269, 90);
 			this->visualisationLocationChart->Name = L"visualisationLocationChart";
 			series2->ChartArea = L"ChartArea1";
-			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Doughnut;
 			series2->EmptyPointStyle->Name = L"Location";
 			series2->Legend = L"Legend1";
 			series2->Name = L"Location1";
@@ -1653,9 +1653,9 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->imageOcrTab->Controls->Add(this->imageOcrFilePathLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrDescriptionLabel);
 			this->imageOcrTab->Controls->Add(this->imageOcrHeaderLabel);
-			this->imageOcrTab->Location = System::Drawing::Point(4, 33);
+			this->imageOcrTab->Location = System::Drawing::Point(4, 22);
 			this->imageOcrTab->Name = L"imageOcrTab";
-			this->imageOcrTab->Size = System::Drawing::Size(852, 709);
+			this->imageOcrTab->Size = System::Drawing::Size(852, 720);
 			this->imageOcrTab->TabIndex = 6;
 			this->imageOcrTab->Text = L"6";
 			this->imageOcrTab->UseVisualStyleBackColor = true;
@@ -1696,7 +1696,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->imageOcrFilePathHeaderLabel->Location = System::Drawing::Point(50, 174);
 			this->imageOcrFilePathHeaderLabel->Name = L"imageOcrFilePathHeaderLabel";
-			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(200, 32);
+			this->imageOcrFilePathHeaderLabel->Size = System::Drawing::Size(136, 24);
 			this->imageOcrFilePathHeaderLabel->TabIndex = 4;
 			this->imageOcrFilePathHeaderLabel->Text = L"File Location:";
 			// 
@@ -1705,7 +1705,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->imageOcrFilePathValueLabel->AutoSize = true;
 			this->imageOcrFilePathValueLabel->Location = System::Drawing::Point(150, 200);
 			this->imageOcrFilePathValueLabel->Name = L"imageOcrFilePathValueLabel";
-			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(59, 25);
+			this->imageOcrFilePathValueLabel->Size = System::Drawing::Size(33, 13);
 			this->imageOcrFilePathValueLabel->TabIndex = 3;
 			this->imageOcrFilePathValueLabel->Text = L"None";
 			// 
@@ -1714,7 +1714,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->imageOcrFilePathLabel->AutoSize = true;
 			this->imageOcrFilePathLabel->Location = System::Drawing::Point(50, 200);
 			this->imageOcrFilePathLabel->Name = L"imageOcrFilePathLabel";
-			this->imageOcrFilePathLabel->Size = System::Drawing::Size(113, 25);
+			this->imageOcrFilePathLabel->Size = System::Drawing::Size(61, 13);
 			this->imageOcrFilePathLabel->TabIndex = 2;
 			this->imageOcrFilePathLabel->Text = L"File loaded:";
 			// 
@@ -1758,9 +1758,9 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->aboutTab->Controls->Add(this->aboutMember3Picture);
 			this->aboutTab->Controls->Add(this->aboutMember2Picture);
 			this->aboutTab->Controls->Add(this->aboutMember1Picture);
-			this->aboutTab->Location = System::Drawing::Point(4, 33);
+			this->aboutTab->Location = System::Drawing::Point(4, 22);
 			this->aboutTab->Name = L"aboutTab";
-			this->aboutTab->Size = System::Drawing::Size(852, 709);
+			this->aboutTab->Size = System::Drawing::Size(852, 720);
 			this->aboutTab->TabIndex = 7;
 			this->aboutTab->Text = L"7";
 			// 
@@ -1804,7 +1804,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->aboutGroup34Label->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->aboutGroup34Label->Location = System::Drawing::Point(334, 296);
 			this->aboutGroup34Label->Name = L"aboutGroup34Label";
-			this->aboutGroup34Label->Size = System::Drawing::Size(178, 47);
+			this->aboutGroup34Label->Size = System::Drawing::Size(173, 46);
 			this->aboutGroup34Label->TabIndex = 21;
 			this->aboutGroup34Label->Text = L"Group 34";
 			// 
@@ -2494,15 +2494,36 @@ private: System::Void visualisationLocationButton_Click(System::Object^  sender,
 				}
 			}
 		}
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 1", location[0]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 2", location[1]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 3", location[2]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 4", location[3]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 5", location[4]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 6", location[5]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 7", location[6]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 8", location[7]);
-		this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Loc 9", location[8]);
+		for (auto y : location)
+		{
+			auto temp = y;
+			for (int x = 1; x < 15; x++)
+			{
+				if (location[y] < location[x])
+				{
+					temp = x;
+				}
+			}
+			auto temp2 = location[y];
+			location[y] = location[temp];
+			location[temp] = temp2;
+
+		}
+		for (auto x : location)
+		{
+			if (location[x] == 0)
+			{
+				break;
+			}
+			else
+			{
+				auto y = x + 1;
+				this->visualisationLocationChart->Series["Location1"]->Points->AddXY("Location" + y, location[x]);
+			}
+
+		}
+
+
 	}
 	catch (...) {
 	}
@@ -2510,3 +2531,4 @@ private: System::Void visualisationLocationButton_Click(System::Object^  sender,
 }
 }; //Endpoint
 }
+

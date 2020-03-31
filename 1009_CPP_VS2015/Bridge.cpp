@@ -36,14 +36,16 @@ int Bridge::executeScript(std::string scriptName, std::string parameters) {
 		//throw "File: " + scriptPath + " does not exists.";
 	
 	std::string command = "\"" + this->executable + "\" " + scriptName + " " + parameters;
-	int res = system(command.c_str());
+	//int res = system(command.c_str());
+	int res = WinExec(command.c_str(), SW_HIDE);
 	return res;
 }
 
 int Bridge::execute(std::string parameters) {
 	std::string command = this->executable + " " + parameters;
 	std::cout << "command is : " << command << std::endl;
-	int res = system(command.c_str());
+	//int res = system(command.c_str());
+	int res = WinExec(command.c_str(), SW_HIDE);
 	return res;
 }
 

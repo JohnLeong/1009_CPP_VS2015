@@ -96,7 +96,8 @@ namespace ICT1009
 				file << s << "\n";
 			file.close();
 
-			system(wordmapCommand.c_str());
+			WinExec(wordmapCommand.c_str(), SW_HIDE);
+			//system(wordmapCommand.c_str());
 
 			return analysedData;
 		}
