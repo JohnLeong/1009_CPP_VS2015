@@ -295,28 +295,28 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(UserInterfaceForm::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series15 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series16 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series17 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series18 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series20 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series21 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series22 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series23 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series24 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series25 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series26 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series27 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series28 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series13 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series14 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->sidePanelBacking = (gcnew System::Windows::Forms::Panel());
 			this->imageOcrButton = (gcnew System::Windows::Forms::Button());
 			this->aboutButton = (gcnew System::Windows::Forms::Button());
@@ -395,11 +395,11 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->analysisFileLocationLabel = (gcnew System::Windows::Forms::Label());
 			this->dataAnalysisHeaderLabel = (gcnew System::Windows::Forms::Label());
 			this->visualisationTab = (gcnew System::Windows::Forms::TabPage());
+			this->visualisationFilePathLabel = (gcnew System::Windows::Forms::Label());
 			this->visualisationSentimentChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->visualisationLocationButton = (gcnew System::Windows::Forms::Button());
 			this->visualisationMonthlyButton = (gcnew System::Windows::Forms::Button());
 			this->visualisationSentimentButton = (gcnew System::Windows::Forms::Button());
-			this->visualisationFilePathLabel = (gcnew System::Windows::Forms::Label());
 			this->jsonVisualFilePath = (gcnew System::Windows::Forms::Label());
 			this->visualationBtn = (gcnew System::Windows::Forms::Button());
 			this->visualisationLocationChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
@@ -1347,29 +1347,29 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			// 
 			this->analysisRelatedHashtagsTable->AllowUserToAddRows = false;
 			this->analysisRelatedHashtagsTable->AllowUserToDeleteRows = false;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->analysisRelatedHashtagsTable->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->analysisRelatedHashtagsTable->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->analysisRelatedHashtagsTable->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->HashtagColumn,
 					this->FreqColumn, this->TotalColumn
 			});
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::World,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->analysisRelatedHashtagsTable->DefaultCellStyle = dataGridViewCellStyle2;
 			this->analysisRelatedHashtagsTable->Location = System::Drawing::Point(12, 339);
 			this->analysisRelatedHashtagsTable->Name = L"analysisRelatedHashtagsTable";
 			this->analysisRelatedHashtagsTable->ReadOnly = true;
@@ -1461,19 +1461,30 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->visualisationTab->Text = L"5";
 			this->visualisationTab->UseVisualStyleBackColor = true;
 			// 
+			// visualisationFilePathLabel
+			// 
+			this->visualisationFilePathLabel->AutoSize = true;
+			this->visualisationFilePathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
+			this->visualisationFilePathLabel->Location = System::Drawing::Point(8, 90);
+			this->visualisationFilePathLabel->Name = L"visualisationFilePathLabel";
+			this->visualisationFilePathLabel->Size = System::Drawing::Size(190, 20);
+			this->visualisationFilePathLabel->TabIndex = 9;
+			this->visualisationFilePathLabel->Text = L"File loaded: No file loaded";
+			// 
 			// visualisationSentimentChart
 			// 
-			chartArea4->Name = L"ChartArea1";
-			this->visualisationSentimentChart->ChartAreas->Add(chartArea4);
-			legend4->Name = L"Legend1";
-			this->visualisationSentimentChart->Legends->Add(legend4);
+			chartArea1->Name = L"ChartArea1";
+			this->visualisationSentimentChart->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->visualisationSentimentChart->Legends->Add(legend1);
 			this->visualisationSentimentChart->Location = System::Drawing::Point(269, 90);
 			this->visualisationSentimentChart->Name = L"visualisationSentimentChart";
-			series15->ChartArea = L"ChartArea1";
-			series15->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
-			series15->Legend = L"Legend1";
-			series15->Name = L"Series1";
-			this->visualisationSentimentChart->Series->Add(series15);
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->visualisationSentimentChart->Series->Add(series1);
 			this->visualisationSentimentChart->Size = System::Drawing::Size(550, 395);
 			this->visualisationSentimentChart->TabIndex = 13;
 			this->visualisationSentimentChart->Text = L"chart1";
@@ -1514,17 +1525,6 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->visualisationSentimentButton->UseVisualStyleBackColor = true;
 			this->visualisationSentimentButton->Click += gcnew System::EventHandler(this, &UserInterfaceForm::visualisationSentimentButton_Click);
 			// 
-			// visualisationFilePathLabel
-			// 
-			this->visualisationFilePathLabel->AutoSize = true;
-			this->visualisationFilePathLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::World, static_cast<System::Byte>(0)));
-			this->visualisationFilePathLabel->Location = System::Drawing::Point(8, 90);
-			this->visualisationFilePathLabel->Name = L"visualisationFilePathLabel";
-			this->visualisationFilePathLabel->Size = System::Drawing::Size(190, 20);
-			this->visualisationFilePathLabel->TabIndex = 9;
-			this->visualisationFilePathLabel->Text = L"File loaded: No file loaded";
-			// 
 			// jsonVisualFilePath
 			// 
 			this->jsonVisualFilePath->AutoSize = true;
@@ -1550,84 +1550,84 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			// 
 			// visualisationLocationChart
 			// 
-			chartArea5->Name = L"ChartArea1";
-			this->visualisationLocationChart->ChartAreas->Add(chartArea5);
-			legend5->Name = L"Legend1";
-			legend5->Title = L"Visualation Number Of Location Base On Post";
-			this->visualisationLocationChart->Legends->Add(legend5);
+			chartArea2->Name = L"ChartArea1";
+			this->visualisationLocationChart->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			legend2->Title = L"Visualation Number Of Location Base On Post";
+			this->visualisationLocationChart->Legends->Add(legend2);
 			this->visualisationLocationChart->Location = System::Drawing::Point(269, 90);
 			this->visualisationLocationChart->Name = L"visualisationLocationChart";
-			series16->ChartArea = L"ChartArea1";
-			series16->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
-			series16->EmptyPointStyle->Name = L"Location";
-			series16->Legend = L"Legend1";
-			series16->Name = L"Location1";
-			series16->YValuesPerPoint = 4;
-			this->visualisationLocationChart->Series->Add(series16);
+			series2->ChartArea = L"ChartArea1";
+			series2->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Pie;
+			series2->EmptyPointStyle->Name = L"Location";
+			series2->Legend = L"Legend1";
+			series2->Name = L"Location1";
+			series2->YValuesPerPoint = 4;
+			this->visualisationLocationChart->Series->Add(series2);
 			this->visualisationLocationChart->Size = System::Drawing::Size(565, 451);
 			this->visualisationLocationChart->TabIndex = 6;
 			this->visualisationLocationChart->Text = L"PieChart";
 			// 
 			// visualisationMonthlyChart
 			// 
-			chartArea6->Name = L"ChartArea1";
-			this->visualisationMonthlyChart->ChartAreas->Add(chartArea6);
-			legend6->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
-			legend6->IsEquallySpacedItems = true;
-			legend6->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
-			legend6->Name = L"VisualationNumberOfPostPerMonth";
-			legend6->Title = L"Visualation Number Of Post Per Month";
-			this->visualisationMonthlyChart->Legends->Add(legend6);
+			chartArea3->Name = L"ChartArea1";
+			this->visualisationMonthlyChart->ChartAreas->Add(chartArea3);
+			legend3->BackGradientStyle = System::Windows::Forms::DataVisualization::Charting::GradientStyle::LeftRight;
+			legend3->IsEquallySpacedItems = true;
+			legend3->LegendStyle = System::Windows::Forms::DataVisualization::Charting::LegendStyle::Column;
+			legend3->Name = L"VisualationNumberOfPostPerMonth";
+			legend3->Title = L"Visualation Number Of Post Per Month";
+			this->visualisationMonthlyChart->Legends->Add(legend3);
 			this->visualisationMonthlyChart->Location = System::Drawing::Point(257, 105);
 			this->visualisationMonthlyChart->Name = L"visualisationMonthlyChart";
-			series17->ChartArea = L"ChartArea1";
-			series17->Legend = L"VisualationNumberOfPostPerMonth";
-			series17->Name = L"JAN";
-			series18->ChartArea = L"ChartArea1";
-			series18->Legend = L"VisualationNumberOfPostPerMonth";
-			series18->Name = L"FEB";
-			series19->ChartArea = L"ChartArea1";
-			series19->Legend = L"VisualationNumberOfPostPerMonth";
-			series19->Name = L"MARCH";
-			series20->ChartArea = L"ChartArea1";
-			series20->Legend = L"VisualationNumberOfPostPerMonth";
-			series20->Name = L"APRIL";
-			series21->ChartArea = L"ChartArea1";
-			series21->Legend = L"VisualationNumberOfPostPerMonth";
-			series21->Name = L"MAY";
-			series22->ChartArea = L"ChartArea1";
-			series22->Legend = L"VisualationNumberOfPostPerMonth";
-			series22->Name = L"JUNE";
-			series23->ChartArea = L"ChartArea1";
-			series23->Legend = L"VisualationNumberOfPostPerMonth";
-			series23->Name = L"JULY";
-			series24->ChartArea = L"ChartArea1";
-			series24->Legend = L"VisualationNumberOfPostPerMonth";
-			series24->Name = L"AUG";
-			series25->ChartArea = L"ChartArea1";
-			series25->Legend = L"VisualationNumberOfPostPerMonth";
-			series25->Name = L"SEPT";
-			series26->ChartArea = L"ChartArea1";
-			series26->Legend = L"VisualationNumberOfPostPerMonth";
-			series26->Name = L"OCT";
-			series27->ChartArea = L"ChartArea1";
-			series27->Legend = L"VisualationNumberOfPostPerMonth";
-			series27->Name = L"NOV";
-			series28->ChartArea = L"ChartArea1";
-			series28->Legend = L"VisualationNumberOfPostPerMonth";
-			series28->Name = L"DEC";
-			this->visualisationMonthlyChart->Series->Add(series17);
-			this->visualisationMonthlyChart->Series->Add(series18);
-			this->visualisationMonthlyChart->Series->Add(series19);
-			this->visualisationMonthlyChart->Series->Add(series20);
-			this->visualisationMonthlyChart->Series->Add(series21);
-			this->visualisationMonthlyChart->Series->Add(series22);
-			this->visualisationMonthlyChart->Series->Add(series23);
-			this->visualisationMonthlyChart->Series->Add(series24);
-			this->visualisationMonthlyChart->Series->Add(series25);
-			this->visualisationMonthlyChart->Series->Add(series26);
-			this->visualisationMonthlyChart->Series->Add(series27);
-			this->visualisationMonthlyChart->Series->Add(series28);
+			series3->ChartArea = L"ChartArea1";
+			series3->Legend = L"VisualationNumberOfPostPerMonth";
+			series3->Name = L"JAN";
+			series4->ChartArea = L"ChartArea1";
+			series4->Legend = L"VisualationNumberOfPostPerMonth";
+			series4->Name = L"FEB";
+			series5->ChartArea = L"ChartArea1";
+			series5->Legend = L"VisualationNumberOfPostPerMonth";
+			series5->Name = L"MARCH";
+			series6->ChartArea = L"ChartArea1";
+			series6->Legend = L"VisualationNumberOfPostPerMonth";
+			series6->Name = L"APRIL";
+			series7->ChartArea = L"ChartArea1";
+			series7->Legend = L"VisualationNumberOfPostPerMonth";
+			series7->Name = L"MAY";
+			series8->ChartArea = L"ChartArea1";
+			series8->Legend = L"VisualationNumberOfPostPerMonth";
+			series8->Name = L"JUNE";
+			series9->ChartArea = L"ChartArea1";
+			series9->Legend = L"VisualationNumberOfPostPerMonth";
+			series9->Name = L"JULY";
+			series10->ChartArea = L"ChartArea1";
+			series10->Legend = L"VisualationNumberOfPostPerMonth";
+			series10->Name = L"AUG";
+			series11->ChartArea = L"ChartArea1";
+			series11->Legend = L"VisualationNumberOfPostPerMonth";
+			series11->Name = L"SEPT";
+			series12->ChartArea = L"ChartArea1";
+			series12->Legend = L"VisualationNumberOfPostPerMonth";
+			series12->Name = L"OCT";
+			series13->ChartArea = L"ChartArea1";
+			series13->Legend = L"VisualationNumberOfPostPerMonth";
+			series13->Name = L"NOV";
+			series14->ChartArea = L"ChartArea1";
+			series14->Legend = L"VisualationNumberOfPostPerMonth";
+			series14->Name = L"DEC";
+			this->visualisationMonthlyChart->Series->Add(series3);
+			this->visualisationMonthlyChart->Series->Add(series4);
+			this->visualisationMonthlyChart->Series->Add(series5);
+			this->visualisationMonthlyChart->Series->Add(series6);
+			this->visualisationMonthlyChart->Series->Add(series7);
+			this->visualisationMonthlyChart->Series->Add(series8);
+			this->visualisationMonthlyChart->Series->Add(series9);
+			this->visualisationMonthlyChart->Series->Add(series10);
+			this->visualisationMonthlyChart->Series->Add(series11);
+			this->visualisationMonthlyChart->Series->Add(series12);
+			this->visualisationMonthlyChart->Series->Add(series13);
+			this->visualisationMonthlyChart->Series->Add(series14);
 			this->visualisationMonthlyChart->Size = System::Drawing::Size(562, 380);
 			this->visualisationMonthlyChart->TabIndex = 1;
 			this->visualisationMonthlyChart->Text = L"BarChart";
@@ -1939,6 +1939,7 @@ private: System::Windows::Forms::DataVisualization::Charting::Chart^  visualisat
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->sidePanelBacking);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"UserInterfaceForm";
 			this->Text = L"ICT1009 Scrapper";
