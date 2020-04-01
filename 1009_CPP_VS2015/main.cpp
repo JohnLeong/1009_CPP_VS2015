@@ -1,4 +1,4 @@
-#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #include "UserInterfaceForm.h"
 
 #include <stdio.h>
@@ -6,7 +6,6 @@
 #include "InstagramScrapper.h"
 #include "FileUtility.h"
 #include "Bridge.h"
-
 
 #include <fstream>
 #include "CurlObj.h"
